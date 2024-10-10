@@ -4,7 +4,8 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@n
 const HomePage = () => {
   return (
     <section className="homepage-bg">
-      <Navbar isBordered>
+      {/* Navbar with shouldHideOnScroll and isBordered */}
+      <Navbar shouldHideOnScroll isBordered>
         <NavbarBrand>
           <p className="text-lg font-bold">Emory Hacks</p>
         </NavbarBrand>
@@ -29,6 +30,7 @@ const HomePage = () => {
           <Button>Register</Button>
         </NavbarItem>
       </Navbar>
+
       <div className="content">
         <h1 className="text-white text-center pt-20">Welcome to Emory Hacks</h1>
       </div>

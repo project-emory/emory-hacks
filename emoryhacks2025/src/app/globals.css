@@ -11,3 +11,10 @@
     background-repeat: no-repeat;
     height: 100vh;
 }
+
+/* Tailwind global styles */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
