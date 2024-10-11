@@ -54,7 +54,8 @@ const HomePage = () => {
 
           {/* Apply button */}
           <NavbarItem>
-            <Link href="/sections/apply">
+            {/* Change this to the external link or page link */}
+            <Link href="https://lu.ma/i3zb0h5t" passHref target="_blank">
               <div
                 style={{
                   paddingLeft: "16px",
