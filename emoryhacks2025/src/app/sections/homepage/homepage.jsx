@@ -1,46 +1,103 @@
 "use client";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
+import { Navbar, NavbarContent, NavbarItem, Button } from "@nextui-org/react";
+import Link from "next/link"; // Import the Link component
 
 const HomePage = () => {
+  const linkStyle = {
+    color: "#D4D4D4",
+    fontSize: "22px",
+    fontFamily: "Space Grotesk",
+    fontWeight: "600",
+    textTransform: "uppercase",
+    wordWrap: "break-word",
+  };
+
+  const titleStyle = {
+    color: "white",
+    fontSize: "88px",
+    fontFamily: "Space Grotesk",
+    fontWeight: "700",
+    textTransform: "uppercase",
+    wordWrap: "break-word",
+  };
+
   return (
     <section className="homepage-bg">
       {/* Navbar with custom styling */}
-      <Navbar isBordered shouldHideOnScroll className="bg-transparent px-10">
-        <NavbarBrand>
-          {/* Add your logo */}
-          <p className="text-2xl font-bold text-white">Emory Hacks</p>
-        </NavbarBrand>
-        
-        <NavbarContent className="hidden sm:flex gap-8" justify="center">
+      <Navbar isBordered shouldHideOnScroll className="bg-transparent px-10 justify-end">
+        <NavbarContent className="flex justify-end items-center gap-10">
           <NavbarItem>
-            <Link href="#about" className="text-white text-lg">About</Link>
+            <Link href="/sections/about" style={linkStyle}>
+              About
+            </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#tracks" className="text-white text-lg">Tracks</Link>
+            <Link href="/sections/tracks" style={linkStyle}>
+              Tracks
+            </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#schedule" className="text-white text-lg">Schedule</Link>
+            <Link href="/sections/schedule" style={linkStyle}>
+              Schedule
+            </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#faq" className="text-white text-lg">FAQ</Link>
+            <Link href="/sections/faq" style={linkStyle}>
+              FAQ
+            </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#sponsors" className="text-white text-lg">Sponsors</Link>
+            <Link href="/sections/sponsors" style={linkStyle}>
+              Sponsors
+            </Link>
           </NavbarItem>
-        </NavbarContent>
-        
-        {/* "Apply" button styled as in the example */}
-        <NavbarContent justify="end">
+
+          {/* Apply button */}
           <NavbarItem>
-            <Button as={Link} href="#" variant="flat" className="bg-pink-500 text-white hover:bg-pink-400">
-              Apply
-            </Button>
+            <Link href="/sections/apply">
+              <div
+                style={{
+                  paddingLeft: "16px",
+                  paddingRight: "16px",
+                  paddingTop: "8px",
+                  paddingBottom: "8px",
+                  backgroundColor: "white",
+                  borderRadius: "12px",
+                  overflow: "hidden",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "10px",
+                  display: "flex",
+                }}
+              >
+                <div
+                  style={{
+                    width: "0px",
+                    height: "44px",
+                    backgroundColor: "#314CC2",
+                  }}
+                />
+                <div
+                  style={{
+                    color: "#314CC2",
+                    fontSize: "22px",
+                    fontFamily: "Space Grotesk",
+                    fontWeight: "700",
+                    textTransform: "uppercase",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Apply
+                </div>
+              </div>
+            </Link>
           </NavbarItem>
         </NavbarContent>
       </Navbar>
 
-      <div className="content">
-        <h1 className="text-white text-center pt-20">Welcome to Emory Hacks</h1>
+      {/* Emory Hacks 2025 Title */}
+      <div className="content pt-20 text-center">
+        <div style={titleStyle}>Emory Hacks 2025</div>
       </div>
     </section>
   );
