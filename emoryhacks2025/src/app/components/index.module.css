@@ -1,0 +1,29 @@
+.emoryHacksPresentedByProjParent {
+    width: 90%; /* Make the text box wider */
+    max-width: 1000px; /* Adjust max width to make the box longer */
+    position: relative;
+    box-shadow: 0px 4px 30.9px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 20px; /* Rounded corners, slightly smaller */
+    background-color: rgba(79, 225, 255, 0.8); /* Light blue with transparency */
+    display: flex;
+    flex-direction: column; /* Center text in column */
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 1.25rem; /* 20px for scaling */
+    color: #000;
+    font-family: Raleway, sans-serif;
+  }
+  
+  .emoryHacksPresented {
+    width: 100%;
+    position: relative;
+    line-height: 1.8; /* Adjust for better readability */
+    font-weight: 500;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  

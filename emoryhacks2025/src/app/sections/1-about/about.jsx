@@ -1,4 +1,5 @@
 "use client";
+import styles from '../../components/index.module.css';
 
 const About = () => {
   return (
@@ -15,8 +16,26 @@ const About = () => {
           </h2>
         </div>
       </div>
-      {/* ABOUT */}
-      <div className="h-screen text-white">About</div>
+
+      {/* ABOUT US PAGE STARTS HERE */}
+      <div className="h-[768px] md:h-[100vw] bg-cover bg-[url('/images/aboutus.png')]">
+        {/* "ABOUT" Title */}
+        <h2 className="text-[36px] md:text-[5vw] font-bold text-white drop-shadow-lg mb-8">
+          ABOUT
+        </h2>
+        {/* About Content Box */}
+        <div className={styles.emoryHacksPresentedByProjParent}>
+          <div className={styles.emoryHacksPresented}>
+            Emory Hacks, presented by PROJECT Emory, is a hackathon hosted at Emory University.
+            We are committed to bringing hundreds of students together for an intensive 36-hour
+            hackathon where innovation comes to life. Participants build cutting-edge applications,
+            websites, and digital tools while learning from industry professionals through hands-on
+            workshops and mentorship. Whether you're a first-time coder or a seasoned developer,
+            join us to push your creative and technical boundaries in this dynamic weekend of
+            building and collaboration.
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
