@@ -1,5 +1,7 @@
 "use client";
-import Frame from '../../components/aboutusFrame'; // Import the Frame component
+
+import Content from "./content"; // Import the Frame component
+import Graphics from "./graphics";
 
 const About = () => {
   return (
@@ -17,12 +19,10 @@ const About = () => {
         </div>
       </div>
 
-      {/* ABOUT US PAGE STARTS HERE */}
-      <div className="h-[768px] md:h-[100vw] bg-cover bg-[url('/images/aboutus.png')] flex items-center justify-center flex-col p-6">
-        <h1 className="text-[36px] md:text-[5vw] font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-md mb-6 ml-[20%]">
-          ABOUT
-        </h1>
-        <Frame />
+      {/* ABOUT US */}
+      <div className="relative h-[100vw]">
+        <Graphics />
+        <Content />
       </div>
     </section>
   );

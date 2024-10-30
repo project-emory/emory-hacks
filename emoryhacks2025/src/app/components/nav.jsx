@@ -45,7 +45,6 @@ const Nav = () => {
         {sections.map((name, i) => (
           <NavItem name={name} setCurrSection={setCurrSection} key={i} />
         ))}
-
         <ApplyButton />
       </ul>
     </nav>
@@ -85,7 +84,7 @@ const NavItem = ({ name, setCurrSection }) => {
         color: "#ffffff",
       }}
       onClick={() => handleClick()}
-      className="text-[22px] text-white font-bold cursor-pointer leading-tight"
+      className="text-[20px] text-white font-bold cursor-pointer leading-tight"
     >
       {name.toUpperCase()}
     </motion.li>
@@ -102,15 +101,14 @@ const ApplyButton = () => {
       rel="noopener noreferrer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative flex items-center justify-center px-4 py-2 bg-white rounded-lg border border-white overflow-hidden"
+      className="relative flex items-center justify-center px-4 py-2 bg-[#ffffffcc] backdrop-blur-md rounded-lg overflow-hidden"
     >
       <motion.div
         animate={{ width: isHovered ? "100%" : "0%" }}
         className="absolute left-0 h-full bg-brand-primary z-0"
       />
       <motion.span
-        animate={{ color: isHovered ? "#ffffff" : "#314cc2" }}
-        className="relative leading-tight text-[22px] font-bold text-brand-primary z-10"
+        className="relative leading-tight text-[20px] font-bold text-brand-primary z-10"
       >
         APPLY
       </motion.span>

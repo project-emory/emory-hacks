@@ -1,3 +1,4 @@
+import SmoothScrolling from "./components/smoothScrolling";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 
@@ -14,10 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${spaceGrotesk.className} antialiased`}
-      >
-        {children}
+      <body className={`${spaceGrotesk.className} antialiased`}>
+        <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>
   );
