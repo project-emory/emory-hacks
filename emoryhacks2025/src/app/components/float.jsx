@@ -3,7 +3,13 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 
-const Float = ({ children }) => {
+const Float = ({
+  children,
+  rotate = true,
+  x = true,
+  y = true,
+  duration = 1.5,
+}) => {
   const [windowWidth, setWindowWidth] = useState(0);
   const ref = useRef(null);
 
@@ -20,20 +26,33 @@ const Float = ({ children }) => {
     };
   }, []);
 
+  // Random number between 0.01 and 0.03
+  const random = (min, max) => Math.random() * (max - min) + min;
+
   // Float animation
   useEffect(() => {
-    gsap.to(ref.current, {
-      rotation: 2,
-      y: 0.032 * windowWidth,
-      x: 0.015 * windowWidth,
-      duration: 1.5,
-      ease: "power1.inOut",
-      repeat: -1,
-      yoyo: true,
-    });
+    gsap.fromTo(
+      ref.current,
+      {
+        rotation: rotate ? -1 : 0,
+      },
+      {
+        rotation: rotate ? 1 : 0,
+        x: x ? random(0, 0.01) * windowWidth : 0,
+        y: y ? random(0.02, 0.03) * windowWidth : 0,
+        duration: random(duration * 0.9, duration * 1.1),
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo: true,
+      }
+    );
   }, [windowWidth]);
 
-  return <div ref={ref} className="origin-center">{children}</div>;
+  return (
+    <div ref={ref} className="origin-center">
+      {children}
+    </div>
+  );
 };
 
 export default Float;

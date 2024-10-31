@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Parallax from "@/app/components/parallax";
 import {
   bg,
@@ -14,6 +14,7 @@ import {
   ufo,
 } from "./graphicsData";
 import Float from "@/app/components/float";
+import gsap from "gsap";
 
 const Graphics = () => {
   const container = useRef(null);
@@ -29,7 +30,14 @@ const Graphics = () => {
       className="absolute top-0 left-0 w-full h-full bg-black"
     >
       {/* BG */}
-      <Image src={bg} alt="bg" className="absolute z-0" />
+      <Float x={false} y={false} duration={5}>
+        <Image
+          id="about-bg"
+          src={bg}
+          alt="bg"
+          className="absolute z-0 scale-105"
+        />
+      </Float>
 
       {/* GRAPHICS */}
       {distant.map((item, index) => (
