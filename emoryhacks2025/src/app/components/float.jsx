@@ -20,6 +20,7 @@ const Float = ({ children }) => {
     };
   }, []);
 
+  // Float animation
   useEffect(() => {
     gsap.to(ref.current, {
       rotation: 2,
