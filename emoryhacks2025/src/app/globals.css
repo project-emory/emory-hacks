@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 /* homepage background */
 /* .homepage-bg {
@@ -16,6 +17,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: #211881;
+}
+
+body {
+  margin: 0; line-height: normal;
 }
 
 /* .navbar {
