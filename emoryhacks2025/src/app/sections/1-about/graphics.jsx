@@ -46,7 +46,12 @@ const Graphics = () => {
 
       {close.map((item, index) => (
         <Parallax containerRef={container} speed={"lg"} key={index}>
-          <Image key={index} src={item} alt={"img"} />
+          <Image
+            key={index}
+            src={item}
+            alt={"img"}
+            className="hidden sm:block"
+          />
         </Parallax>
       ))}
 
