@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link"; // Import the Link component
-import { motion, useInView } from "framer-motion";
+import { animate, motion, stagger, useInView } from "framer-motion";
 import { gsap } from "gsap";
 
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -94,24 +94,50 @@ const NavItem = ({ name, setCurrSection }) => {
 const ApplyButton = () => {
   const [isHovered, setIsHovered] = useState(false);
 
+  useEffect(() => {
+    animate(
+      ".stagger-letter-1",
+      { y: isHovered ? -28 : 0, opacity: isHovered ? 0 : 1 },
+      { delay: stagger(0.03, { ease: "easeOut" }), ease: "circOut" }
+    );
+    animate(
+      ".stagger-letter-2",
+      { y: isHovered ? -28 : 0, opacity: isHovered ? 1 : 0 },
+      { delay: stagger(0.03, { ease: "easeOut" }), ease: "circOut" }
+    );
+  });
+
   return (
     <Link
       href="https://lu.ma/i3zb0h5t"
       target="_blank"
       rel="noopener noreferrer"
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={() => {
+        setIsHovered(true);
+      }}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative flex items-center justify-center px-4 py-2 bg-[#ffffffcc] backdrop-blur-md rounded-lg overflow-hidden"
     >
       <motion.div
-        animate={{ width: isHovered ? "100%" : "0%" }}
-        className="absolute left-0 h-full bg-brand-primary z-0"
-      />
-      <motion.span
-        className="relative leading-tight text-[20px] font-bold text-brand-primary z-10"
+        animate={{ background: isHovered ? "#ffffffff" : "#ffffffcc" }}
+        className="relative font-bold text-brand-primary z-10 px-4 py-2 backdrop-blur-md rounded-lg"
       >
-        APPLY
-      </motion.span>
+        <div className="overflow-hidden leading-none text-[20px] h-[20px]">
+          <div className="mb-2">
+            {"APPLY".split("").map((char, i) => (
+              <div className="stagger-letter-1 inline-block" key={i}>
+                {char}
+              </div>
+            ))}
+          </div>
+          <div>
+            {"APPLY".split("").map((char, i) => (
+              <div className="stagger-letter-2 inline-block" key={i}>
+                {char}
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
     </Link>
   );
 };

@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { useRef } from "react";
 import Parallax from "@/app/components/parallax";
 import {
   bg,
@@ -11,6 +10,7 @@ import {
   planet_br_1,
   planet_br_2,
   planet_tr,
+  planet_bl,
   ufo,
 } from "./graphicsData";
 import Float from "@/app/components/float";
@@ -21,7 +21,7 @@ const Graphics = () => {
   // Parallax speeds
   const distant = [cloud_tl, planet_br_2, planet_tr];
   const medium = [cloud_br];
-  const close = [planet_br_1];
+  const close = [planet_br_1, planet_bl];
 
   return (
     <div
