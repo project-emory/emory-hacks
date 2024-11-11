@@ -1,29 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
-
-/* homepage background */
-/* .homepage-bg {
-    background-image: url('/images/IMG_1023.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-} */
-
-/* Tailwind global styles */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #211881;
-}
-
-body {
-  margin: 0; line-height: normal;
-}
-
-/* .navbar {
-  background-color: transparent;
-  color: white;
-} */

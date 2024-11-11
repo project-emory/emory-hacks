@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import Parallax from "@/app/components/parallax";
 import {
   bg,
@@ -11,9 +10,11 @@ import {
   planet_br_1,
   planet_br_2,
   planet_tr,
+  planet_bl,
   ufo,
 } from "./graphicsData";
 import Float from "@/app/components/float";
+import gsap from "gsap";
 
 const Graphics = () => {
   const container = useRef(null);
@@ -21,7 +22,7 @@ const Graphics = () => {
   // Parallax speeds
   const distant = [cloud_tl, planet_br_2, planet_tr];
   const medium = [cloud_br];
-  const close = [planet_br_1];
+  const close = [planet_br_1, planet_bl];
 
   return (
     <div
@@ -29,7 +30,14 @@ const Graphics = () => {
       className="absolute top-0 left-0 w-full h-full bg-black"
     >
       {/* BG */}
-      <Image src={bg} alt="bg" className="absolute z-0" />
+      <Float x={false} y={false} duration={5}>
+        <Image
+          id="about-bg"
+          src={bg}
+          alt="bg"
+          className="absolute z-0 scale-105"
+        />
+      </Float>
 
       {/* GRAPHICS */}
       {distant.map((item, index) => (
@@ -46,7 +54,12 @@ const Graphics = () => {
 
       {close.map((item, index) => (
         <Parallax containerRef={container} speed={"lg"} key={index}>
-          <Image key={index} src={item} alt={"img"} />
+          <Image
+            key={index}
+            src={item}
+            alt={"img"}
+            className="hidden sm:block"
+          />
         </Parallax>
       ))}
 

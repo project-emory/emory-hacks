@@ -10,13 +10,14 @@ const Parallax = ({ children, containerRef, speed }) => {
     offset: ["start end", "end start"],
   });
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   // Update window width on resize
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -39,12 +40,12 @@ const Parallax = ({ children, containerRef, speed }) => {
     lg: useTransform(
       scrollYProgress,
       [0, 1],
-      [0.17 * windowWidth, -0.18 * windowWidth]
+      [0.17 * windowWidth, -0.17 * windowWidth]
     ),
     xl: useTransform(
       scrollYProgress,
       [0, 1],
-      [0.25 * windowWidth, -0.28 * windowWidth]
+      [0.28 * windowWidth, -0.28 * windowWidth]
     ),
   };
 

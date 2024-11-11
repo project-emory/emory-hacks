@@ -17,7 +17,7 @@ const Content = () => {
   return (
     <motion.div
       ref={container}
-      className="absolute top-[20vw] right-[6vw] w-[53vw] z-10"
+      className="absolute top-[10vw] sm:top-[20vw] right-[15vw] sm:right-[6vw] w-[70vw] sm:w-[53vw] h-auto z-10"
     >
       <ParallaxProvider containerRef={container} speed="sm">
         {/* TITLE */}
@@ -26,8 +26,8 @@ const Content = () => {
             opacity: isInView ? 1 : 0,
             y: isInView ? 0 : 20,
           }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-4 text-[36px] md:text-[5vw] font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-md"
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="mb-2 sm:mb-4 text-[22px] sm:text-[36px] md:text-[5vw] font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-title"
         >
           ABOUT
         </motion.h1>
@@ -38,10 +38,10 @@ const Content = () => {
             opacity: isInView ? 1 : 0,
             backgroundImage: "url(/noise.png)",
           }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className={`${raleway.className} p-10 bg-[#ffffff70] backdrop-blur-[33px] shadow-xl rounded-[30px]`}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className={`${raleway.className} p-5 md:p-10 bg-[#ffffff70] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px]`}
         >
-          <p className="leading-relaxed tracking-normal lg:tracking-wide xl:tracking-wider text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] font-medium text-black">
+          <p className="leading-snug sm:leading-relaxed tracking-normal lg:tracking-wide xl:tracking-wider text-[10px] sm:text-[12px] md:text-[16px] lg:text-[20px] xl:text-[24px] font-medium text-black">
             Emory Hacks, presented by PROJECT Emory, is a hackathon hosted at
             Emory University. We are committed to bringing hundreds of students
             together for an intensive 36-hour hackathon where innovation comes

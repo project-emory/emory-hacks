@@ -10,15 +10,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         "brand-primary": "#314CC2",
         "brand-secondary": "#9965E6",
         "brand-tertiary": "#6EB8FF",
       },
-      // backgroundImage: {
-      //   homepage: "url('/images/IMG_1023.png')",
-      // },
+      dropShadow: {
+        title: "0px 4px 10px rgba(0, 0, 0, 0.50)",
+      },
     },
   },
   plugins: [],
