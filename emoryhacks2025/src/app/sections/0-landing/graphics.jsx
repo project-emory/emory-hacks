@@ -23,7 +23,7 @@ const Graphics = () => {
   // Parallax speeds
   const distant = [planet_br_1, cloud_r, cloud_bl];
   const medium = [planet_br_2, asteroid];
-  const close = [rocket, planet_bl];
+  const close = [planet_bl];
 
   return (
     <div
@@ -31,7 +31,7 @@ const Graphics = () => {
       className="absolute top-0 left-0 w-full h-full bg-black"
     >
       {/* BG */}
-      <Float duration={6}>
+      <Float duration={8}>
         <Image
           id="landing-bg"
           src={bg}
@@ -61,7 +61,7 @@ const Graphics = () => {
 
       <Parallax containerRef={container} speed={"md"}>
         <Float>
-          <Image src={astronaut} alt="ufo" />
+          <Image src={astronaut} alt="'astronaut'" />
         </Float>
       </Parallax>
 
@@ -75,6 +75,12 @@ const Graphics = () => {
           />
         </Parallax>
       ))}
+
+      <Parallax containerRef={container} speed={"lg"}>
+        <Float y={0.002} duration={0.3}>
+          <Image src={rocket} alt="rocket" />
+        </Float>
+      </Parallax>
     </div>
   );
 };
