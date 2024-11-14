@@ -4,13 +4,17 @@ import Schedule from "./sections/3-schedule/schedule";
 import Sponsors from "./sections/5-sponsors/sponsors";
 import Tracks from "./sections/2-tracks/tracks";
 import Nav from "./components/nav";
+import Landing from "./sections/0-landing/landing";
 
 export default function Home() {
   return (
     <>
       <Nav />
       <main>
-        <About />
+        <section id="about">
+          <Landing />
+          <About />
+        </section>
         <Tracks />
         <Schedule />
         <FAQ />

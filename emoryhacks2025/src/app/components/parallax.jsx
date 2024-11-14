@@ -30,22 +30,22 @@ const Parallax = ({ children, containerRef, speed }) => {
     sm: useTransform(
       scrollYProgress,
       [0, 1],
-      [0.05 * windowWidth, -0.05 * windowWidth]
+      [0.07 * windowWidth, -0.07 * windowWidth]
     ),
     md: useTransform(
       scrollYProgress,
       [0, 1],
-      [0.1 * windowWidth, -0.1 * windowWidth]
+      [0.12 * windowWidth, -0.12 * windowWidth]
     ),
     lg: useTransform(
       scrollYProgress,
       [0, 1],
-      [0.17 * windowWidth, -0.17 * windowWidth]
+      [0.2 * windowWidth, -0.2 * windowWidth]
     ),
     xl: useTransform(
       scrollYProgress,
       [0, 1],
-      [0.28 * windowWidth, -0.28 * windowWidth]
+      [0.3 * windowWidth, -0.3 * windowWidth]
     ),
   };
 

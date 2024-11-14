@@ -4,14 +4,16 @@ import Image from "next/image";
 import { useRef } from "react";
 import Parallax from "@/app/components/parallax";
 import {
+  asteroid,
+  astronaut,
   bg,
-  cloud_br,
-  cloud_tl,
+  cloud_bl,
+  cloud_r,
+  dog,
+  planet_bl,
   planet_br_1,
   planet_br_2,
-  planet_tr,
-  planet_bl,
-  ufo,
+  rocket,
 } from "./graphicsData";
 import Float from "@/app/components/float";
 
@@ -19,9 +21,9 @@ const Graphics = () => {
   const container = useRef(null);
 
   // Parallax speeds
-  const distant = [cloud_tl, planet_br_2, planet_tr];
-  const medium = [cloud_br];
-  const close = [planet_br_1, planet_bl];
+  const distant = [planet_br_1, cloud_r, cloud_bl];
+  const medium = [planet_br_2, asteroid];
+  const close = [planet_bl];
 
   return (
     <div
@@ -29,9 +31,9 @@ const Graphics = () => {
       className="absolute top-0 left-0 w-full h-full bg-black"
     >
       {/* BG */}
-      <Float duration={6}>
+      <Float duration={8}>
         <Image
-          id="about-bg"
+          id="landing-bg"
           src={bg}
           alt="bg"
           className="absolute z-0 scale-105"
@@ -51,6 +53,18 @@ const Graphics = () => {
         </Parallax>
       ))}
 
+      <Parallax containerRef={container} speed={"md"}>
+        <Float>
+          <Image src={dog} alt="dog" />
+        </Float>
+      </Parallax>
+
+      <Parallax containerRef={container} speed={"md"}>
+        <Float>
+          <Image src={astronaut} alt="'astronaut'" />
+        </Float>
+      </Parallax>
+
       {close.map((item, index) => (
         <Parallax containerRef={container} speed={"lg"} key={index}>
           <Image
@@ -62,9 +76,9 @@ const Graphics = () => {
         </Parallax>
       ))}
 
-      <Parallax containerRef={container} speed={"xl"}>
-        <Float x={0.01} y={0.03}>
-          <Image src={ufo} alt="ufo" />
+      <Parallax containerRef={container} speed={"lg"}>
+        <Float y={0.002} duration={0.3}>
+          <Image src={rocket} alt="rocket" />
         </Float>
       </Parallax>
     </div>
