@@ -77,9 +77,9 @@ const Graphics = () => {
       ))}
 
       <Parallax containerRef={container} speed={"lg"}>
-        <Float y={0.002} duration={0.3}>
+        {/* <Float y={0.002} duration={0.3}> */}
           <Image src={rocket} alt="rocket" />
-        </Float>
+        {/* </Float> */}
       </Parallax>
     </div>
   );
