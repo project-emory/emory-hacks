@@ -61,7 +61,7 @@ const NavItem = ({ name, setCurrSection }) => {
 
   const ref = useRef(null);
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { amount: 0.3 });
+  const isInView = useInView(sectionRef, { amount: 0.5 });
 
   useEffect(() => {
     sectionRef.current = document.getElementById(name);

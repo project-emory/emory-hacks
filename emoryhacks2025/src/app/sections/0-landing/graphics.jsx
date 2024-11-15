@@ -31,54 +31,49 @@ const Graphics = () => {
       className="absolute top-0 left-0 w-full h-full bg-black"
     >
       {/* BG */}
-      <Float duration={8}>
+      {/* <Float duration={8}> */}
         <Image
           id="landing-bg"
           src={bg}
           alt="bg"
-          className="absolute z-0 scale-105"
+          className="absolute z-0 scale-105 w-screen"
         />
-      </Float>
+      {/* </Float> */}
 
       {/* GRAPHICS */}
       {distant.map((item, index) => (
         <Parallax containerRef={container} speed={"sm"} key={index}>
-          <Image key={index} src={item} alt={"img"} />
+          <Image key={index} src={item} alt={"img"} className="w-screen" />
         </Parallax>
       ))}
 
       {medium.map((item, index) => (
         <Parallax containerRef={container} speed={"md"} key={index}>
-          <Image key={index} src={item} alt={"img"} />
+          <Image key={index} src={item} alt={"img"} className="w-screen" />
         </Parallax>
       ))}
 
       <Parallax containerRef={container} speed={"md"}>
         <Float>
-          <Image src={dog} alt="dog" />
+          <Image src={dog} alt="dog" className="w-screen" />
         </Float>
       </Parallax>
 
       <Parallax containerRef={container} speed={"md"}>
         <Float>
-          <Image src={astronaut} alt="'astronaut'" />
+          <Image src={astronaut} alt="astronaut" className="w-screen" />
         </Float>
       </Parallax>
 
       {close.map((item, index) => (
         <Parallax containerRef={container} speed={"lg"} key={index}>
-          <Image
-            key={index}
-            src={item}
-            alt={"img"}
-            className="hidden sm:block"
-          />
+          <Image key={index} src={item} alt={"img"} className="w-screen" />
         </Parallax>
       ))}
 
       <Parallax containerRef={container} speed={"lg"}>
         {/* <Float y={0.002} duration={0.3}> */}
-          <Image src={rocket} alt="rocket" />
+        <Image src={rocket} alt="rocket" className="w-screen" />
         {/* </Float> */}
       </Parallax>
     </div>

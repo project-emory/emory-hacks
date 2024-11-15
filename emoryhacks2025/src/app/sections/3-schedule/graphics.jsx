@@ -5,13 +5,11 @@ import { useRef } from "react";
 import Parallax from "@/app/components/parallax";
 import {
   bg,
-  cloud_br,
-  cloud_tl,
-  planet_br_1,
-  planet_br_2,
-  planet_tr,
-  planet_bl,
-  ufo,
+  alien_l,
+  alien_r,
+  comet_c,
+  comet_l,
+  comet_r,
 } from "./graphicsData";
 import Float from "@/app/components/float";
 
@@ -19,9 +17,9 @@ const Graphics = () => {
   const container = useRef(null);
 
   // Parallax speeds
-  const distant = [cloud_tl, planet_br_2, planet_tr];
-  const medium = [cloud_br];
-  const close = [planet_br_1, planet_bl];
+  const distant = [comet_r];
+  const medium = [comet_l, comet_c, alien_r];
+  const close = [alien_l];
 
   return (
     <div
@@ -31,7 +29,7 @@ const Graphics = () => {
       {/* BG */}
       {/* <Float duration={6}> */}
         <Image
-          id="about-bg"
+          id="schedule-bg"
           src={bg}
           alt="bg"
           className="absolute z-0 scale-105 w-screen"
@@ -53,20 +51,9 @@ const Graphics = () => {
 
       {close.map((item, index) => (
         <Parallax containerRef={container} speed={"lg"} key={index}>
-          <Image
-            key={index}
-            src={item}
-            alt={"img"}
-            className="hidden sm:block w-screen"
-          />
+          <Image key={index} src={item} alt={"img"} className="w-screen" />
         </Parallax>
       ))}
-
-      <Parallax containerRef={container} speed={"xl"}>
-        <Float x={0.01} y={0.03}>
-          <Image src={ufo} alt="ufo" className="w-screen" />
-        </Float>
-      </Parallax>
     </div>
   );
 };
