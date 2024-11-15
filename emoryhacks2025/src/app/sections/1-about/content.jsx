@@ -39,7 +39,7 @@ const Content = () => {
             backgroundImage: "url(/noise.png)",
           }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className={`${raleway.className} p-5 md:p-10 bg-[#ffffff70] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px]`}
+          className={`${raleway.className} p-5 md:p-10 bg-[#ffffff88] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px]`}
         >
           <p className="leading-snug sm:leading-relaxed tracking-normal lg:tracking-wide xl:tracking-wider text-[10px] sm:text-[12px] md:text-[16px] lg:text-[20px] xl:text-[24px] font-medium text-black">
             Emory Hacks, presented by PROJECT Emory, is a hackathon hosted at

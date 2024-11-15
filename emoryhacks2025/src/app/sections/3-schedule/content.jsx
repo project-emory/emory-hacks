@@ -17,7 +17,7 @@ const Content = () => {
   return (
     <motion.div
       ref={container}
-      className="absolute top-[8vw] sm:top-[18vw] right-[25vw] w-[50vw] h-auto z-10"
+      className="absolute top-[8vw] sm:top-[18vw] right-[15vw] sm:right-[25vw] w-[70vw] sm:w-[50vw] h-auto z-10"
     >
       <ParallaxProvider containerRef={container} speed="sm">
         {/* TITLE */}
@@ -39,7 +39,7 @@ const Content = () => {
             backgroundImage: "url(/noise.png)",
           }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className={`${raleway.className} p-5 md:p-10 bg-[#ffffff70] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px]`}
+          className={`${raleway.className} p-5 md:p-10 bg-[#ffffff88] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px]`}
         >
           <p className="leading-snug sm:leading-relaxed tracking-normal lg:tracking-wide xl:tracking-wider text-[10px] sm:text-[12px] md:text-[16px] lg:text-[20px] xl:text-[24px] font-medium text-black">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure,
