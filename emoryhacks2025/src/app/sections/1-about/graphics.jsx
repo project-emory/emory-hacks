@@ -29,25 +29,25 @@ const Graphics = () => {
       className="absolute top-0 left-0 w-full h-full bg-black"
     >
       {/* BG */}
-      <Float duration={6}>
+      {/* <Float duration={6}> */}
         <Image
           id="about-bg"
           src={bg}
           alt="bg"
-          className="absolute z-0 scale-105"
+          className="absolute z-0 scale-105 w-screen"
         />
-      </Float>
+      {/* </Float> */}
 
       {/* GRAPHICS */}
       {distant.map((item, index) => (
         <Parallax containerRef={container} speed={"sm"} key={index}>
-          <Image key={index} src={item} alt={"img"} />
+          <Image key={index} src={item} alt={"img"} className="w-screen" />
         </Parallax>
       ))}
 
       {medium.map((item, index) => (
         <Parallax containerRef={container} speed={"md"} key={index}>
-          <Image key={index} src={item} alt={"img"} />
+          <Image key={index} src={item} alt={"img"} className="w-screen" />
         </Parallax>
       ))}
 
@@ -57,14 +57,14 @@ const Graphics = () => {
             key={index}
             src={item}
             alt={"img"}
-            className="hidden sm:block"
+            className="hidden sm:block w-screen"
           />
         </Parallax>
       ))}
 
       <Parallax containerRef={container} speed={"xl"}>
         <Float x={0.01} y={0.03}>
-          <Image src={ufo} alt="ufo" />
+          <Image src={ufo} alt="ufo" className="w-screen" />
         </Float>
       </Parallax>
     </div>

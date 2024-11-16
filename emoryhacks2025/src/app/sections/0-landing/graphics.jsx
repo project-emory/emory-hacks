@@ -16,6 +16,7 @@ import {
   rocket,
 } from "./graphicsData";
 import Float from "@/app/components/float";
+import { motion } from "framer-motion";
 
 const Graphics = () => {
   const container = useRef(null);
@@ -31,55 +32,115 @@ const Graphics = () => {
       className="absolute top-0 left-0 w-full h-full bg-black"
     >
       {/* BG */}
-      <Float duration={8}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <Image
           id="landing-bg"
           src={bg}
           alt="bg"
-          className="absolute z-0 scale-105"
+          className="absolute z-0 scale-105 w-screen"
         />
-      </Float>
+      </motion.div>
 
       {/* GRAPHICS */}
       {distant.map((item, index) => (
         <Parallax containerRef={container} speed={"sm"} key={index}>
-          <Image key={index} src={item} alt={"img"} />
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+          >
+            <Image key={index} src={item} alt={"img"} className="w-screen" />
+          </motion.div>
         </Parallax>
       ))}
 
       {medium.map((item, index) => (
         <Parallax containerRef={container} speed={"md"} key={index}>
-          <Image key={index} src={item} alt={"img"} />
+          <motion.div
+            initial={{ opacity: 0, y: 120 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
+          >
+            <Image key={index} src={item} alt={"img"} className="w-screen" />
+          </motion.div>
         </Parallax>
       ))}
 
+      {/* DOG */}
       <Parallax containerRef={container} speed={"md"}>
         <Float>
-          <Image src={dog} alt="dog" />
+          <motion.div
+            initial={{ scale: 0, opacity: 0, x: -100, y: -50 }}
+            animate={{ scale: 1, opacity: 1, x: 0, y: 0 }}
+            transition={{
+              type: "spring",
+              bounce: 1,
+              stiffness: 50,
+              duration: 3,
+              delay: 3.1,
+              ease: "easeOut",
+            }}
+            className="origin-right"
+          >
+            <Image src={dog} alt="dog" className="w-screen" />
+          </motion.div>
         </Float>
       </Parallax>
-
+      
+      {/* ASTRONAUT */}
       <Parallax containerRef={container} speed={"md"}>
         <Float>
-          <Image src={astronaut} alt="'astronaut'" />
+          <motion.div
+            initial={{ scale: 0.3, opacity: 0, y: 100 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              bounce: 1,
+              stiffness: 50,
+              duration: 3,
+              delay: 3,
+              ease: "easeOut",
+            }}
+            className="origin-top-right"
+          >
+            <Image src={astronaut} alt="astronaut" className="w-screen" />
+          </motion.div>
         </Float>
       </Parallax>
 
       {close.map((item, index) => (
         <Parallax containerRef={container} speed={"lg"} key={index}>
-          <Image
-            key={index}
-            src={item}
-            alt={"img"}
-            className="hidden sm:block"
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 150 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+          >
+            <Image key={index} src={item} alt={"img"} className="w-screen" />
+          </motion.div>
         </Parallax>
       ))}
 
+      {/* ROCKET */}
       <Parallax containerRef={container} speed={"lg"}>
-        {/* <Float y={0.002} duration={0.3}> */}
-          <Image src={rocket} alt="rocket" />
-        {/* </Float> */}
+        <motion.div
+          initial={{ x: 1000, y: -1000, rotateZ: 30 }}
+          animate={{ x: 70, y: 0, rotateZ: 0 }}
+          transition={{
+            type: "spring",
+            bounce: 0.3,
+            stiffness: 50,
+            duration: 1,
+            delay: 2,
+            ease: "easeOut",
+          }}
+          className="origin-center"
+        >
+          <Image src={rocket} alt="rocket" className="w-screen" />
+        </motion.div>
       </Parallax>
     </div>
   );

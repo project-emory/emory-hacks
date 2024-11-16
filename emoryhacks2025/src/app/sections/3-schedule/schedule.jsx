@@ -1,9 +1,13 @@
 "use client";
 
+import Content from "./content";
+import Graphics from "./graphics";
+
 const Schedule = () => {
   return (
-    <section id="schedule" className="h-screen text-white">
-      Schedule
+    <section id="schedule" className="relative h-[86vw]">
+      <Graphics />
+      <Content />
     </section>
   );
 };
