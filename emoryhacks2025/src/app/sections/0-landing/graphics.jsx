@@ -70,6 +70,7 @@ const Graphics = () => {
         </Parallax>
       ))}
 
+      {/* DOG */}
       <Parallax containerRef={container} speed={"md"}>
         <Float>
           <motion.div
@@ -89,7 +90,8 @@ const Graphics = () => {
           </motion.div>
         </Float>
       </Parallax>
-
+      
+      {/* ASTRONAUT */}
       <Parallax containerRef={container} speed={"md"}>
         <Float>
           <motion.div
@@ -122,10 +124,11 @@ const Graphics = () => {
         </Parallax>
       ))}
 
+      {/* ROCKET */}
       <Parallax containerRef={container} speed={"lg"}>
         <motion.div
           initial={{ x: 1000, y: -1000, rotateZ: 30 }}
-          animate={{ x: 50, y: 0, rotateZ: 0 }}
+          animate={{ x: 70, y: 0, rotateZ: 0 }}
           transition={{
             type: "spring",
             bounce: 0.3,

@@ -28,7 +28,12 @@ const Nav = () => {
   }, [currSection]);
 
   return (
-    <nav className="fixed w-screen flex justify-between gap-10 py-6 top-0 px-6 sm:px-10 z-50 bg-gradient-to-b from-[#211254dd] to-[#21125400]">
+    <motion.nav
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 1, ease: "backInOut" }}
+      className="fixed w-screen flex justify-between gap-10 py-6 top-0 px-6 sm:px-10 z-50 bg-gradient-to-b from-[#211254dd] to-[#21125400]"
+    >
       <div className="hidden md:block size-16 bg-neutral-200"></div>
 
       {/* INDICATOR BAR */}
@@ -45,7 +50,7 @@ const Nav = () => {
         ))}
         <ApplyButton />
       </ul>
-    </nav>
+    </motion.nav>
   );
 };
 
