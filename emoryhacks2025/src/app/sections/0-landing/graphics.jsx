@@ -61,9 +61,9 @@ const Graphics = () => {
       {medium.map((item, index) => (
         <Parallax containerRef={container} speed={"md"} key={index}>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 120 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2, delay: 0.6, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           >
             <Image key={index} src={item} alt={"img"} className="w-screen" />
           </motion.div>
@@ -115,9 +115,9 @@ const Graphics = () => {
       {close.map((item, index) => (
         <Parallax containerRef={container} speed={"lg"} key={index}>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 150 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2.5, delay: 1, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 1, ease: "easeOut" }}
           >
             <Image key={index} src={item} alt={"img"} className="w-screen" />
           </motion.div>
