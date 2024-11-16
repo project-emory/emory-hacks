@@ -56,7 +56,7 @@ const Parallax = ({ children, containerRef, speed }) => {
         zIndex:
           speed === "xl" ? 30 : speed === "lg" ? 20 : speed === "md" ? 10 : 0,
       }}
-      className="absolute"
+      className="absolute w-full h-full"
     >
       {children}
     </motion.div>

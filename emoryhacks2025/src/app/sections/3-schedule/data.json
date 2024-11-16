@@ -1,0 +1,33 @@
+[
+  [
+    { "start": "2:00 PM", "name": "Check-In & Setup" },
+    {
+      "start": "4:00 PM",
+      "name": "Opening Ceremony & Hackathon Rules Briefing"
+    },
+    { "start": "5:00 PM", "name": "Team Forming/Networking" },
+    { "start": "5:30 PM", "name": "Speakers/Talks" },
+    { "start": "6:30 PM", "name": "Dinner & Sponsor Fair" },
+    { "start": "7:30 PM", "name": "Hacking Begins (Overnight)" }
+  ],
+  [
+    { "start": "8:00 AM", "name": "Breakfast" },
+    { "start": "9:00 AM", "name": "Hacking Session" },
+    { "start": "12:00 PM", "name": "Lunch" },
+    { "start": "1:00 PM", "name": "Workshops" },
+    { "start": "2:00 PM", "name": "Hacking Session & Panelists" },
+    { "start": "5:00 PM", "name": "Dinner" },
+    { "start": "6:00 PM", "name": "Hacking Session & Activities" },
+    { "start": "10:00 PM", "name": "Hacking Continues" },
+    { "start": "12:00 AM", "name": "Late Night Snacks" }
+  ],
+  [
+    { "start": "8:00 AM", "name": "Breakfast" },
+    { "start": "9:00 AM", "name": "Final Hacking Sprint" },
+    { "start": "11:00 AM", "name": "Judging Round 1" },
+    { "start": "1:00 PM", "name": "Lunch" },
+    { "start": "2:00 PM", "name": "Final Presentations & Judging Round 2" },
+    { "start": "4:00 PM", "name": "Judge Decisions/Participant Activities" },
+    { "start": "5:00 PM", "name": "Closing Ceremony & Awards" }
+  ]
+]

@@ -17,8 +17,8 @@ const Graphics = () => {
   const container = useRef(null);
 
   // Parallax speeds
-  const distant = [comet_r];
-  const medium = [comet_l, comet_c, alien_r];
+  const distant = [comet_r, comet_l, comet_c];
+  const medium = [alien_r];
   const close = [alien_l];
 
   return (
@@ -28,12 +28,12 @@ const Graphics = () => {
     >
       {/* BG */}
       {/* <Float duration={6}> */}
-        <Image
-          id="schedule-bg"
-          src={bg}
-          alt="bg"
-          className="absolute z-0 scale-105 w-screen"
-        />
+      <Image
+        id="schedule-bg"
+        src={bg}
+        alt="bg"
+        className="absolute z-0 scale-105 w-screen"
+      />
       {/* </Float> */}
 
       {/* GRAPHICS */}
