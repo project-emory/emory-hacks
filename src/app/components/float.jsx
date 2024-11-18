@@ -3,13 +3,7 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 
-const Float = ({
-  children,
-  rotate = true,
-  x = 0,
-  y = 0,
-  duration = 1.5,
-}) => {
+const Float = ({ children, rotate = true, x = 0, y = 0, duration = 1.5 }) => {
   const [windowWidth, setWindowWidth] = useState(0);
   const ref = useRef(null);
 
@@ -46,7 +40,7 @@ const Float = ({
         yoyo: true,
       }
     );
-  }, [windowWidth]);
+  }, [windowWidth, duration, x, y, rotate]);
 
   return (
     <div ref={ref} className="origin-center">
