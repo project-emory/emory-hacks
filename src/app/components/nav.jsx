@@ -6,6 +6,8 @@ import { gsap } from "gsap";
 
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useEffect, useRef, useState } from "react";
+import logo from "../../../public/logo.png";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -34,7 +36,10 @@ const Nav = () => {
       transition={{ duration: 1, delay: 1, ease: "backInOut" }}
       className="fixed w-screen flex justify-between gap-10 py-6 top-0 px-6 sm:px-10 z-50 bg-gradient-to-b from-[#211254dd] to-[#21125400]"
     >
-      <div className="hidden md:block size-16 bg-neutral-200"></div>
+      {/* LOGO */}
+      <div className="hidden md:block size-16">
+        <Image src={logo} alt="logo" />
+      </div>
 
       {/* INDICATOR BAR */}
       <motion.div
