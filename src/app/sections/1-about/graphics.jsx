@@ -21,7 +21,7 @@ const Graphics = () => {
   // Parallax speeds
   const distant = [cloud_tl, planet_br_2, planet_tr];
   const medium = [cloud_br];
-  const close = [planet_br_1, planet_bl];
+  const close = [/*planet_br_1*/, planet_bl];
 
   return (
     <div
