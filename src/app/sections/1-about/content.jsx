@@ -4,6 +4,11 @@ import ParallaxProvider from "@/app/components/parallax";
 import { useRef } from "react";
 import { Raleway } from "next/font/google";
 import { useInView, motion } from "framer-motion";
+import Image from "next/image";
+import cnr from "../../../../public/images/sponsors/cnr.png";
+import emorynlp from "../../../../public/images/sponsors/emorynlp.png";
+import hyundai from "../../../../public/images/sponsors/hyundai.png";
+import jpmorgan from "../../../../public/images/sponsors/jpmorgan.png";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -15,7 +20,7 @@ const Content = () => {
   const isInView = useInView(container, { once: true });
 
   return (
-    <motion.div
+    <div
       ref={container}
       className="absolute top-[10vw] sm:top-[20vw] right-[15vw] sm:right-[6vw] w-[70vw] sm:w-[53vw] h-auto z-10"
     >
@@ -53,8 +58,29 @@ const Content = () => {
             collaboration.
           </p>
         </motion.div>
+
+        {/* SPONSORS */}
+        <div className="relative left-20">
+          <motion.h1
+            animate={{
+              opacity: isInView ? 1 : 0,
+              y: isInView ? 0 : 20,
+            }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="mt-4 mb-2 text-[16px] sm:text-[24px] md:text-[3vw] font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-title"
+          >
+            SPONSORED BY
+          </motion.h1>
+
+          <div className="flex flex-wrap gap-[50px]">
+            <Image src={jpmorgan} height={100} />
+            <Image src={hyundai} height={100} />
+            <Image src={cnr} height={100} />
+            <Image src={emorynlp} height={100} />
+          </div>
+        </div>
       </ParallaxProvider>
-    </motion.div>
+    </div>
   );
 };
 
