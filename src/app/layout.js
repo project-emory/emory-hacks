@@ -1,8 +1,6 @@
-import { Suspense } from "react";
 import SmoothScrolling from "./components/smoothScrolling";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
-import Loading from "./loading";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -18,11 +16,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.className} antialiased w-screen overflow-x-hidden bg-[#24155C]`}
+        className={`${spaceGrotesk.className} antialiased w-screen overflow-x-hidden bg-bg`}
       >
-        <Suspense fallback={<Loading />}>
-          <SmoothScrolling>{children}</SmoothScrolling>
-        </Suspense>
+        <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>
   );

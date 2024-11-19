@@ -41,7 +41,7 @@ const Content = () => {
         <motion.div
           animate={{
             opacity: isInView ? 1 : 0,
-            backgroundImage: "url(/noise.png)",
+            backgroundImage: "url(emoryhacks2025/noise.png)",
           }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className={`${raleway.className} p-5 md:p-10 bg-[#ffffff88] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px]`}
@@ -73,10 +73,10 @@ const Content = () => {
           </motion.h1>
 
           <div className="flex flex-wrap gap-[50px]">
-            <Image src={jpmorgan} height={100} />
-            <Image src={hyundai} height={100} />
-            <Image src={cnr} height={100} />
-            <Image src={emorynlp} height={100} />
+            <Image src={jpmorgan} height={100} alt="sponsor" />
+            <Image src={hyundai} height={100} alt="sponsor" />
+            <Image src={cnr} height={100} alt="sponsor" />
+            <Image src={emorynlp} height={100} alt="sponsor" />
           </div>
         </div>
       </ParallaxProvider>

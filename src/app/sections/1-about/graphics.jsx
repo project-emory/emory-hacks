@@ -26,7 +26,7 @@ const Graphics = () => {
   return (
     <div
       ref={container}
-      className="absolute top-0 left-0 w-full h-full bg-black"
+      className="absolute top-0 left-0 w-full h-full"
     >
       {/* BG */}
       <Image

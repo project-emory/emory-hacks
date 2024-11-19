@@ -8,6 +8,7 @@ const Parallax = ({ children, containerRef, speed }) => {
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
+    layoutEffect: false,
   });
 
   const [windowWidth, setWindowWidth] = useState(0);
@@ -50,26 +51,10 @@ const Parallax = ({ children, containerRef, speed }) => {
   };
 
   const scales = {
-    sm: useTransform(
-      scrollYProgress,
-      [0.5, 1],
-      [1, 1.05]
-    ),
-    md: useTransform(
-      scrollYProgress,
-      [0.5, 1],
-      [1, 1.08]
-    ),
-    lg: useTransform(
-      scrollYProgress,
-      [0.5, 1],
-      [1, 1.12]
-    ),
-    xl: useTransform(
-      scrollYProgress,
-      [0.5, 1],
-      [1, 1.15]
-    ),
+    sm: useTransform(scrollYProgress, [0.5, 1], [1, 1.05]),
+    md: useTransform(scrollYProgress, [0.5, 1], [1, 1.08]),
+    lg: useTransform(scrollYProgress, [0.5, 1], [1, 1.12]),
+    xl: useTransform(scrollYProgress, [0.5, 1], [1, 1.15]),
   };
 
   return (
