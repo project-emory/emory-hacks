@@ -12,7 +12,7 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollToPlugin);
 
 const Nav = () => {
-  const sections = ["about", "tracks", "schedule", "faq", "sponsors"];
+  const sections = ["about", "tracks", "schedule", "speakers", "faq", "sponsors"];
   const [currSection, setCurrSection] = useState(null);
   const [indicatorStyle, setIndicatorStyle] = useState({});
 

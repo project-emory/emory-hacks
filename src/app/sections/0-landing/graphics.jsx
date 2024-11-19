@@ -41,7 +41,7 @@ const Graphics = () => {
           id="landing-bg"
           src={bg}
           alt="bg"
-          className="absolute z-0 scale-105 w-screen"
+          className="absolute z-0 w-screen"
         />
       </motion.div>
 
