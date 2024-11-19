@@ -81,7 +81,7 @@ export const TransitionGraphics = () => {
       <motion.div
         animate={{
           opacity: isInView ? 1 : 0,
-          x: isInView ? 0 : -50,
+          x: isInView ? 0 : -100,
         }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
@@ -93,7 +93,7 @@ export const TransitionGraphics = () => {
       <motion.div
         animate={{
           opacity: isInView ? 1 : 0,
-          x: isInView ? 0 : 50,
+          x: isInView ? 0 : 100,
         }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
