@@ -39,7 +39,7 @@ const Content = () => {
         <motion.div
           animate={{
             opacity: isInView ? 1 : 0,
-            backgroundImage: "url(/noise.png)",
+            backgroundImage: "url(emoryhacks2025/noise.png)",
           }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className={`${raleway.className} p-5 md:p-10 bg-[#ffffff88] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px] flex flex-col gap-2 md:gap-5`}

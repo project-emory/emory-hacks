@@ -27,10 +27,7 @@ const Graphics = () => {
   const close = [planet_bl];
 
   return (
-    <div
-      ref={container}
-      className="absolute top-0 left-0 w-full h-full bg-black"
-    >
+    <div ref={container} className="absolute top-0 left-0 w-full h-full">
       {/* BG */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -43,6 +40,7 @@ const Graphics = () => {
           alt="bg"
           className="absolute z-0 w-screen"
         />
+        <img src={bg} alt="bg" className="absolute z-0 w-screen" />
       </motion.div>
 
       {/* GRAPHICS */}
@@ -53,7 +51,12 @@ const Graphics = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
           >
-            <Image key={index} src={item} alt={"img"} className="w-screen" />
+            <Image
+              key={index}
+              src={item}
+              alt={"img"}
+              className="w-screen"
+            />
           </motion.div>
         </Parallax>
       ))}
@@ -65,7 +68,11 @@ const Graphics = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}
         >
-          <Image src={cloud_r} alt={"img"} className="w-screen" />
+          <Image
+            src={cloud_r}
+            alt={"img"}
+            className="w-screen"
+          />
         </motion.div>
       </Parallax>
 
@@ -76,7 +83,11 @@ const Graphics = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}
         >
-          <Image src={cloud_bl} alt={"img"} className="w-screen" />
+          <Image
+            src={cloud_bl}
+            alt={"img"}
+            className="w-screen"
+          />
         </motion.div>
       </Parallax>
 
@@ -87,7 +98,12 @@ const Graphics = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           >
-            <Image key={index} src={item} alt={"img"} className="w-screen" />
+            <Image
+              key={index}
+              src={item}
+              alt={"img"}
+              className="w-screen"
+            />
           </motion.div>
         </Parallax>
       ))}
@@ -107,7 +123,11 @@ const Graphics = () => {
           }}
           className="origin-center"
         >
-          <Image src={asteroid} alt={"img"} className="w-screen" />
+          <Image
+            src={asteroid}
+            alt={"img"}
+            className="w-screen"
+          />
         </motion.div>
       </Parallax>
 
@@ -127,7 +147,11 @@ const Graphics = () => {
             }}
             className="origin-right"
           >
-            <Image src={dog} alt="dog" className="w-screen" />
+            <Image
+              src={dog}
+              alt="dog"
+              className="w-screen"
+            />
           </motion.div>
         </Float>
       </Parallax>
@@ -148,7 +172,11 @@ const Graphics = () => {
             }}
             className="origin-top-right"
           >
-            <Image src={astronaut} alt="astronaut" className="w-screen" />
+            <Image
+              src={astronaut}
+              alt="astronaut"
+              className="w-screen"
+            />
           </motion.div>
         </Float>
       </Parallax>
@@ -160,7 +188,12 @@ const Graphics = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1, ease: "easeOut" }}
           >
-            <Image key={index} src={item} alt={"img"} className="w-screen" />
+            <Image
+              key={index}
+              src={item}
+              alt={"img"}
+              className="w-screen"
+            />
           </motion.div>
         </Parallax>
       ))}
@@ -180,7 +213,11 @@ const Graphics = () => {
           }}
           className="origin-center"
         >
-          <Image src={rocket} alt="rocket" className="w-screen" />
+          <Image
+            src={rocket}
+            alt="rocket"
+            className="w-screen"
+          />
         </motion.div>
       </Parallax>
     </div>
