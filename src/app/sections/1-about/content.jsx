@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Raleway } from "next/font/google";
 import { useInView, motion } from "framer-motion";
 import Image from "next/image";
+import noise from "../../../../public/noise.png";
 import cnr from "../../../../public/images/sponsors/cnr.png";
 import emorynlp from "../../../../public/images/sponsors/emorynlp.png";
 import hyundai from "../../../../public/images/sponsors/hyundai.png";
@@ -41,7 +42,7 @@ const Content = () => {
         <motion.div
           animate={{
             opacity: isInView ? 1 : 0,
-            backgroundImage: "url(emoryhacks2025/noise.png)",
+            backgroundImage: `url(${noise.src})`,
           }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className={`${raleway.className} p-5 md:p-10 bg-[#ffffff88] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px]`}
