@@ -49,7 +49,7 @@ const Nav = () => {
         className="hidden md:block bg-white h-[2px] sm:h-[3px] w-10 fixed top-[45px] md:top-[70px]"
       /> */}
 
-      <ul className="flex w-full max-w-[700px] items-center justify-between">
+      <ul className="flex w-full max-w-[800px] items-center justify-between">
         {sections.map((name, i) => (
           <NavItem name={name} setCurrSection={setCurrSection} key={i} />
         ))}
@@ -75,6 +75,7 @@ const NavItem = ({ name, setCurrSection }) => {
 
   useEffect(() => {
     sectionRef.current = document.getElementById(name);
+    console.log(sectionRef.current);
   }, [name]);
 
   useEffect(() => {
