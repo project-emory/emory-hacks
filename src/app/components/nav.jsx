@@ -14,20 +14,20 @@ gsap.registerPlugin(ScrollToPlugin);
 const Nav = () => {
   const sections = ["about", "tracks", "schedule", "speakers", "faq", "sponsors"];
   const [currSection, setCurrSection] = useState(null);
-  // const [indicatorStyle, setIndicatorStyle] = useState({});
+  const [indicatorStyle, setIndicatorStyle] = useState({});
 
   // Update the indicator style as currSection changes
-  // useEffect(() => {
-  //   if (currSection) {
-  //     const rect = currSection.current.getBoundingClientRect();
-  //     setIndicatorStyle((prev) => ({
-  //       ...prev,
-  //       opacity: 1,
-  //       left: rect.left,
-  //       width: rect.width,
-  //     }));
-  //   }
-  // }, [currSection]);
+  useEffect(() => {
+    if (currSection) {
+      const rect = currSection.current.getBoundingClientRect();
+      setIndicatorStyle((prev) => ({
+        ...prev,
+        opacity: 1,
+        left: rect.left,
+        width: rect.width,
+      }));
+    }
+  }, [currSection]);
 
   return (
     <motion.nav
@@ -42,12 +42,12 @@ const Nav = () => {
       </div>
 
       {/* INDICATOR BAR */}
-      {/* <motion.div
+      <motion.div
         initial={{ opacity: 0 }}
         animate={indicatorStyle}
         transition={{ opacity: { delay: 1 } }}
         className="hidden md:block bg-white h-[2px] sm:h-[3px] w-10 fixed top-[45px] md:top-[70px]"
-      /> */}
+      />
 
       <ul className="flex w-full max-w-[800px] items-center justify-between">
         {sections.map((name, i) => (
@@ -78,11 +78,10 @@ const NavItem = ({ name, setCurrSection }) => {
   }, [name]);
 
   useEffect(() => {
-    console.log(name, isInView);
     if (isInView) {
       setCurrSection(ref);
     }
-  }, [isInView, name, ref]);
+  }, [isInView, ref]);
 
   return (
     <motion.li
