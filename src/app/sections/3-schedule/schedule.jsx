@@ -1,13 +1,21 @@
 "use client";
 
 import Content from "./content";
-import Graphics from "./graphics";
+import Graphics, { TransitionGraphics } from "./graphics";
 
 const Schedule = () => {
   return (
-    <section id="schedule" className="relative h-[86vw]">
-      <Graphics />
-      <Content />
+    <section id="schedule">
+      {/* SCHEDULE */}
+      <div className="relative h-[85vw]">
+        <Graphics />
+        <Content />
+      </div>
+
+      {/* TRANSITION */}
+      <div className="relative h-[68vw]">
+        <TransitionGraphics />
+      </div>
     </section>
   );
 };

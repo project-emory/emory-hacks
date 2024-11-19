@@ -49,10 +49,34 @@ const Parallax = ({ children, containerRef, speed }) => {
     ),
   };
 
+  const scales = {
+    sm: useTransform(
+      scrollYProgress,
+      [0.5, 1],
+      [1, 1.05]
+    ),
+    md: useTransform(
+      scrollYProgress,
+      [0.5, 1],
+      [1, 1.08]
+    ),
+    lg: useTransform(
+      scrollYProgress,
+      [0.5, 1],
+      [1, 1.12]
+    ),
+    xl: useTransform(
+      scrollYProgress,
+      [0.5, 1],
+      [1, 1.15]
+    ),
+  };
+
   return (
     <motion.div
       style={{
         y: speeds[speed],
+        scale: scales[speed],
         zIndex:
           speed === "xl" ? 30 : speed === "lg" ? 20 : speed === "md" ? 10 : 0,
       }}

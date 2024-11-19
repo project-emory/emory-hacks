@@ -12,7 +12,7 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollToPlugin);
 
 const Nav = () => {
-  const sections = ["about", "tracks", "schedule", "faq", "sponsors"];
+  const sections = ["about", "tracks", "schedule", "speakers", "faq", "sponsors"];
   const [currSection, setCurrSection] = useState(null);
   const [indicatorStyle, setIndicatorStyle] = useState({});
 
@@ -42,12 +42,12 @@ const Nav = () => {
       </div>
 
       {/* INDICATOR BAR */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={indicatorStyle}
         transition={{ opacity: { delay: 1 } }}
         className="hidden md:block bg-white h-[2px] sm:h-[3px] w-10 fixed top-[45px] md:top-[70px]"
-      />
+      /> */}
 
       <ul className="flex w-full max-w-[700px] items-center justify-between">
         {sections.map((name, i) => (
@@ -71,7 +71,7 @@ const NavItem = ({ name, setCurrSection }) => {
 
   const ref = useRef(null);
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { amount: 0.4 });
+  const isInView = useInView(sectionRef, { amount: "some" });
 
   useEffect(() => {
     sectionRef.current = document.getElementById(name);
