@@ -32,7 +32,7 @@ const Graphics = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 2 }}
       >
         <Image
           id="landing-bg"

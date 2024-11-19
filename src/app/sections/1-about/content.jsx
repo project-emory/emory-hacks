@@ -73,11 +73,11 @@ const Content = () => {
             SPONSORED BY
           </motion.h1>
 
-          <div className="flex flex-wrap gap-[50px]">
-            <Image src={jpmorgan} height={100} alt="sponsor" />
-            <Image src={hyundai} height={100} alt="sponsor" />
-            <Image src={cnr} height={100} alt="sponsor" />
-            <Image src={emorynlp} height={100} alt="sponsor" />
+          <div className="flex flex-wrap gap-x-[50px] gap-y-[20px]">
+            <Image src={jpmorgan} alt="sponsor" className="w-[10vw]" />
+            <Image src={hyundai} alt="sponsor" className="w-[10vw]" />
+            <Image src={cnr} alt="sponsor" className="w-[10vw]" />
+            <Image src={emorynlp} alt="sponsor" className="w-[10vw]" />
           </div>
         </div>
       </ParallaxProvider>

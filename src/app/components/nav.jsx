@@ -14,20 +14,20 @@ gsap.registerPlugin(ScrollToPlugin);
 const Nav = () => {
   const sections = ["about", "tracks", "schedule", "speakers", "faq", "sponsors"];
   const [currSection, setCurrSection] = useState(null);
-  const [indicatorStyle, setIndicatorStyle] = useState({});
+  // const [indicatorStyle, setIndicatorStyle] = useState({});
 
   // Update the indicator style as currSection changes
-  useEffect(() => {
-    if (currSection) {
-      const rect = currSection.current.getBoundingClientRect();
-      setIndicatorStyle((prev) => ({
-        ...prev,
-        opacity: 1,
-        left: rect.left,
-        width: rect.width,
-      }));
-    }
-  }, [currSection]);
+  // useEffect(() => {
+  //   if (currSection) {
+  //     const rect = currSection.current.getBoundingClientRect();
+  //     setIndicatorStyle((prev) => ({
+  //       ...prev,
+  //       opacity: 1,
+  //       left: rect.left,
+  //       width: rect.width,
+  //     }));
+  //   }
+  // }, [currSection]);
 
   return (
     <motion.nav
