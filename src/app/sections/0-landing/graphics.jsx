@@ -40,7 +40,6 @@ const Graphics = () => {
           alt="bg"
           className="absolute z-0 w-screen"
         />
-        <img src={bg} alt="bg" className="absolute z-0 w-screen" />
       </motion.div>
 
       {/* GRAPHICS */}
