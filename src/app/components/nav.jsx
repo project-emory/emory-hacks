@@ -75,14 +75,14 @@ const NavItem = ({ name, setCurrSection }) => {
 
   useEffect(() => {
     sectionRef.current = document.getElementById(name);
-    console.log(sectionRef.current);
   }, [name]);
 
   useEffect(() => {
+    console.log(name, isInView);
     if (isInView) {
       setCurrSection(ref);
     }
-  }, [isInView, setCurrSection, name]);
+  }, [isInView, name, ref]);
 
   return (
     <motion.li
