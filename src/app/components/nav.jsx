@@ -45,7 +45,7 @@ const Nav = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={indicatorStyle}
-        transition={{ opacity: { delay: 1 } }}
+        transition={{ opacity: { delay: 1 }, type: "spring", stiffness: 50 }}
         className="hidden md:block bg-white h-[2px] sm:h-[3px] w-10 fixed top-[45px] md:top-[70px]"
       />
 
@@ -92,7 +92,7 @@ const NavItem = ({ name, setCurrSection }) => {
         color: "#ffffff",
       }}
       onClick={() => handleClick()}
-      className="text-[12px] sm:text-[20px] text-white font-bold cursor-pointer leading-tight"
+      className="text-[12px] sm:text-[20px] text-white font-semibold cursor-pointer leading-tight"
     >
       {name.toUpperCase()}
     </motion.li>
