@@ -1,36 +1,36 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { easeOut, motion } from "framer-motion";
 
 const HeroText = () => {
   return (
     <motion.div className="absolute origin-top-left left-6 sm:left-10 md:left-[8vw] top-[120px] sm:top-[14vh] inline-block z-40">
       {/* TITLE */}
-      <h1 className="text-[40px] sm:text-[10vw] font-bold leading-none bg-gradient-to-tl from-white to-brand-tertiary inline-block text-transparent bg-clip-text drop-shadow-title">
-        <motion.span
+      <h1 className="text-[40px] sm:text-[10vw] font-bold leading-none drop-shadow-title">
+        <motion.div
           initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2, ease: "easeOut" }}
-          className="block"
+          animate={{ opacity: 1.01, y: 0 }}
+          transition={{ duration: 1, delay: 2, ease: easeOut }}
+          className="block text-gradient"
         >
           EMORY
-        </motion.span>
-        <motion.span
+        </motion.div>
+        <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.3, ease: "easeOut" }}
-          className="block"
+          transition={{ duration: 1, delay: 2.3, ease: easeOut }}
+          className="block text-gradient"
         >
           HACKS
-        </motion.span>
-        <motion.span
+        </motion.div>
+        <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.6, ease: "easeOut" }}
-          className="block"
+          transition={{ duration: 1, delay: 2.6, ease: easeOut }}
+          className="block text-gradient"
         >
           2025
-        </motion.span>
+        </motion.div>
       </h1>
 
       {/* DATE */}
