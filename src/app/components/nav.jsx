@@ -81,7 +81,7 @@ const NavItem = ({ name, setCurrSection }) => {
     if (isInView) {
       setCurrSection(ref);
     }
-  }, [isInView, ref]);
+  }, [isInView, ref, setCurrSection]);
 
   return (
     <motion.li
