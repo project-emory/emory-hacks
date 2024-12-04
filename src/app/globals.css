@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .text-title {
-  @apply text-[22px] sm:text-[36px] md:text-[6vw]
+  @apply text-[22px] sm:text-[36px] md:text-[5vw]
 }
 
 .text-body {
