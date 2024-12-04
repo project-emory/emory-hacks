@@ -85,7 +85,7 @@ const Nav = () => {
         <div className="absolute top-6 left-6 size-10">
           <Image src={logo} alt="logo" />
         </div>
-        
+
         <AnimatePresence mode="wait">
           {/* MENU ICON */}
           {isClicked ? (
@@ -135,6 +135,18 @@ const Nav = () => {
                   <NavItem name={name} setCurrSection={setCurrSection} />
                 </motion.div>
               ))}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{
+                  delay: sections.length * 0.05,
+                  duration: 0.5,
+                  ease: "easeOut",
+                }}
+              >
+                <ApplyButton />
+              </motion.div>
             </ul>
           )}
         </AnimatePresence>
