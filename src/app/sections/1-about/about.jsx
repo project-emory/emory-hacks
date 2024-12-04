@@ -5,7 +5,7 @@ import Graphics from "./graphics";
 
 const About = () => {
   return (
-    <div className="relative h-[100vw]">
+    <div className="relative h-[100vw] overflow-hidden">
       <Graphics />
       <Content />
     </div>

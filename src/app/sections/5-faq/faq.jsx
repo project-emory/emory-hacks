@@ -1,9 +1,24 @@
 "use client";
 
+import Content from "./content";
+import Graphics, { TransitionLeft, TransitionRight } from "./graphics";
+
 const FAQ = () => {
   return (
-    <section id="faq" className="h-screen text-white">
-      FAQ
+    <section id="faq">
+      {/* FAQ */}
+      <div className="relative h-fit content-center overflow-hidden">
+        <Graphics />
+        <Content />
+      </div>
+      {/* TRANSITION LEFT */}
+      <div className="relative h-[60vw] overflow-hidden">
+        <TransitionLeft />
+      </div>
+      {/* TRANSITION RIGHT */}
+      <div className="relative h-[60vw] overflow-hidden">
+        <TransitionRight />
+      </div>
     </section>
   );
 };

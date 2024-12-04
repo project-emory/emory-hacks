@@ -43,7 +43,7 @@ const Content = () => {
             backgroundImage: `url(${noise.src})`,
           }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className={`${raleway.className} p-5 md:p-10 bg-[#ffffff88] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px] flex flex-col gap-2 md:gap-5`}
+          className={`${raleway.className} p-5 md:p-10 bg-[#ffffffaa] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px] flex flex-col gap-2 md:gap-5`}
         >
           {/* DAY */}
           <h3 className="font-bold text-body">
