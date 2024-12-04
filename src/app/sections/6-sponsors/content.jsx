@@ -21,7 +21,7 @@ const Content = () => {
       link: "https://www.jpmorganchase.com/",
     },
     { src: hyundai, name: "Hyundai", link: "https://www.hyundaiusa.com/us/en" },
-    { src: cnr, name: "CNR", link: "" },
+    { src: cnr, name: "CNR", link: "https://cnrit.com/" },
     { src: emorynlp, name: "EmoryNLP", link: "https://www.emorynlp.org/" },
   ];
 
@@ -63,7 +63,7 @@ const SponsorCard = ({ src, link }) => {
         backgroundImage: `url(${noise.src})`,
       }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="w-[17vw] h-[13vw] flex items-center justify-center p-5 md:p-10 bg-[#ffffff88] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px] cursor-pointer"
+      className="w-[17vw] h-[13vw] flex items-center justify-center p-5 md:p-10 bg-[#ffffffaa] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px] cursor-pointer"
     >
       <Link href={link} target="_blank" rel="noopener noreferrer">
         <Image src={src} alt="sponsor" width={160} />

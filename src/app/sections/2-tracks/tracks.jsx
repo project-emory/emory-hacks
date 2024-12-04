@@ -4,7 +4,7 @@ import Graphics from "./graphics";
 
 const Tracks = () => {
   return (
-    <section id="tracks" className="relative h-[115vw]">
+    <section id="tracks" className="relative h-[115vw] overflow-hidden">
       <Graphics />
     </section>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import About from "./sections/1-about/about";
 import FAQ from "./sections/5-faq/faq";
 import Schedule from "./sections/3-schedule/schedule";
@@ -7,6 +9,12 @@ import Nav from "./components/nav";
 import Landing from "./sections/0-landing/landing";
 import Speakers from "./sections/4-speakers/speakers";
 import Footer from "./sections/7-footer/footer";
+import { Raleway } from "next/font/google";
+
+export const raleway = Raleway({
+  subsets: ["latin"],
+  weight: "variable",
+});
 
 export default function Home() {
   return (

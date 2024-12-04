@@ -1,6 +1,6 @@
 import SmoothScrolling from "./components/smoothScrolling";
 import "./globals.css";
-import { Space_Grotesk } from "next/font/google";
+import { Raleway, Space_Grotesk } from "next/font/google";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -15,11 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${spaceGrotesk.className} antialiased w-screen overflow-x-hidden bg-bg`}
-      >
+      <body className={`${spaceGrotesk.className} antialiased w-screen bg-bg`}>
         {/* <SmoothScrolling> */}
-          {children}
+        {children}
 
         {/* </SmoothScrolling> */}
       </body>

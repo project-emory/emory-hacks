@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 .text-title {
-  @apply text-[22px] sm:text-[36px] md:text-[5vw]
+  @apply text-[22px] sm:text-[36px] md:text-[5vw];
 }
 
 .text-body {
-  @apply leading-snug sm:leading-relaxed tracking-normal lg:tracking-wide xl:tracking-wider text-[10px] sm:text-[12px] md:text-[16px] lg:text-[20px] xl:text-[24px];
+  @apply leading-snug sm:leading-relaxed tracking-normal lg:tracking-wide xl:tracking-wider text-[12px] md:text-[16px] lg:text-[20px] xl:text-[24px];
+}
+
+.text-body-small {
+  @apply leading-snug sm:leading-relaxed tracking-normal lg:tracking-wide xl:tracking-wider text-[10px] md:text-[14px] lg:text-[28px] xl:text-[20px];
 }
 
 .text-small {
