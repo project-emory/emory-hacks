@@ -6,6 +6,7 @@ import { useInView, motion, AnimatePresence } from "framer-motion";
 import data from "./data.json";
 import noise from "../../../../public/noise.png";
 import Image from "next/image";
+import Parallax from "@/app/components/parallax";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -59,7 +60,9 @@ const Speaker = ({ speaker, isLast }) => {
         {/* DESCRIPTION */}
         <div className="flex-1">
           <h2 className="text-body font-bold md:mb-1">{speaker.name}</h2>
-          <p className="text-small text-[#484848] mb-2 md:mb-4">{speaker.title}</p>
+          <p className="text-small text-[#484848] mb-2 md:mb-4">
+            {speaker.title}
+          </p>
           <p className="text-body-small">{speaker.bio}</p>
         </div>
       </div>

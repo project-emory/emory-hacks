@@ -1,6 +1,6 @@
 "use client";
 
-import ParallaxProvider from "@/app/components/parallax";
+import Parallax from "@/app/components/parallax";
 import { useRef, useState } from "react";
 import { Raleway } from "next/font/google";
 import { useInView, motion, AnimatePresence } from "framer-motion";
@@ -23,7 +23,7 @@ const Content = () => {
       ref={container}
       className="absolute top-[8vw] sm:top-[12vw] right-[15vw] sm:right-[25vw] w-[70vw] sm:w-[50vw] h-auto z-40"
     >
-      <ParallaxProvider containerRef={container} speed="sm">
+      <Parallax containerRef={container} speed="sm">
         {/* TITLE */}
         <motion.h1
           animate={{
@@ -101,7 +101,7 @@ const Content = () => {
             </motion.button>
           </div>
         </motion.div>
-      </ParallaxProvider>
+      </Parallax>
     </motion.div>
   );
 };

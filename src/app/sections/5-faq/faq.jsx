@@ -7,7 +7,7 @@ const FAQ = () => {
   return (
     <section id="faq">
       {/* FAQ */}
-      <div className="relative h-fit content-center overflow-hidden">
+      <div className="relative h-fit py-[10vw] content-center overflow-hidden">
         <Graphics />
         <Content />
       </div>

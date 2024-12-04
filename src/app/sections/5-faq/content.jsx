@@ -1,6 +1,5 @@
 "use client";
 
-import ParallaxProvider from "@/app/components/parallax";
 import { useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import noise from "../../../../public/noise.png";

@@ -4,7 +4,7 @@ import { easeOut, motion } from "framer-motion";
 
 const HeroText = () => {
   return (
-    <div className="absolute left-6 sm:left-10 md:left-[8vw] top-[120px] sm:top-[14vh] xl:top-[100px] inline-block z-40">
+    <div className="absolute left-[8vw] top-[120px] sm:top-[14vh] xl:top-[100px] inline-block z-40">
       {/* TITLE */}
       <h1 className="text-[40px] sm:text-[10vw] font-bold leading-none drop-shadow-title">
         <motion.div
