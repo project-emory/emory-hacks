@@ -81,6 +81,11 @@ const Nav = () => {
         // transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex flex-col items-end gap-8 md:hidden fixed w-screen py-6 px-6 z-50 bg-gradient-to-b from-[#211254dd] to-[#21125400]"
       >
+        {/* LOGO */}
+        <div className="absolute top-6 left-6 size-10">
+          <Image src={logo} alt="logo" />
+        </div>
+        
         <AnimatePresence mode="wait">
           {/* MENU ICON */}
           {isClicked ? (
