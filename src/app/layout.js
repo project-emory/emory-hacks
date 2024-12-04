@@ -18,7 +18,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${spaceGrotesk.className} antialiased w-screen overflow-x-hidden bg-bg`}
       >
-        <SmoothScrolling>{children}</SmoothScrolling>
+        {/* <SmoothScrolling> */}
+          {children}
+
+        {/* </SmoothScrolling> */}
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import Tracks from "./sections/2-tracks/tracks";
 import Nav from "./components/nav";
 import Landing from "./sections/0-landing/landing";
 import Speakers from "./sections/4-speakers/speakers";
+import Footer from "./sections/7-footer/footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Speakers />
         <FAQ />
         <Sponsors />
+        <Footer />
       </main>
     </>
   );

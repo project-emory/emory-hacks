@@ -1,9 +1,12 @@
 "use client";
 
+import Graphics from "./graphics";
+
 const Sponsors = () => {
   return (
-    <section id="sponsors" className="h-screen text-white">
-      Sponsors
+    <section id="sponsors" className="relative h-[100vw]">
+      <Graphics />
+      {/* <Content /> */}
     </section>
   );
 };

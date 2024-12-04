@@ -1,14 +1,13 @@
 "use client";
 
 // import Content from "./content";
-// import Graphics from "./graphics";
+import Graphics from "./graphics";
 
 const Speakers = () => {
   return (
     <section id="speakers" className="relative h-[100vw]">
-      {/* <Graphics /> */}
+      <Graphics />
       {/* <Content /> */}
-      Speakers
     </section>
   );
 };
