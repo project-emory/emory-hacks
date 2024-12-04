@@ -9,11 +9,9 @@ const Landing = () => {
   const landingRef = useRef(null);
 
   return (
-    <div
-      ref={landingRef}
-      className="relative h-[106vw]"
-    >
+    <div ref={landingRef} className="relative h-[110vw]">
       <Graphics />
+
       {/* TITLE */}
       <Parallax speed={"xl"} containerRef={landingRef}>
         <HeroText />

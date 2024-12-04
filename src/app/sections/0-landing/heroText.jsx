@@ -1,6 +1,7 @@
 "use client";
 
 import { easeOut, motion } from "framer-motion";
+import CountdownTimer from "@/app/components/timerComponent";
 
 const HeroText = () => {
   return (
@@ -42,6 +43,16 @@ const HeroText = () => {
       >
         MAR 21 - MAR 23
       </motion.h2>
+
+      {/* TIMER */}
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 3.3, ease: easeOut }}
+        className="mt-3 w-full sm:w-[90%] md:w-[80%] lg:w-[60%] xl:w-[50%] mx-auto p-2 bg-white/20 backdrop-blur-md rounded-lg shadow-md"
+      >
+        <CountdownTimer />
+      </motion.div>
     </motion.div>
   );
 };
