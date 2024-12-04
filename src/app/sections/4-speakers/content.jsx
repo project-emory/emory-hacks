@@ -1,12 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Raleway } from "next/font/google";
-import { useInView, motion, AnimatePresence } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import data from "./data.json";
 import noise from "../../../../public/noise.png";
 import Image from "next/image";
-import Parallax from "@/app/components/parallax";
 
 const raleway = Raleway({
   subsets: ["latin"],
