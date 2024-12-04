@@ -1,13 +1,13 @@
 "use client";
 
-// import Content from "./content";
+import Content from "./content";
 import Graphics from "./graphics";
 
 const Speakers = () => {
   return (
-    <section id="speakers" className="relative h-[100vw] overflow-hidden">
+    <section id="speakers" className="relative h-fit py-[10vw] overflow-hidden">
       <Graphics />
-      {/* <Content /> */}
+      <Content />
     </section>
   );
 };

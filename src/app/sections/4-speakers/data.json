@@ -1,0 +1,26 @@
+[
+  {
+    "name": "John Doe",
+    "title": "CEO",
+    "image": "/images/speakers/sample.jpg",
+    "bio": "John Doe is a web developer, designer, and entrepreneur. He has over 10 years of experience working with clients to develop their brands and websites."
+  },
+  {
+    "name": "Jane Doe",
+    "title": "CTO",
+    "image": "/images/speakers/sample.jpg",
+    "bio": "John Doe is a web developer, designer, and entrepreneur. He has over 10 years of experience working with clients to develop their brands and websites."
+  },
+  {
+    "name": "John Smith",
+    "title": "CFO",
+    "image": "/images/speakers/sample.jpg",
+    "bio": "John Doe is a web developer, designer, and entrepreneur. He has over 10 years of experience working with clients to develop their brands and websites."
+  },
+  {
+    "name": "Jane Smith",
+    "title": "COO",
+    "image": "/images/speakers/sample.jpg",
+    "bio": "John Doe is a web developer, designer, and entrepreneur. He has over 10 years of experience working with clients to develop their brands and websites."
+  }
+]
