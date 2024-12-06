@@ -21,7 +21,7 @@ const Content = () => {
   return (
     <motion.div
       ref={container}
-      className="absolute top-[8vw] sm:top-[12vw] right-[15vw] sm:right-[25vw] w-[70vw] sm:w-[50vw] h-auto z-40"
+      className="absolute top-[8vw] sm:top-[12vw] right-[12.5vw] w-[75vw] h-auto z-40"
     >
       <Parallax containerRef={container} speed="sm">
         {/* TITLE */}
