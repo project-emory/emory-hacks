@@ -10,6 +10,7 @@ import Landing from "./sections/0-landing/landing";
 import Speakers from "./sections/4-speakers/speakers";
 import Footer from "./sections/7-footer/footer";
 import { Raleway } from "next/font/google";
+import Timer from "./components/timer";
 
 export const raleway = Raleway({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function Home() {
         <Sponsors />
         <Footer />
       </main>
+      <Timer />
     </>
   );
 }

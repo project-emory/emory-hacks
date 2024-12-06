@@ -55,7 +55,6 @@ const Content = () => {
 };
 
 const SponsorCard = ({ src, link }) => {
-	console.log(link);
   return (
     <motion.div
       whileHover={{ backgroundColor: "#ffffffdd" }}

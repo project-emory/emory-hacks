@@ -1,8 +1,8 @@
 "use client";
 
-import { easeOut, motion } from "framer-motion";
+import { easeOut, motion, useInView } from "framer-motion";
 
-const HeroText = () => {
+const Content = () => {
   return (
     <div className="absolute left-[8vw] top-[120px] sm:top-[14vh] xl:top-[100px] inline-block z-40">
       {/* TITLE */}
@@ -46,4 +46,4 @@ const HeroText = () => {
   );
 };
 
-export default HeroText;
+export default Content;

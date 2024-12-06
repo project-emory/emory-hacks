@@ -13,9 +13,9 @@ const raleway = Raleway({
 
 const Content = () => {
   return (
-    <div className="absolute bottom-0 w-screen px-6 sm:px-10 py-8 sm:py-12 h-fit flex justify-between items-center z-10">
+    <div className="absolute left-6 sm:left-8 bottom-8 sm:bottom-10 w-fit h-fit flex flex-col z-10">
       {/* LOGO */}
-      <div className="size-[12vw]">
+      <div className="size-[12vw] mb-4">
         <Image src={logo} alt="logo" />
       </div>
 
@@ -26,7 +26,9 @@ const Content = () => {
         </h2>
         <Link
           href={"https://www.instagram.com/emoryhacks_/"}
-          className="block text-right text-white text-body-small"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-white text-body-small"
         >
           <motion.p
             whileHover={{
@@ -38,8 +40,10 @@ const Content = () => {
           </motion.p>
         </Link>
         <Link
-          href={"contactprojectemory@gmail.com"}
-          className="block text-right text-white text-body-small"
+          href={"mailto:contactprojectemory@gmail.com"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-white text-body-small"
         >
           <motion.p
             whileHover={{

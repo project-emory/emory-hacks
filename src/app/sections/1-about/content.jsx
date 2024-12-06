@@ -1,6 +1,6 @@
 "use client";
 
-import ParallaxProvider from "@/app/components/parallax";
+import Parallax from "@/app/components/parallax";
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
 import noise from "../../../../public/noise.png";
@@ -15,7 +15,7 @@ const Content = () => {
       ref={container}
       className="absolute top-[10vw] sm:top-[20vw] right-[15vw] sm:right-[6vw] w-[70vw] sm:w-[53vw] h-auto z-10"
     >
-      <ParallaxProvider containerRef={container} speed="sm">
+      <Parallax containerRef={container} speed="sm">
         {/* TITLE */}
         <motion.h1
           animate={{
@@ -49,7 +49,7 @@ const Content = () => {
             collaboration.
           </p>
         </motion.div>
-      </ParallaxProvider>
+      </Parallax>
     </div>
   );
 };
