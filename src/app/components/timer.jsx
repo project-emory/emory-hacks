@@ -45,7 +45,9 @@ const Timer = () => {
       onMouseEnter={() => {
         setIsHovered(true);
       }}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseLeave={() => {
+        setIsHovered(false);
+      }}
       animate={{ padding: isHovered ? "16px" : "0px" }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="hidden md:block fixed bottom-6 right-6 z-40"

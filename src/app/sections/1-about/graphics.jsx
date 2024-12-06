@@ -21,13 +21,10 @@ const Graphics = () => {
   // Parallax speeds
   const distant = [cloud_tl, planet_br_2, planet_tr];
   const medium = [cloud_br];
-  const close = [, /*planet_br_1*/ planet_bl];
+  const close = [planet_bl];
 
   return (
-    <div
-      ref={container}
-      className="absolute top-0 left-0 w-full h-full"
-    >
+    <div ref={container} className="absolute top-0 left-0 w-full h-full">
       {/* BG */}
       <Image
         id="about-bg"
@@ -57,7 +54,7 @@ const Graphics = () => {
 
       <Parallax containerRef={container} speed={"xl"}>
         <Float x={0.01} y={0.03}>
-          <Image src={ufo} alt="ufo" className="w-screen" />
+          <Image src={ufo} alt="ufo" className="hidden sm:block w-screen" />
         </Float>
       </Parallax>
     </div>
