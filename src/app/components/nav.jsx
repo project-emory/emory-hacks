@@ -78,7 +78,6 @@ const Nav = () => {
       {/* MOBILE */}
       <motion.nav
         animate={{ height: isClicked ? "auto" : 0 }}
-        // transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex flex-col items-end gap-8 md:hidden fixed w-screen py-6 px-6 z-50 bg-gradient-to-b from-[#211254dd] to-[#21125400]"
       >
         {/* LOGO */}
@@ -119,7 +118,7 @@ const Nav = () => {
           )}
 
           {isClicked && (
-            <ul className="flex flex-col gap-5 items-end pb-20">
+            <ul className="flex flex-col gap-6 items-end pb-20">
               {sections.map((name, i) => (
                 <motion.div
                   key={i}
@@ -225,7 +224,7 @@ const ApplyButton = () => {
         animate={{ background: isHovered ? "#ffffffff" : "#ffffffcc" }}
         className="relative font-bold text-brand-primary z-10 px-2 py-1 sm:px-4 sm:py-2 backdrop-blur-md rounded-md sm:rounded-lg"
       >
-        <div className="overflow-hidden leading-none text-[12px] sm:text-[20px] h-[12px] sm:h-[20px]">
+        <div className="overflow-hidden leading-none text-[14px] sm:text-[20px] h-[14px] sm:h-[20px]">
           <div className="mb-2">
             {"APPLY".split("").map((char, i) => (
               <div className="stagger-letter-1 inline-block" key={i}>
