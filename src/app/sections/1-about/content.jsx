@@ -11,8 +11,11 @@ const Content = () => {
   const isInView = useInView(container, { once: true });
 
   return (
-    <div
+    <motion.div
       ref={container}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
       className="absolute top-[10vw] sm:top-[20vw] right-[15vw] sm:right-[6vw] w-[70vw] sm:w-[53vw] h-auto z-10"
     >
       <Parallax containerRef={container} speed="sm">
@@ -50,7 +53,7 @@ const Content = () => {
           </p>
         </motion.div>
       </Parallax>
-    </div>
+    </motion.div>
   );
 };
 
