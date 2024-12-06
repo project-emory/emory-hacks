@@ -38,6 +38,7 @@ const Graphics = () => {
           id="landing-bg"
           src={bg}
           alt="bg"
+          loading="eager"
           className="absolute z-0 w-screen"
         />
       </motion.div>
@@ -46,14 +47,15 @@ const Graphics = () => {
       {distant.map((item, index) => (
         <Parallax containerRef={container} speed={"sm"} key={index}>
           <motion.div
+            key={index}
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
           >
             <Image
-              key={index}
               src={item}
               alt={"img"}
+              loading="eager"
               className="w-screen"
             />
           </motion.div>
@@ -70,6 +72,7 @@ const Graphics = () => {
           <Image
             src={cloud_r}
             alt={"img"}
+            loading="eager"
             className="w-screen"
           />
         </motion.div>
@@ -85,6 +88,7 @@ const Graphics = () => {
           <Image
             src={cloud_bl}
             alt={"img"}
+            loading="eager"
             className="w-screen"
           />
         </motion.div>
@@ -93,14 +97,15 @@ const Graphics = () => {
       {medium.map((item, index) => (
         <Parallax containerRef={container} speed={"md"} key={index}>
           <motion.div
+            key={index}
             initial={{ opacity: 0, y: 120 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           >
             <Image
-              key={index}
               src={item}
               alt={"img"}
+              loading="eager"
               className="w-screen"
             />
           </motion.div>
@@ -183,12 +188,12 @@ const Graphics = () => {
       {close.map((item, index) => (
         <Parallax containerRef={container} speed={"lg"} key={index}>
           <motion.div
+            key={index}
             initial={{ opacity: 0, y: 150 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1, ease: "easeOut" }}
           >
             <Image
-              key={index}
               src={item}
               alt={"img"}
               className="w-screen"

@@ -19,6 +19,7 @@ const Graphics = () => {
         id="footer-bg"
         src={bg}
         alt="bg"
+        loading="eager"
         className="absolute z-0 w-screen"
       />
 
