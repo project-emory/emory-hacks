@@ -6,7 +6,7 @@ import { Raleway } from "next/font/google";
 import { useInView, motion, AnimatePresence } from "framer-motion";
 import data from "./data.json";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import noise from "../../../../public/noise.png";
+import noise from "../../../../public/noise.webp";
 
 const raleway = Raleway({
   subsets: ["latin"],

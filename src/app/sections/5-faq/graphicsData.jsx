@@ -1,8 +1,8 @@
-import general_bg from "../../../../public/images/general_bg.png";
-import transition_l_bg from "../../../../public/images/faq/transition_l/bg.png";
-import transition_r_bg from "../../../../public/images/faq/transition_r/bg.png";
-import transition_l_cloud from "../../../../public/images/faq/transition_l/cloud.png";
-import transition_r_cloud from "../../../../public/images/faq/transition_r/cloud.png";
+import general_bg from "../../../../public/images/general_bg.webp";
+import transition_l_bg from "../../../../public/images/faq/transition_l/bg.webp";
+import transition_r_bg from "../../../../public/images/faq/transition_r/bg.webp";
+import transition_l_cloud from "../../../../public/images/faq/transition_l/cloud.webp";
+import transition_r_cloud from "../../../../public/images/faq/transition_r/cloud.webp";
 
 export {
   general_bg,

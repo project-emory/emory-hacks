@@ -3,7 +3,7 @@
 import Parallax from "@/app/components/parallax";
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
-import noise from "../../../../public/noise.png";
+import noise from "../../../../public/noise.webp";
 import { raleway } from "@/app/page";
 
 const Content = () => {

@@ -1,7 +1,7 @@
 "use client";
 
 import { Raleway } from "next/font/google";
-import logo from "../../../../public/logo.png";
+import logo from "../../../../public/logo.webp";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";

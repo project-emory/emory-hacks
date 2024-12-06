@@ -3,11 +3,11 @@
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import cnr from "../../../../public/images/sponsors/cnr.png";
-import emorynlp from "../../../../public/images/sponsors/emorynlp.png";
-import hyundai from "../../../../public/images/sponsors/hyundai.png";
-import jpmorgan from "../../../../public/images/sponsors/jpmorgan.png";
-import noise from "../../../../public/noise.png";
+import cnr from "../../../../public/images/sponsors/cnr.webp";
+import emorynlp from "../../../../public/images/sponsors/emorynlp.webp";
+import hyundai from "../../../../public/images/sponsors/hyundai.webp";
+import jpmorgan from "../../../../public/images/sponsors/jpmorgan.webp";
+import noise from "../../../../public/noise.webp";
 import Link from "next/link";
 
 const Content = () => {

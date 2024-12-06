@@ -12,7 +12,7 @@ import { gsap } from "gsap";
 
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { useEffect, useRef, useState } from "react";
-import logo from "../../../public/logo.png";
+import logo from "../../../public/logo.webp";
 import Image from "next/image";
 import { IconX, IconMenuDeep } from "@tabler/icons-react";
 

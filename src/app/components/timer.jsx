@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import noise from "../../../public/noise.png";
+import noise from "../../../public/noise.webp";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconRocket } from "@tabler/icons-react";
 import Link from "next/link";

@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
-import noise from "../../../../public/noise.png";
+import noise from "../../../../public/noise.webp";
 import { raleway } from "@/app/page";
 import data from "./data.json";
 import { IconCaretDownFilled } from "@tabler/icons-react";

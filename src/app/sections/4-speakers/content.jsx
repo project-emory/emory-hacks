@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Raleway } from "next/font/google";
 import { useInView, motion } from "framer-motion";
 import data from "./data.json";
-import noise from "../../../../public/noise.png";
+import noise from "../../../../public/noise.webp";
 import Image from "next/image";
 
 const raleway = Raleway({
