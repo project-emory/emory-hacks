@@ -10,7 +10,7 @@ const Timer = () => {
   const targetDate = new Date("March 21, 2025 00:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState({});
 
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,14 +42,9 @@ const Timer = () => {
 
   return (
     <motion.div
-      onMouseEnter={() => {
-        setIsHovered(true);
-      }}
-      onMouseLeave={() => {
-        setIsHovered(false);
-      }}
-      animate={{ padding: isHovered ? "16px" : "0px" }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
       className="hidden md:block fixed bottom-6 right-6 z-40"
     >
       {/* TIMER */}
