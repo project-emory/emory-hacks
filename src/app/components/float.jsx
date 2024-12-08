@@ -29,11 +29,13 @@ const Float = ({ children, rotate = true, x = 0, y = 0, duration = 1.5 }) => {
       ref.current,
       {
         rotation: rotate ? -1 : 0,
+        x: -x * windowWidth,
+        y: -y * windowWidth,
       },
       {
         rotation: rotate ? 1 : 0,
-        x: random(0.9 * x, 1.1 * x) * windowWidth,
-        y: random(0.9 * y, 1.1 * y) * windowWidth,
+        x: x * windowWidth,
+        y: y * windowWidth,
         duration: random(duration * 0.9, duration * 1.1),
         ease: "power1.inOut",
         repeat: -1,
