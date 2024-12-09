@@ -38,7 +38,7 @@ const Graphics = () => {
           id="landing-bg"
           src={bg}
           alt="bg"
-          loading="eager"
+          priority={true}
           className="absolute z-0 w-screen"
         />
       </motion.div>
@@ -52,12 +52,7 @@ const Graphics = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
           >
-            <Image
-              src={item}
-              alt={"img"}
-              loading="eager"
-              className="w-screen"
-            />
+            <Image src={item} alt={"img"} quality={60} className="w-screen" />
           </motion.div>
         </Parallax>
       ))}
@@ -69,12 +64,7 @@ const Graphics = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}
         >
-          <Image
-            src={cloud_r}
-            alt={"img"}
-            loading="eager"
-            className="w-screen"
-          />
+          <Image src={cloud_r} alt={"img"} quality={60} className="w-screen" />
         </motion.div>
       </Parallax>
 
@@ -85,12 +75,7 @@ const Graphics = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}
         >
-          <Image
-            src={cloud_bl}
-            alt={"img"}
-            loading="eager"
-            className="w-screen"
-          />
+          <Image src={cloud_bl} alt={"img"} quality={60} className="w-screen" />
         </motion.div>
       </Parallax>
 
@@ -102,12 +87,7 @@ const Graphics = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           >
-            <Image
-              src={item}
-              alt={"img"}
-              loading="eager"
-              className="w-screen"
-            />
+            <Image src={item} alt={"img"} quality={65} className="w-screen" />
           </motion.div>
         </Parallax>
       ))}
@@ -127,11 +107,7 @@ const Graphics = () => {
           }}
           className="origin-center"
         >
-          <Image
-            src={asteroid}
-            alt={"img"}
-            className="w-screen"
-          />
+          <Image src={asteroid} alt={"img"} quality={65} className="w-screen" />
         </motion.div>
       </Parallax>
 
@@ -151,11 +127,7 @@ const Graphics = () => {
             }}
             className="origin-right"
           >
-            <Image
-              src={dog}
-              alt="dog"
-              className="w-screen"
-            />
+            <Image src={dog} alt="dog" className="w-screen" />
           </motion.div>
         </Float>
       </Parallax>
@@ -176,11 +148,7 @@ const Graphics = () => {
             }}
             className="origin-top-right"
           >
-            <Image
-              src={astronaut}
-              alt="astronaut"
-              className="w-screen"
-            />
+            <Image src={astronaut} alt="astronaut" className="w-screen" />
           </motion.div>
         </Float>
       </Parallax>
@@ -193,11 +161,7 @@ const Graphics = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1, ease: "easeOut" }}
           >
-            <Image
-              src={item}
-              alt={"img"}
-              className="w-screen"
-            />
+            <Image src={item} alt={"img"} quality={70} className="w-screen" />
           </motion.div>
         </Parallax>
       ))}
@@ -217,11 +181,7 @@ const Graphics = () => {
           }}
           className="origin-center"
         >
-          <Image
-            src={rocket}
-            alt="rocket"
-            className="w-screen"
-          />
+          <Image src={rocket} alt="rocket" className="w-screen" />
         </motion.div>
       </Parallax>
     </div>

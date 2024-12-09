@@ -36,7 +36,8 @@ const Graphics = () => {
           id="about-bg"
           src={bg}
           alt="bg"
-          loading="eager"
+          priority={true}
+          quality={80}
           className="absolute z-0 w-screen"
         />
       </motion.div>
@@ -48,6 +49,7 @@ const Graphics = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
+            quality={60}
           >
             <Image src={item} alt={"img"} className="w-screen" />
           </motion.div>
@@ -61,7 +63,7 @@ const Graphics = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
-            <Image src={item} alt={"img"} className="w-screen" />
+            <Image src={item} alt={"img"} className="w-screen" quality={65} />
           </motion.div>
         </Parallax>
       ))}
@@ -76,6 +78,7 @@ const Graphics = () => {
             <Image
               src={item}
               alt={"img"}
+              quality={70}
               className="hidden sm:block w-screen"
             />
           </motion.div>
@@ -89,7 +92,12 @@ const Graphics = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
-            <Image src={ufo} alt="ufo" className="hidden sm:block w-screen" />
+            <Image
+              src={ufo}
+              alt="ufo"
+              quality={80}
+              className="hidden sm:block w-screen"
+            />
           </motion.div>
         </Float>
       </Parallax>
