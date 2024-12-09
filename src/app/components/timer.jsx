@@ -101,7 +101,7 @@ const Timer = () => {
               height={32}
               width={32}
               style={{ fill: "#314cc2" }}
-              isPaused={!isHovered}
+              isStopped={!isHovered}
             />
           </Float>
         </motion.div>
@@ -122,20 +122,12 @@ const TimeDisplay = ({ unit, value, isHovered }) => {
 
   return (
     <>
-      <motion.div
-        // animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 40 }}
-        // transition={{ delay: delay }}
-        className="w-[42px] text-body text-center font-bold text-brand-secondary"
-      >
+      <div className="w-[42px] text-body text-center font-bold text-brand-secondary">
         <span>{value}</span>
-      </motion.div>
-      <motion.span
-        // animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 40 }}
-        // transition={{ delay: delay }}
-        className="text-body font-bold text-[#808080]"
-      >
+      </div>
+      <span className="text-body font-bold text-[#808080]">
         {unit !== "seconds" && ":"}
-      </motion.span>
+      </span>
     </>
   );
 };
