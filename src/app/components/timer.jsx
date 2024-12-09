@@ -72,7 +72,6 @@ const Timer = () => {
               key={unit}
               unit={unit}
               value={value}
-              isHovered={isHovered}
             />
           ))}
         </div>
@@ -110,15 +109,15 @@ const Timer = () => {
   );
 };
 
-const TimeDisplay = ({ unit, value, isHovered }) => {
-  const delay =
-    unit === "days"
-      ? 0.3
-      : unit === "hours"
-      ? 0.35
-      : unit === "minutes"
-      ? 0.4
-      : 0.45;
+const TimeDisplay = ({ unit, value }) => {
+  // const delay =
+  //   unit === "days"
+  //     ? 0.3
+  //     : unit === "hours"
+  //     ? 0.35
+  //     : unit === "minutes"
+  //     ? 0.4
+  //     : 0.45;
 
   return (
     <>
