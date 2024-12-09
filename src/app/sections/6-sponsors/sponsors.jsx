@@ -5,7 +5,7 @@ import Graphics from "./graphics";
 
 const Sponsors = () => {
   return (
-    <section id="sponsors" className="relative h-[40vw] content-center overflow-hidden">
+    <section id="sponsors" className="relative h-fit content-center overflow-hidden">
       <Graphics />
       <Content />
     </section>
