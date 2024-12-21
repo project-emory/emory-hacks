@@ -5,7 +5,7 @@
   },
   {
     "question": "Where is the event? Is it in person or virtual? Where can I park?",
-    "answer": "The event is located in the XXXX Building at INSERT STREET ADDRESS. You can park in Lot X, Y, Z which you can see on this campus parking site - LINK"
+    "answer": "The event is located at Emory University’s Goizueta Business School at 1300 Clifton Rd N E, Atlanta, GA 30322. You can park at the Fishburne Parking Deck, Oxford Road Parking Deck, and Gambrell Parking deck, which you can see on this campus parking site - https://transportation.emory.edu/visitor-parking"
   },
   {
     "question": "Who can attend? What if I don’t have any experience? Do I have to be 18?",
@@ -17,11 +17,11 @@
   },
   {
     "question": "Are there travel reimbursements?",
-    "answer": "We are not able to provide travel reimbursements at this time."
+    "answer": "We will not be providing travel reimbursements at this time."
   },
   {
     "question": "What should I bring?",
-    "answer": "Your laptop, charger, headphones, deodorant, pillow/blanket"
+    "answer": "Your laptop, charger, headphones, ID, blanket & pillow, and enthusiasm."
   },
   {
     "question": "When can we start working on our project? Can I work on a previous project?",
@@ -33,7 +33,7 @@
   },
   {
     "question": "Do I have to stay overnight?",
-    "answer": "No, you can leave and come back if you would prefer to go to bed."
+    "answer": "No, you can leave and come back if you would prefer to go to bed. Here are some suggestions: University Inn at Emory, DoubleTree by Hilton Hotel Atlanta North Druid Hills, La Quinta Inn & Suites by Wyndham Atlanta Midtown, Holiday Inn Express & Suites Atlanta - Emory University"
   },
   {
     "question": "What kind of activities will there be?",
@@ -49,7 +49,7 @@
   },
   {
     "question": "Are you sending out acceptances? Is there a deadline to apply? Is there a waitlist?",
-    "answer": "We will send out acceptances XX days before the event. If you need to know before then to book travel, please reach out to our team for an early review. Applications will be closing once we reach the maximum amount of hackers we can support, but we will have a waitlist the day of the event for any local hackers who want to fill the spots of any accepted hackers who do not end up attending."
+    "answer": "We will send out acceptances 30 days before the event. If you need to know before then to book travel, please reach out to our team for an early review. Applications will be closing once we reach the maximum amount of hackers we can support, but we will have a waitlist the day of the event for any local hackers who want to fill the spots of any accepted hackers who do not end up attending."
   },
   {
     "question": "How do I sign up to be a mentor/judge/volunteer?",
@@ -57,6 +57,6 @@
   },
   {
     "question": "I still have a question!",
-    "answer": "Email us at team@hackathon.com"
+    "answer": "Email us at contactemoryhacks@gmail.com"
   }
 ]
