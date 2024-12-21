@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           name="keywords"
-          content="Emory Hacks, hackathon, Emory University, coding, programming, innovation"
+          content="Emory Hacks, hackathon, Emory University, coding, programming, innovation, Emory Hackathon, Atlanta Hackathon, Emory University"
         />
         <meta property="og:title" content="Emory Hacks 2025" />
         <meta
@@ -39,7 +39,6 @@ export default function RootLayout({ children }) {
       <body className={`${spaceGrotesk.className} antialiased w-screen bg-bg`}>
         {/* <SmoothScrolling> */}
         {children}
-
         {/* </SmoothScrolling> */}
       </body>
     </html>
