@@ -212,7 +212,7 @@ const ApplyButton = () => {
 
   return (
     <Link
-      href="https://lu.ma/i3zb0h5t"
+      href="https://lu.ma/1on8ptd3"
       target="_blank"
       rel="noopener noreferrer"
       onMouseEnter={() => {
