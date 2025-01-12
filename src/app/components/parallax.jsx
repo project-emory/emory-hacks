@@ -3,7 +3,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const Parallax = ({ children, containerRef, speed }) => {
+const Parallax = ({ children, containerRef, speed, fillContainer = true }) => {
   // Get scroll progress
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -62,10 +62,12 @@ const Parallax = ({ children, containerRef, speed }) => {
       style={{
         y: speeds[speed],
         scale: scales[speed],
+        width: fillContainer ? "100%" : "0",
+        height: fillContainer ? "100%" : "0",
         zIndex:
           speed === "xl" ? 30 : speed === "lg" ? 20 : speed === "md" ? 10 : 0,
       }}
-      className="absolute w-full h-full"
+      className="absolute"
     >
       {children}
     </motion.div>
