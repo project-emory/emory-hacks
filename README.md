@@ -28,3 +28,21 @@ collaboration.
 
 ## Sponsored by
 
+<p align="center">
+  <a href="https://www.jpmorganchase.com/" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/sponsors/jpmorgan.webp" alt="JPMorganChase" width="120" style="margin: 20px;" />
+  </a>
+  <a href="https://www.hyundaiusa.com/us/en" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/sponsors/hyundai.webp" alt="Hyundai" width="120" style="margin: 20px;" />
+  </a>
+  <a href="https://www.wolframalpha.com/" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/sponsors/wolframalpha.webp" alt="WolframAlpha" width="120" style="margin: 20px;" />
+  </a>
+  <a href="https://cnrit.com/" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/sponsors/cnr.webp" alt="CNR" width="120" style="margin: 20px;" />
+  </a>
+  <a href="https://www.emorynlp.org/" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/sponsors/emorynlp.webp" alt="EmoryNLP" width="120" style="margin: 20px;" />
+  </a>
+</p>
+// ...existing code...
