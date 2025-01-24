@@ -11,6 +11,7 @@ import Speakers from "./sections/4-speakers/speakers";
 import Footer from "./sections/7-footer/footer";
 import { Raleway } from "next/font/google";
 import Timer from "./components/timer";
+import { useEffect } from "react";
 
 export const raleway = Raleway({
   subsets: ["latin"],
@@ -18,6 +19,13 @@ export const raleway = Raleway({
 });
 
 export default function Home() {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const scroll = new LocomotiveScroll({});
+    })();
+  });
+
   return (
     <>
       <Nav />

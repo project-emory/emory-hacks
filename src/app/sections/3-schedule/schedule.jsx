@@ -7,7 +7,7 @@ const Schedule = () => {
   return (
     <section id="schedule">
       {/* SCHEDULE */}
-      <div className="relative h-[85vw] overflow-hidden">
+      <div className="relative h-[85vw]">
         <Graphics />
         <Content />
       </div>

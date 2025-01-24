@@ -21,7 +21,7 @@ const Content = () => {
   return (
     <motion.div
       ref={container}
-      className="absolute top-[8vw] sm:top-[12vw] right-[12.5vw] w-[75vw] h-auto z-40"
+      className="absolute top-[8vw] sm:top-[12vw] right-[12.5vw] w-[75vw] z-40"
     >
       <Parallax containerRef={container} speed="sm">
         {/* TITLE */}
@@ -43,7 +43,7 @@ const Content = () => {
             backgroundImage: `url(${noise.src})`,
           }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className={`${raleway.className} p-5 md:p-10 bg-[#ffffffaa] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px] flex flex-col gap-2 md:gap-5`}
+          className={`${raleway.className} p-5 md:p-10 bg-[#ffffffaa] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px] flex flex-col justify-between gap-2 md:gap-5 min-h-[400px]`}
         >
           {/* DAY */}
           <h3 className="font-bold text-body">
@@ -59,7 +59,7 @@ const Content = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
               data-lenis-prevent
-              className="flex flex-col gap-1 sm:gap-3 md:gap-5 h-[34vw] overflow-y-scroll"
+              className="flex flex-col gap-1 sm:gap-3 md:gap-5 grow"
             >
               {data[day - 1].map((event, i) => (
                 <ScheduleUnit event={event} key={i} />
