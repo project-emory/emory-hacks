@@ -11,7 +11,7 @@
 }
 
 .text-body-small {
-  @apply leading-snug sm:leading-relaxed tracking-normal lg:tracking-wide xl:tracking-wider text-[10px] md:text-[14px] lg:text-[28px] xl:text-[20px];
+  @apply leading-snug sm:leading-relaxed tracking-normal lg:tracking-wide xl:tracking-wider text-[10px] md:text-[14px] lg:text-[18px] xl:text-[20px];
 }
 
 .text-small {

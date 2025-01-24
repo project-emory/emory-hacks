@@ -125,7 +125,7 @@ const Graphics = () => {
                   and healthcare providers, such as telemedicine platforms or
                   appointment scheduling apps.
                 </h4>
-                <ul className="hidden md:block mt-2 text-body-small text-white list-disc list-inside">
+                <ul className="hidden md:inline mt-2 text-body-small text-white list-disc list-inside">
                   <li>Improving patient quality of life</li>
                   <li>Improving efficiency of medical workers</li>
                   <li>Responding to emergencies</li>
