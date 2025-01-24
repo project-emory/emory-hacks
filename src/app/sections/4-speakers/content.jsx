@@ -19,7 +19,7 @@ const Content = () => {
   return (
     <div ref={container} className="w-[75vw] h-fit mx-auto z-10">
       {/* TITLE */}
-      <motion.h1
+      <motion.h2
         animate={{
           opacity: isInView ? 1 : 0,
           y: isInView ? 0 : 20,
@@ -28,7 +28,7 @@ const Content = () => {
         className="mb-2 text-title font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-title"
       >
         GUEST SPEAKERS
-      </motion.h1>
+      </motion.h2>
 
       {/* BODY */}
       <motion.div
@@ -58,7 +58,7 @@ const Speaker = ({ speaker, isLast }) => {
 
         {/* DESCRIPTION */}
         <div className="flex-1">
-          <h2 className="text-body font-bold md:mb-1">{speaker.name}</h2>
+          <h3 className="text-body font-bold md:mb-1">{speaker.name}</h3>
           <p className="text-small text-[#484848] mb-2 md:mb-4">
             {speaker.title}
           </p>

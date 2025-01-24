@@ -25,7 +25,7 @@ const Content = () => {
     >
       <Parallax containerRef={container} speed="sm">
         {/* TITLE */}
-        <motion.h1
+        <motion.h2
           animate={{
             opacity: isInView ? 1 : 0,
             y: isInView ? 0 : 20,
@@ -34,7 +34,7 @@ const Content = () => {
           className="mb-2 text-title font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-title"
         >
           SCHEDULE
-        </motion.h1>
+        </motion.h2>
 
         {/* BODY */}
         <motion.div

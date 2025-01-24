@@ -33,7 +33,7 @@ const Content = () => {
 
   return (
     <div ref={container} className="w-full px-[12.5vw] py-10 h-fit">
-      <motion.h1
+      <motion.h2
         animate={{
           opacity: isInView ? 1 : 0,
           y: isInView ? 0 : 20,
@@ -42,7 +42,7 @@ const Content = () => {
         className="mb-2 text-title font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-title inline-block"
       >
         SPONSORS
-      </motion.h1>
+      </motion.h2>
 
       <motion.div
         animate={{ opacity: isInView ? 1 : 0 }}

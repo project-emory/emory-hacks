@@ -6,7 +6,7 @@ const Content = () => {
   return (
     <div className="absolute left-[8vw] top-[120px] sm:top-[14vh] xl:top-[100px] inline-block z-40">
       {/* TITLE */}
-      <h1 className="text-[40px] sm:text-[8vw] font-bold leading-none drop-shadow-title">
+      <h2 className="text-[40px] sm:text-[8vw] font-bold leading-none drop-shadow-title">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1.01, y: 0 }}
@@ -31,7 +31,7 @@ const Content = () => {
         >
           2025
         </motion.div>
-      </h1>
+      </h2>
 
       {/* DATE */}
       <motion.h2
