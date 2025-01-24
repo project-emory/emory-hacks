@@ -6,7 +6,7 @@ const Content = () => {
   return (
     <div className="absolute left-[8vw] top-[120px] sm:top-[14vh] xl:top-[100px] inline-block z-40">
       {/* TITLE */}
-      <h2 className="text-[40px] sm:text-[8vw] font-bold leading-none drop-shadow-title">
+      <h1 className="text-[40px] sm:text-[8vw] font-bold leading-none drop-shadow-title">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1.01, y: 0 }}
@@ -31,17 +31,17 @@ const Content = () => {
         >
           2025
         </motion.div>
-      </h2>
+      </h1>
 
       {/* DATE */}
-      <motion.h2
+      <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 3, ease: "easeOut" }}
         className="mt-5 text-[22px] md:text-[3vw] font-bold text-white drop-shadow-title"
       >
         MAR 21 - MAR 23
-      </motion.h2>
+      </motion.h1>
     </div>
   );
 };

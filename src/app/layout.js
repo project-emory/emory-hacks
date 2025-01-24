@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           name="keywords"
-          content="Emory Hacks, hackathon, Emory University, coding, programming, innovation, Emory Hackathon, Atlanta Hackathon, Emory University"
+          content="Emory Hacks, hackathon, Emory University, coding, programming, innovation, Emory Hackathon, Atlanta, Emory University, Emory, software, contest, competition"
         />
         <meta property="og:title" content="Emory Hacks 2025" />
         <meta
