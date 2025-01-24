@@ -58,8 +58,7 @@ const Content = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              data-lenis-prevent
-              className="flex flex-col gap-1 sm:gap-3 md:gap-5 grow"
+              className="flex flex-col gap-1 sm:gap-3 md:gap-5"
             >
               {data[day - 1].map((event, i) => (
                 <ScheduleUnit event={event} key={i} />

@@ -54,7 +54,7 @@ const Timer = () => {
         }}
         className="absolute right-0 bottom-0 w-fit h-[48px] overflow-hidden bg-[#ffffffaa] backdrop-blur-[33px] drop-shadow-lg rounded-2xl"
       >
-        <div className="w-fit h-full text-body font-bold text-brand-secondary text-nowrap text-center flex items-center pl-4 pr-[70px]">
+        <div className="w-fit h-full text-body font-bold text-brand-primary text-nowrap text-center flex items-center pl-4 pr-[70px]">
           {formattedTime}
         </div>
       </div>
