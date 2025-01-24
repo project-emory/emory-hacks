@@ -46,7 +46,7 @@ const Nav = () => {
   }, [currSection]);
 
   return (
-    <>
+    <header>
       {/* DESKTOP */}
       <motion.nav
         initial={{ opacity: 0, y: -100 }}
@@ -150,7 +150,7 @@ const Nav = () => {
           )}
         </AnimatePresence>
       </motion.nav>
-    </>
+    </header>
   );
 };
 
