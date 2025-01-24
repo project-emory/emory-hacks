@@ -85,7 +85,7 @@ const Graphics = () => {
                   disabilities, such as speech-to-text applications, sign
                   language translators, or eye-tracking communication devices.
                 </h4>
-                <ul className="mt-2 text-body-small text-white list-disc list-inside">
+                <ul className="hidden md:block mt-2 text-body-small text-white list-disc list-inside">
                   <li>Help disabled people</li>
                   <li>Make technology more accessible</li>
                   <li>
@@ -125,7 +125,7 @@ const Graphics = () => {
                   and healthcare providers, such as telemedicine platforms or
                   appointment scheduling apps.
                 </h4>
-                <ul className="mt-2 text-body-small text-white list-disc list-inside">
+                <ul className="hidden md:block mt-2 text-body-small text-white list-disc list-inside">
                   <li>Improving patient quality of life</li>
                   <li>Improving efficiency of medical workers</li>
                   <li>Responding to emergencies</li>
@@ -166,7 +166,7 @@ const Graphics = () => {
                   among students, teachers, and parents, enhancing the
                   educational experience.
                 </h4>
-                <ul className="mt-2 text-body-small text-white list-disc list-inside">
+                <ul className="hidden md:block mt-2 text-body-small text-white list-disc list-inside">
                   <li>More accessibility in educational materials</li>
                   <li>Provide a unique learning experience</li>
                   <li>Develop a new methodology or way to teach</li>
