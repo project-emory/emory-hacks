@@ -1,6 +1,6 @@
 "use client";
 
-import { useScroll, useTransform, motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const Parallax = ({ children, containerRef, speed, fillContainer = true }) => {
@@ -61,7 +61,7 @@ const Parallax = ({ children, containerRef, speed, fillContainer = true }) => {
     <motion.div
       style={{
         y: speeds[speed],
-        scale: scales[speed],
+        // scale: scales[speed],
         width: fillContainer ? "100%" : "0",
         height: fillContainer ? "100%" : "0",
         zIndex:
