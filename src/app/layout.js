@@ -9,7 +9,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "emory hacks 2025",
+  title: "Emory Hacks 2025",
   description:
     "Join us for Emory Hacks 2025, a 36-hour hackathon at Emory University where innovation comes to life.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata = {
     "atlanta hackathon",
     "atl hackathon",
     "atlanta coding",
-    "computer science"
+    "computer science",
   ],
   robots: {
     index: true,
@@ -37,17 +37,17 @@ export const metadata = {
     googleBot: { index: true, follow: true },
   },
   openGraph: {
-    title: "emory hacks 2025",
+    title: "Emory Hacks 2025",
     description:
-      "join us for emory hacks 2025, a 36-hour hackathon at emory university where innovation comes to life.",
+      "Join us for Emory Hacks 2025, a 36-hour hackathon at Emory University where innovation comes to life.",
     url: "https://www.emoryhacks.com",
-    site_name: "emory hacks 2025",
+    site_name: "Emory Hacks 2025",
     images: [
       {
-        url: "https://taehoonlee.dev/taehoon.png",
+        url: "https://www.emoryhacks.com/logo.webp",
         width: 800,
         height: 800,
-        alt: "emory hacks",
+        alt: "Emory Hacks",
       },
     ],
     locale: "en_us",
