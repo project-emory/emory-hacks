@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Raleway } from "next/font/google";
-import { useInView, motion } from "framer-motion";
-import data from "./data.json";
-import noise from "../../../../public/noise.webp";
 import Image from "next/image";
+import { useRef } from "react";
+
+import noise from "../../../../public/noise.webp";
+import data from "./data.json";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -58,7 +59,7 @@ const Speaker = ({ speaker, isLast }) => {
 
         {/* DESCRIPTION */}
         <div className="flex-1">
-          <h3 className="text-body font-bold md:mb-1">{speaker.name}</h3>
+          <p className="text-body font-bold md:mb-1">{speaker.name}</p>
           <p className="text-small text-[#484848] mb-2 md:mb-4">
             {speaker.title}
           </p>

@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { useInView, motion } from "framer-motion";
-import noise from "../../../../public/noise.webp";
 import { raleway } from "@/app/page";
-import data from "./data.json";
 import { IconCaretDownFilled } from "@tabler/icons-react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+
+import noise from "../../../../public/noise.webp";
+import data from "./data.json";
 
 const Content = () => {
   const container = useRef(null);
@@ -72,7 +73,7 @@ const Question = ({
       >
         <div className="flex-1 overflow-hidden flex flex-col">
           {/* QUESTION */}
-          <h3 className="text-body font-semibold">{question}</h3>
+          <p className="text-body font-semibold">{question}</p>
 
           {/* ANSWER */}
           <motion.p

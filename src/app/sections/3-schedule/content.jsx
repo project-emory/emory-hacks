@@ -1,12 +1,13 @@
 "use client";
 
 import Parallax from "@/app/components/parallax";
-import { useRef, useState } from "react";
-import { Raleway } from "next/font/google";
-import { useInView, motion, AnimatePresence } from "framer-motion";
-import data from "./data.json";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import { Raleway } from "next/font/google";
+import { useRef, useState } from "react";
+
 import noise from "../../../../public/noise.webp";
+import data from "./data.json";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -46,9 +47,9 @@ const Content = () => {
           className={`${raleway.className} p-5 md:p-10 bg-[#ffffffaa] backdrop-blur-[33px] drop-shadow-lg rounded-[16px] md:rounded-[30px] flex flex-col justify-between gap-2 md:gap-5 min-h-[400px]`}
         >
           {/* DAY */}
-          <h3 className="font-bold text-body">
+          <p className="font-bold text-body">
             DAY {day}
-          </h3>
+          </p>
 
           {/* SCHEDULE */}
           <AnimatePresence mode="wait">
