@@ -44,7 +44,7 @@ export const metadata = {
     site_name: "Emory Hacks 2025",
     images: [
       {
-        url: "https://www.emoryhacks.com/logo.webp",
+        url: "https://www.emoryhacks.com/thumbnail.png",
         width: 800,
         height: 800,
         alt: "Emory Hacks",
@@ -65,7 +65,10 @@ export default function RootLayout({ children }) {
           name="twitter:description"
           content="Join us for Emory Hacks 2025, a 36-hour hackathon at Emory University where innovation comes to life."
         />
-        <meta name="twitter:image" content="../../public/logo.webp" />
+        <meta
+          name="twitter:image"
+          content="https://www.emoryhacks.com/thumbnail.png"
+        />
       </Head>
 
       <body className={`${spaceGrotesk.className} antialiased w-screen bg-bg`}>
