@@ -6,8 +6,9 @@ import { useRef, useState } from "react";
 import cnr from "../../../../public/images/sponsors/cnr.webp";
 import emorynlp from "../../../../public/images/sponsors/emorynlp.webp";
 import hyundai from "../../../../public/images/sponsors/hyundai.webp";
-import jpmorgan from "../../../../public/images/sponsors/jpmorgan.webp";
+// import jpmorgan from "../../../../public/images/sponsors/jpmorgan.webp";
 import wolframalpha from "../../../../public/images/sponsors/wolframalpha.webp";
+import marta from "../../../../public/images/sponsors/marta.webp";
 import noise from "../../../../public/noise.webp";
 import Link from "next/link";
 
@@ -16,11 +17,11 @@ const Content = () => {
   const isInView = useInView(container, { once: true });
 
   const sponsors = [
-    {
-      src: jpmorgan,
-      name: "JPMorganChase",
-      link: "https://www.jpmorganchase.com/",
-    },
+    // {
+    //   src: jpmorgan,
+    //   name: "JPMorganChase",
+    //   link: "https://www.jpmorganchase.com/",
+    // },
     { src: hyundai, name: "Hyundai", link: "https://www.hyundaiusa.com/us/en" },
     {
       src: wolframalpha,
@@ -29,6 +30,7 @@ const Content = () => {
     },
     { src: cnr, name: "CNR", link: "https://cnrit.com/" },
     { src: emorynlp, name: "EmoryNLP", link: "https://www.emorynlp.org/" },
+    { src: marta, name: "Marta", link: "https://www.itsmarta.com/" },
   ];
 
   return (
