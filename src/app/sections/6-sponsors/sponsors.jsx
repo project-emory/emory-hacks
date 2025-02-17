@@ -7,7 +7,9 @@ const Sponsors = () => {
   return (
     <section id="sponsors" className="relative h-fit content-center overflow-hidden">
       <Graphics />
-      <Content />
+      <div className="absolute top-[30vw] left-0">
+        <Content />
+      </div>
     </section>
   );
 };

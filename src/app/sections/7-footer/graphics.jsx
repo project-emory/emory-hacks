@@ -1,8 +1,9 @@
 "use client";
 
+import Parallax from "@/app/components/parallax";
 import Image from "next/image";
 import { useRef } from "react";
-import Parallax from "@/app/components/parallax";
+
 import { bg, clouds, rocket } from "./graphicsData";
 
 const Graphics = () => {

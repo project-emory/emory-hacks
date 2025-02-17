@@ -11,14 +11,7 @@ const FAQ = () => {
         <Graphics />
         <Content />
       </div>
-      {/* TRANSITION LEFT */}
-      <div className="relative h-[60vw] overflow-hidden">
-        <TransitionLeft />
-      </div>
-      {/* TRANSITION RIGHT */}
-      <div className="relative h-[60vw] overflow-hidden">
-        <TransitionRight />
-      </div>
+
     </section>
   );
 };
