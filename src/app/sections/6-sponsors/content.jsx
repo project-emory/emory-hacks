@@ -34,7 +34,7 @@ const Content = () => {
   ];
 
   return (
-    <div ref={container} className="w-full px-[12.5vw] py-10 h-fit">
+    <div ref={container} className="w-screen px-[12.5vw] py-10 h-fit">
       <motion.h2
         animate={{
           opacity: isInView ? 1 : 0,
