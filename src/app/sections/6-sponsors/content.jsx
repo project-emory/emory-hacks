@@ -28,9 +28,9 @@ const Content = () => {
       name: "WolframAlpha",
       link: "https://www.wolframalpha.com/",
     },
+    { src: marta, name: "Marta", link: "https://www.itsmarta.com/" },
     { src: cnr, name: "CNR", link: "https://cnrit.com/" },
     { src: emorynlp, name: "EmoryNLP", link: "https://www.emorynlp.org/" },
-    { src: marta, name: "Marta", link: "https://www.itsmarta.com/" },
   ];
 
   return (
