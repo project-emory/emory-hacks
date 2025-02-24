@@ -18,7 +18,7 @@
     { "start": "2:00 PM", "name": "Workshop 2" },
     { "start": "3:00 PM", "name": "Guest Speaker/Panel 2: Jay Jung" },
     { "start": "5:00 PM", "name": "Dinner Served" },
-    { "start": "6:30 PM", "name": "Recreational Event" },
+    { "start": "6:30 PM", "name": "Recreational Event" }
   ],
   [
     { "start": "8:00 AM", "name": "Breakfast Served" },
@@ -28,6 +28,6 @@
     { "start": "3:00 PM", "name": "Closing Ceremony" },
     { "start": "3:55 PM", "name": "Judges Deliberate" },
     { "start": "4:20 PM", "name": "Winners Announced" },
-    { "start": "4:30 PM", "name": "Event Ends" },
+    { "start": "4:30 PM", "name": "Event Ends" }
   ]
 ]
