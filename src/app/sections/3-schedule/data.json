@@ -1,33 +1,33 @@
 [
   [
-    { "start": "2:00 PM", "name": "Check-In & Setup" },
+    { "start": "3:00 PM", "name": "Check-In Starts" },
     {
       "start": "4:00 PM",
-      "name": "Opening Ceremony & Hackathon Rules Briefing"
+      "name": "Participant Check-in Closing"
     },
-    { "start": "5:00 PM", "name": "Team Forming/Networking" },
-    { "start": "5:30 PM", "name": "Speakers/Talks" },
-    { "start": "6:30 PM", "name": "Dinner & Sponsor Fair" },
-    { "start": "7:30 PM", "name": "Hacking Begins (Overnight)" }
+    { "start": "5:00 PM", "name": "Opening Ceremony" },
+    { "start": "6:30 PM", "name": "Dinner" },
+    { "start": "7:00 PM", "name": "Team Forming" },
+    { "start": "8:00 PM", "name": "Hacking Starts" }
   ],
   [
     { "start": "8:00 AM", "name": "Breakfast" },
-    { "start": "9:00 AM", "name": "Hacking Session" },
-    { "start": "12:00 PM", "name": "Lunch" },
-    { "start": "1:00 PM", "name": "Workshops" },
-    { "start": "2:00 PM", "name": "Hacking Session & Panelists" },
-    { "start": "5:00 PM", "name": "Dinner" },
-    { "start": "6:00 PM", "name": "Hacking Session & Activities" },
-    { "start": "10:00 PM", "name": "Hacking Continues" },
-    { "start": "12:00 AM", "name": "Late Night Snacks" }
+    { "start": "10:00 AM", "name": "Workshop 1" },
+    { "start": "12:00 PM", "name": "Lunch Served" },
+    { "start": "1:00 PM", "name": "Guest Speaker: Dorothea Volpe" },
+    { "start": "2:00 PM", "name": "Workshop 2" },
+    { "start": "3:00 PM", "name": "Guest Speaker/Panel 2: Jay Jung" },
+    { "start": "5:00 PM", "name": "Dinner Served" },
+    { "start": "6:30 PM", "name": "Recreational Event" },
   ],
   [
-    { "start": "8:00 AM", "name": "Breakfast" },
-    { "start": "9:00 AM", "name": "Final Hacking Sprint" },
-    { "start": "11:00 AM", "name": "Judging Round 1" },
-    { "start": "1:00 PM", "name": "Lunch" },
-    { "start": "2:00 PM", "name": "Final Presentations & Judging Round 2" },
-    { "start": "4:00 PM", "name": "Judge Decisions/Participant Activities" },
-    { "start": "5:00 PM", "name": "Closing Ceremony & Awards" }
+    { "start": "8:00 AM", "name": "Breakfast Served" },
+    { "start": "9:30 AM", "name": "Submission Due (Soft Deadline)" },
+    { "start": "11:00 AM", "name": "Hacking Ends (Hard Deadline)" },
+    { "start": "11:30 PM", "name": "Lunch Served (TBD)" },
+    { "start": "3:00 PM", "name": "Closing Ceremony" },
+    { "start": "3:55 PM", "name": "Judges Deliberate" },
+    { "start": "4:20 PM", "name": "Winners Announced" },
+    { "start": "4:30 PM", "name": "Event Ends" },
   ]
 ]
