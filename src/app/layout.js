@@ -30,6 +30,7 @@ export const metadata = {
     "atl hackathon",
     "atlanta coding",
     "computer science",
+    "atlanta"
   ],
   robots: {
     index: true,
