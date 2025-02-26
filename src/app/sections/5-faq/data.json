@@ -1,7 +1,7 @@
 [
   {
     "question": "Is the event free to attend?",
-    "answer": "Yes! Food will be provided for the duration of the event. We will also have swag and prizes!"
+    "answer": "Yes, the event is free to attend. The Emory Hacks team will be providing food and swag for all hackers attending the event."
   },
   {
     "question": "Where is the event? Is it in person or virtual? Where can I park?",
@@ -21,7 +21,7 @@
   },
   {
     "question": "What should I bring?",
-    "answer": "Your laptop, charger, headphones, ID, blanket & pillow, and enthusiasm."
+    "answer": "Please bring your laptop, battery packs, chargers, headphones, ID (Government Issue), blanket, pillow, and personal toiletries."
   },
   {
     "question": "When can we start working on our project? Can I work on a previous project?",
@@ -37,7 +37,7 @@
   },
   {
     "question": "What kind of activities will there be?",
-    "answer": "We will post the schedule closer to the event. There will be workshops and activities to take a break and meet other hackers and our wonderful sponsors."
+    "answer": "The hackathon will provide workshops, panels with speakers, and much more!"
   },
   {
     "question": "What is a hackathon? Will there be actual hacking?",
@@ -49,11 +49,7 @@
   },
   {
     "question": "Are you sending out acceptances? Is there a deadline to apply? Is there a waitlist?",
-    "answer": "We will send out acceptances 30 days before the event. If you need to know before then to book travel, please reach out to our team for an early review. Applications will be closing once we reach the maximum amount of hackers we can support, but we will have a waitlist the day of the event for any local hackers who want to fill the spots of any accepted hackers who do not end up attending."
-  },
-  {
-    "question": "How do I sign up to be a mentor/judge/volunteer?",
-    "answer": "You can sign up here - LINK"
+    "answer": "We will send out acceptances after the March 8th application deadline or when the maximum amount of hackers we can support is reached. Applications will close March 8th at 11:59 PM. There will be a waitlist the day of the event for any local hackers who want to fill the spots of any accepted hackers who do not attend."
   },
   {
     "question": "I still have a question!",
