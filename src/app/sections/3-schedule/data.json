@@ -14,8 +14,7 @@
     { "start": "8:00 AM", "name": "Breakfast" },
     { "start": "10:00 AM", "name": "Workshop 1" },
     { "start": "12:00 PM", "name": "Lunch Served" },
-    { "start": "1:00 PM", "name": "Guest Speaker: Dorothea Volpe" },
-    { "start": "2:00 PM", "name": "Workshop 2" },
+    { "start": "2:00 PM", "name": "Guest Speaker: Dorothea Volpe" },
     { "start": "3:00 PM", "name": "Guest Speaker/Panel 2: Jay Jung" },
     { "start": "5:00 PM", "name": "Dinner Served" },
     { "start": "6:30 PM", "name": "Recreational Event" }
