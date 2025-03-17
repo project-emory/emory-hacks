@@ -54,7 +54,7 @@ const Speaker = ({ speaker, isLast }) => {
       <div className="flex gap-3 md:gap-8 md:items-center">
         {/* PROFILE */}
         <div className="rounded-xl md:rounded-2xl size-[14vw] relative overflow-hidden">
-          <Image src={speaker.image} alt="speaker" fill />
+          <Image src={speaker.image} alt="speaker" fill className="object-cover" />
         </div>
 
         {/* DESCRIPTION */}
