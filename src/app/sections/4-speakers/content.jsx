@@ -28,7 +28,7 @@ const Content = () => {
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="mb-2 text-title font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-title"
       >
-        SPEAKERS/JUDGES
+        GUEST SPEAKERS
       </motion.h2>
 
       {/* BODY */}
@@ -54,7 +54,12 @@ const Speaker = ({ speaker, isLast }) => {
       <div className="flex gap-3 md:gap-8 md:items-center">
         {/* PROFILE */}
         <div className="rounded-xl md:rounded-2xl size-[14vw] relative overflow-hidden">
-          <Image src={speaker.image} alt="speaker" fill className="object-cover" />
+          <Image 
+            src={speaker.image} 
+            alt={`${speaker.name} - ${speaker.title}`} 
+            fill 
+            className={`object-cover ${speaker.name.includes("Bozicolona-Volpe") ? "object-[center_10%]" : "object-center"}`} 
+          />
         </div>
 
         {/* DESCRIPTION */}
