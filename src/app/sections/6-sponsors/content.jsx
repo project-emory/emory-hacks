@@ -23,11 +23,11 @@ const Content = () => {
     //   link: "https://www.jpmorganchase.com/",
     // },
     { src: hyundai, name: "Hyundai", link: "https://www.hyundaiusa.com/us/en" },
-    {
-      src: wolframalpha,
-      name: "WolframAlpha",
-      link: "https://www.wolframalpha.com/",
-    },
+    // {
+    //   src: wolframalpha,
+    //   name: "WolframAlpha",
+    //   link: "https://www.wolframalpha.com/",
+    // },
     { src: marta, name: "Marta", link: "https://www.itsmarta.com/" },
     { src: cnr, name: "CNR", link: "https://cnrit.com/" },
     { src: emorynlp, name: "EmoryNLP", link: "https://www.emorynlp.org/" },
