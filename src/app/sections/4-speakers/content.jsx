@@ -28,7 +28,7 @@ const Content = () => {
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="mb-2 text-title font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-title"
       >
-        GUEST SPEAKERS
+        SPEAKERS/JUDGES
       </motion.h2>
 
       {/* BODY */}
