@@ -1,27 +1,22 @@
 [
   [
     { "start": "3:00 PM", "name": "Check-In Starts" },
-    {
-      "start": "4:00 PM",
-      "name": "Participant Check-in Closing"
-    },
-    { "start": "5:00 PM", "name": "Opening Ceremony" },
-    { "start": "6:30 PM", "name": "Dinner" },
-    { "start": "7:00 PM", "name": "Team Forming" },
-    { "start": "8:00 PM", "name": "Hacking Starts" }
+    { "start": "4:00 PM", "name": "Registration Begins" },
+    { "start": "5:00 PM", "name": "Registration Ends / Opening Ceremony" },
+    { "start": "6:00 PM", "name": "Hacking Begins" },
+    { "start": "6:30 PM", "name": "Dinner Served" }
   ],
   [
     { "start": "8:00 AM", "name": "Breakfast" },
     { "start": "12:00 PM", "name": "Lunch Served" },
     { "start": "2:00 PM", "name": "Guest Speaker: Dorothea Volpe" },
-    { "start": "3:00 PM", "name": "Guest Speaker: Jay Jung (Cracking Big Tech)" },
+    { "start": "3:00 PM", "name": "Guest Speaker: Jay Jung <Cracking Big Tech>" },
     { "start": "5:00 PM", "name": "Dinner Served" },
-    { "start": "6:30 PM", "name": "Recreational Event" }
   ],
   [
+    { "start": "12:00 AM", "name": "Midnight Snack" },
     { "start": "8:00 AM", "name": "Breakfast Served" },
-    { "start": "12:00 PM", "name": "Hacking Ends" },
-    { "start": "12:00 PM", "name": "Lunch Served" },
+    { "start": "12:00 PM", "name": "Hacking Ends / Lunch Served" },
     { "start": "1:00 PM", "name": "Judging Begins" },
     { "start": "3:00 PM", "name": "Judging Ends" },
     { "start": "4:00 PM", "name": "Judges Deliberate" },
