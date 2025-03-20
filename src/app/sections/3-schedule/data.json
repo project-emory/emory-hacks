@@ -12,21 +12,20 @@
   ],
   [
     { "start": "8:00 AM", "name": "Breakfast" },
-    { "start": "10:00 AM", "name": "Workshop 1" },
     { "start": "12:00 PM", "name": "Lunch Served" },
     { "start": "2:00 PM", "name": "Guest Speaker: Dorothea Volpe" },
-    { "start": "3:00 PM", "name": "Guest Speaker/Panel 2: Jay Jung (Cracking Big Tech)" },
+    { "start": "3:00 PM", "name": "Guest Speaker: Jay Jung (Cracking Big Tech)" },
     { "start": "5:00 PM", "name": "Dinner Served" },
     { "start": "6:30 PM", "name": "Recreational Event" }
   ],
   [
     { "start": "8:00 AM", "name": "Breakfast Served" },
-    { "start": "9:30 AM", "name": "Submission Due (Soft Deadline)" },
-    { "start": "11:00 AM", "name": "Hacking Ends (Hard Deadline)" },
-    { "start": "11:30 PM", "name": "Lunch Served (TBD)" },
-    { "start": "3:00 PM", "name": "Closing Ceremony" },
-    { "start": "3:55 PM", "name": "Judges Deliberate" },
-    { "start": "4:20 PM", "name": "Winners Announced" },
-    { "start": "4:30 PM", "name": "Event Ends" }
+    { "start": "12:00 PM", "name": "Hacking Ends" },
+    { "start": "12:00 PM", "name": "Lunch Served" },
+    { "start": "1:00 PM", "name": "Judging Begins" },
+    { "start": "3:00 PM", "name": "Judging Ends" },
+    { "start": "4:00 PM", "name": "Judges Deliberate" },
+    { "start": "4:10 PM", "name": "Closing Ceremony" },
+    { "start": "4:45 PM", "name": "Event Ends" }
   ]
 ]
