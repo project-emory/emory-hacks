@@ -3,8 +3,8 @@
     { "start": "3:00 PM", "name": "Check-In Starts" },
     { "start": "4:00 PM", "name": "Registration Begins" },
     { "start": "5:00 PM", "name": "Registration Ends / Opening Ceremony" },
-    { "start": "6:00 PM", "name": "Hacking Begins" },
-    { "start": "6:30 PM", "name": "Dinner Served" }
+    { "start": "6:30 PM", "name": "Dinner Served" },
+    { "start": "8:00 PM", "name": "Hacking Begins" },
   ],
   [
     { "start": "8:00 AM", "name": "Breakfast" },
