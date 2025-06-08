@@ -119,7 +119,6 @@ const Register = () => {
 			download: true,
 			header: true,
 			complete: (results) => {
-				console.log("Schools loaded:", results.data);
 				setSchoolsData(results.data as SchoolData[]);
 				setIsLoading(false);
 			},
