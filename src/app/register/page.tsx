@@ -138,7 +138,7 @@ const Register = () => {
 
 	return (
 		<main className="mx-auto max-w-md">
-			<h1 className="mt-40 mb-10">Register for Emory Hacks 2025</h1>
+			<h1 className="mt-40 mb-10">Register for Emory Hacks 2026</h1>
 			{isLoading ? (
 				<p>Loading form data...</p>
 			) : (

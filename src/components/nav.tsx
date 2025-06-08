@@ -12,7 +12,7 @@ import {
 const Nav = () => {
 	return (
 		<NavigationMenu viewport={false}>
-			<NavigationMenuList className="sticky top-0 w-screen z-50 border-b m-0 p-2">
+			<NavigationMenuList className="absolute top-0 w-screen z-50 border-b m-0 p-2">
 				<NavigationMenuItem className="m-0">
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
 						<Link href="/">Home</Link>
