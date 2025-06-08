@@ -134,10 +134,18 @@
 	}
 
 	p {
-		@apply leading-7 [&:not(:first-child)]:mt-6;
+		@apply leading-7;
 	}
 
-  ul {
-    @apply my-6 ml-6 list-disc [&>li]:mt-2
-  }
+	ul {
+		@apply my-6 ml-6 list-disc [&>li]:mt-2;
+	}
+
+	button {
+		@apply cursor-pointer;
+	}
+
+	a {
+		@apply cursor-pointer;
+	}
 }

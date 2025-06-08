@@ -45,15 +45,15 @@ const countriesCsvPath = "/countries.csv";
 const schoolsCsvPath = "/schools.csv";
 
 const formSchema = z.object({
-	fname: z.string(),
-	lname: z.string(),
-	age: z.string(),
-	phone: z.string(),
-	email: z.email(),
-	school: z.string(),
-	studyLevel: z.string(),
-	country: z.string(),
-	linkedIn: z.string(),
+	fname: z.string().min(1, "First name is required"),
+	lname: z.string().min(1, "Last name is required"),
+	age: z.string().min(1, "Age is required"),
+	phone: z.string().min(1, "Phone number is required"),
+	email: z.email().min(1, "Email is required"),
+	school: z.string().min(1, "School is required"),
+	studyLevel: z.string().min(1, "Level of study is required"),
+	country: z.string().min(1, "Country of residence is required"),
+	linkedIn: z.url().optional(),
 });
 
 const studyLevels = [
@@ -76,6 +76,13 @@ const Register = () => {
 		defaultValues: {
 			fname: "",
 			lname: "",
+			age: "",
+			phone: "",
+			email: "",
+			school: "",
+			studyLevel: "",
+			country: "",
+			linkedIn: "",
 		},
 	});
 
@@ -276,8 +283,8 @@ const Register = () => {
 												</Button>
 											</FormControl>
 										</PopoverTrigger>
-										<PopoverContent className="w-full max-w-md p-0">
-											<Command>
+										<PopoverContent className="p-0 w-md">
+											<Command className="w-md">
 												<CommandInput
 													placeholder="Search a country..."
 													className="h-9"
@@ -345,7 +352,7 @@ const Register = () => {
 											</FormControl>
 										</PopoverTrigger>
 										<PopoverContent className="w-full max-w-md p-0">
-											<Command>
+											<Command className="w-full">
 												<CommandInput
 													placeholder="Search a school..."
 													className="h-9"
@@ -402,6 +409,7 @@ const Register = () => {
 						/>
 
 						{/* Continue with other form fields */}
+						<Button className="w-full">Submit</Button>
 					</form>
 				</Form>
 			)}
