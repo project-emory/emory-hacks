@@ -9,7 +9,7 @@ const DDAY = "2026-03-11";
 export default function Home() {
 	return (
 		<main className="flex items-center justify-center w-screen h-screen">
-			<div className="-z-10 rounded-full animate-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[30vw] bg-sky-200/60 blur-3xl" />
+			<div className="-z-10 rounded-full animate-pulse absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[30vw] bg-sky-200/50 blur-3xl" />
 			<div className="text-center space-y-2">
 				<h1>Emory Hacks 2026</h1>
 				<Countdown />
