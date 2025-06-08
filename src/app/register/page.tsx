@@ -135,7 +135,7 @@ const Register = () => {
 	}
 
 	return (
-		<main className="mx-auto max-w-md">
+		<main className="mx-auto max-w-lg">
 			<h1 className="mt-40 mb-10">Register for Emory Hacks 2026</h1>
 			{isLoading ? (
 				<p>Loading form data...</p>
@@ -240,7 +240,7 @@ const Register = () => {
 												<SelectValue placeholder="Select a level" />
 											</SelectTrigger>
 										</FormControl>
-										<SelectContent className="w-md">
+										<SelectContent className="w-lg">
 											{studyLevels.map((level) => (
 												<SelectItem key={level} value={level}>
 													{level}
@@ -281,8 +281,8 @@ const Register = () => {
 												</Button>
 											</FormControl>
 										</PopoverTrigger>
-										<PopoverContent className="p-0 w-md">
-											<Command className="w-md">
+										<PopoverContent className="p-0 w-lg">
+											<Command className="w-lg">
 												<CommandInput
 													placeholder="Search a country..."
 													className="h-9"
@@ -349,7 +349,7 @@ const Register = () => {
 												</Button>
 											</FormControl>
 										</PopoverTrigger>
-										<PopoverContent className="w-full max-w-md p-0">
+										<PopoverContent className="w-full max-w-lg p-0">
 											<Command className="w-full">
 												<CommandInput
 													placeholder="Search a school..."
