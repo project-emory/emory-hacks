@@ -240,7 +240,7 @@ const Register = () => {
 												<SelectValue placeholder="Select a level" />
 											</SelectTrigger>
 										</FormControl>
-										<SelectContent>
+										<SelectContent className="w-md">
 											{studyLevels.map((level) => (
 												<SelectItem key={level} value={level}>
 													{level}
@@ -288,14 +288,14 @@ const Register = () => {
 													className="h-9"
 												/>
 												<CommandList>
-													<CommandEmpty>No school found.</CommandEmpty>
+													<CommandEmpty>No country found.</CommandEmpty>
 													<CommandGroup>
 														{countriesData.map((country, i) => (
 															<CommandItem
 																value={country.name}
 																key={i}
 																onSelect={() => {
-																	form.setValue("school", country.name);
+																	form.setValue("country", country.name); // Fixed field name
 																}}
 															>
 																{country.name}
