@@ -57,6 +57,8 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
+          # Explicitly set the base path
+          base_path: 2025
       - name: Restore cache
         uses: actions/cache@v4
         with:
