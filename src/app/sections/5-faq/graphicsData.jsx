@@ -1,5 +1,3 @@
-import general_bg from "../../../../public/images/general_bg.webp";
+import general_bg from "./graphics/general_bg.webp";
 
-export {
-  general_bg,
-};
+export { general_bg };

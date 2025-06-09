@@ -1,5 +1,5 @@
-import bg from "../../../../public/images/footer/bg.webp";
-import clouds from "../../../../public/images/footer/clouds.webp";
-import rocket from "../../../../public/images/footer/rocket.webp";
+import bg from "./graphics/bg.webp";
+import clouds from "./graphics/clouds.webp";
+import rocket from "./graphics/rocket.webp";
 
 export { bg, clouds, rocket };
