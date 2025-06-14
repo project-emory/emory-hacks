@@ -110,15 +110,15 @@ jobs:
           touch ./deployment/.nojekyll
 
           # Create a root index.html if this is the primary branch (2025)
-          if [ "${{ env.DEPLOY_PATH }}" = "2025" ]; then
+          if [ "${{ env.DEPLOY_PATH }}" = "2026" ]; then
             cat > ./deployment/index.html << EOL
           <!DOCTYPE html>
           <html>
             <head>
-              <meta http-equiv="refresh" content="0;url=/2025" />
+              <meta http-equiv="refresh" content="0;url=/2026" />
             </head>
             <body>
-              Redirecting to <a href="/2025">/2025</a>
+              Redirecting to <a href="/2026">/2026</a>
             </body>
           </html>
           EOL
