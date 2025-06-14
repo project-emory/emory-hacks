@@ -1,0 +1,55 @@
+name: Deploy Branch to GitHub Pages
+
+on:
+  push:
+    branches:
+      - "2025"
+      - "2026"
+
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        required: true
+      path:
+        description: "Path to deploy to"
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: gh-pages-branch
+
+      - name: Copy build to path
+        run: |
+          mkdir -p gh-pages-branch/${{ github.event.inputs.path }}
+          cp -r out/* gh-pages-branch/${{ github.event.inputs.path }}/
+
+      - name: Commit and push
+        run: |
+          cd gh-pages-branch
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Deploy ${{ github.event.inputs.branch }} to ${{ github.event.inputs.path }}"
+          git push
