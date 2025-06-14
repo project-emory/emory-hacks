@@ -1,0 +1,118 @@
+name: Deploy Branch to GitHub Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        required: true
+      path:
+        description: "Path to deploy to"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build Next.js Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Debug - Check build output
+        run: |
+          echo "Checking for build output directories:"
+          ls -la
+          if [ -d "out" ]; then
+            echo "Found 'out' directory:"
+            ls -la out/
+          elif [ -d ".next/out" ]; then
+            echo "Found '.next/out' directory:"
+            ls -la .next/out/
+          elif [ -d ".next" ]; then
+            echo "Found '.next' directory:"
+            ls -la .next/
+          fi
+
+      - name: Prepare build output
+        id: prepare-output
+        run: |
+          # Create a directory to hold the output
+          mkdir -p build-output
+
+          # Copy the relevant output to build-output directory
+          if [ -d "out" ] && [ "$(ls -A out 2>/dev/null)" ]; then
+            echo "Copying from out/ directory"
+            cp -r out/* build-output/
+            echo "output_found=true" >> $GITHUB_OUTPUT
+          elif [ -d ".next/out" ] && [ "$(ls -A .next/out 2>/dev/null)" ]; then
+            echo "Copying from .next/out/ directory"
+            cp -r .next/out/* build-output/
+            echo "output_found=true" >> $GITHUB_OUTPUT
+          else
+            echo "No build output found"
+            echo "output_found=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create fallback content if needed
+        if: steps.prepare-output.outputs.output_found != 'true'
+        run: |
+          echo "<html><body><h1>Coming Soon</h1><p>The ${{ github.event.inputs.branch }} branch content will be deployed here soon.</p></body></html>" > build-output/index.html
+          echo "Created placeholder page"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: build-output/
+          retention-days: 1
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: downloaded-build
+
+      - name: List downloaded files
+        run: |
+          echo "Downloaded build files:"
+          ls -la downloaded-build/
+
+      - name: Copy files to deployment path
+        run: |
+          mkdir -p ${{ github.event.inputs.path }}
+          cp -r downloaded-build/* ${{ github.event.inputs.path }}/
+
+      - name: Commit and push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Deploy ${{ github.event.inputs.branch }} to ${{ github.event.inputs.path }}"
+          git push
