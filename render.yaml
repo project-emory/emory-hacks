@@ -1,0 +1,17 @@
+# Exported from Render on 2025-06-15T21:02:33Z
+services:
+- type: web
+  name: emory-hacks-2026
+  runtime: node
+  repo: https://github.com/project-emory/emory-hacks
+  branch: "2026"
+  plan: free
+  envVars:
+  - key: PORT
+    sync: false
+  - fromGroup: prod
+  region: oregon
+  buildCommand: npm ci; npm run build
+  startCommand: npm start
+  autoDeployTrigger: commit
+version: "1"
