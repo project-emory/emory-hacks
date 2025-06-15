@@ -13,23 +13,23 @@ const Content = () => {
 
 	const sponsors = [
 		{
-			src: "/2025/images/sponsors/hyundai.webp",
+			src: "/images/sponsors/hyundai.webp",
 			name: "Hyundai",
 			link: "https://www.hyundaiusa.com/us/en",
 		},
 
 		{
-			src: "/2025/images/sponsors/marta.webp",
+			src: "/images/sponsors/marta.webp",
 			name: "Marta",
 			link: "https://www.itsmarta.com/",
 		},
 		{
-			src: "/2025/images/sponsors/cnr.webp",
+			src: "/images/sponsors/cnr.webp",
 			name: "CNR",
 			link: "https://cnrit.com/",
 		},
 		{
-			src: "/2025/images/sponsors/emorynlp.webp",
+			src: "/images/sponsors/emorynlp.webp",
 			name: "EmoryNLP",
 			link: "https://www.emorynlp.org/",
 		},

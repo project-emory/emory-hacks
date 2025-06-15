@@ -2,31 +2,31 @@
 	{
 		"name": "Paul Varnedoe",
 		"title": "Principal Customer Solutions Manager at Amazon Web Services (AWS)",
-		"image": "/2025/images/speakers/varnedoe.jpg",
+		"image": "/images/speakers/varnedoe.jpg",
 		"bio": "Paul Varnedoe is a seasoned technology executive with over 20 years of experience in customer success, software development, and program management. As a Principal Customer Solutions Manager at AWS, he leads cloud transformation projects, including a recent $130 million initiative that significantly boosted revenue. Previously, he held leadership roles at major companies like Equifax and Delta Air Lines, focusing on agile frameworks and process optimization. Paul holds a management degree from Georgia Tech and multiple AWS and agile certifications. He is also active in professional networks and hosts podcasts on technology and career development."
 	},
 	{
 		"name": "Adam Sandor",
 		"title": "Software Engineer at Microsoft",
-		"image": "/2025/images/speakers/sandor.jpg",
+		"image": "/images/speakers/sandor.jpg",
 		"bio": "Adam Sandor is a software engineer at Microsoft with 9 years of experience. He's worked on Dynamics 365, Azure Compute, and Az Powershell + CLI. Most of his time is now spent making LLM powered tools and leading AI workshops. Adam's dream project is to contribute to a real-time universal translator. When he's not coding or getting his MBA, Adam loves to practice jodo and dussack."
 	},
 	{
 		"name": "Roy Hadley Jr",
 		"title": "Senior Special Counsel at Morris, Manning & Manning (MMM)",
-		"image": "/2025/images/speakers/hadley.jpg",
+		"image": "/images/speakers/hadley.jpg",
 		"bio": "Roy Hadley Jr is Special Counsel at Morris, Manning & Martin, where he leads the AI/Digital Innovation team.  He is an expert advisor in cybersecurity, risk management, and AI, particularly in data governance, compliance, and incident response. Roy's extensive background includes executive roles at publicly traded companies and legal counsel positions in technology, entertainment, and governmental bodies, including his current role as Special Counsel to the Commonwealth of Virginia for Cybersecurity."
 	},
 	{
 		"name": "Dorothea Bozicolona-Volpe",
 		"title": "Strategic Digital Marketing Executive",
-		"image": "/2025/images/speakers/bozicolona-volpe.jpg",
+		"image": "/images/speakers/bozicolona-volpe.jpg",
 		"bio": "Dorothéa Bozicolona-Volpe is a strategic digital marketing executive fluent in four languages, specializing in digital transformation, branding, and social media marketing for major global brands. A TED speaker and Webby Awards judge, she has been featured as a marketing expert on CBS and CNN, working with clients like IBM, L’Oréal, and Coca-Cola."
 	},
 	{
 		"name": "Jay Jung",
 		"title": "Software Engineer",
-		"image": "/2025/images/speakers/jung.jpg",
+		"image": "/images/speakers/jung.jpg",
 		"bio": "Jay Jung is a Staff Software Engineer in Atlanta with experience leading API Fundraising at Meta, scaling AI products at Microsoft, and integrating serverless architectures at Amazon. A keynote speaker at Princeton and a judge/speaker at Harvard, UPenn, and Berkeley, he also runs a successful social media platform with 40K+ followers, offering pre-professional advice."
 	}
 ]
