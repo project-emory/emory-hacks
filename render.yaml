@@ -2,7 +2,6 @@ services:
   - type: web
     name: emory-hacks
     runtime: static
-    plan: free
     buildCommand: npm ci; npm run build
     autoDeploy: true
     envVars:
