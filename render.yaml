@@ -3,7 +3,7 @@ services:
     name: next-js
     runtime: node
     plan: free
-    buildCommand: npm install; npm build
+    buildCommand: npm ci; npm run build
     startCommand: npm start
     autoDeploy: false
     envVars:
