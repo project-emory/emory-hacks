@@ -28,7 +28,7 @@ collaboration.
 
 ## Sponsored by
 
-<p align="center">
+<div style="display: flex; justify-content: center; gap: 20px;">
   <a href="https://www.hyundaiusa.com/us/en" target="_blank" rel="noopener noreferrer">
     <img src="/assets/images/sponsors/hyundai.webp" alt="Hyundai" width="120" style="margin: 20px;" />
   </a>
