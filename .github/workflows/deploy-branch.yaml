@@ -5,15 +5,12 @@ on:
     inputs:
       branch:
         description: "Branch to deploy"
-                required: true
-                default: "2025"
-                type: choice
-                options:
-                  - "2025"
-                  - "2026"
-      path:
-        description: "Path to deploy to"
         required: true
+        default: "2026"
+        type: choice
+        options:
+          - "2025"
+          - "2026"
 
 permissions:
   contents: write
@@ -111,13 +108,13 @@ jobs:
 
       - name: Copy files to deployment path
         run: |
-          mkdir -p ${{ github.event.inputs.path }}
-          cp -r downloaded-build/* ${{ github.event.inputs.path }}/
+          mkdir -p ${{ github.event.inputs.branch }}
+          cp -r downloaded-build/* ${{ github.event.inputs.branch }}/
 
       - name: Commit and push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "Deploy ${{ github.event.inputs.branch }} to ${{ github.event.inputs.path }}"
+          git commit -m "Deploy ${{ github.event.inputs.branch }} to ${{ github.event.inputs.branch }}"
           git push

@@ -1,0 +1,146 @@
+# Workflow for building and deploying multiple branches of a Next.js site to GitHub Pages
+# with separate paths for each branch
+
+name: Deploy Next.js site to Pages
+
+on:
+  # Runs on pushes targeting specific branches
+  push:
+    branches: ["2025", "2026"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        required: true
+        default: "2025"
+        type: choice
+        options:
+          - "2025"
+          - "2026"
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment per branch
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Define branch configuration here for easy updating
+      PRIMARY_BRANCH: "2025"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.branch || github.ref_name }}
+
+      - name: Set deploy path
+        id: set-path
+        run: |
+          BRANCH_NAME=${{ github.event_name == 'workflow_dispatch' && inputs.branch || github.ref_name }}
+          echo "DEPLOY_PATH=${BRANCH_NAME}" >> $GITHUB_ENV
+          echo "deploy_path=${BRANCH_NAME}" >> $GITHUB_OUTPUT
+          echo "IS_PRIMARY=$([[ "${BRANCH_NAME}" == "2025" ]] && echo "true" || echo "false")" >> $GITHUB_ENV
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Restore cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .next/cache
+          # Generate a new cache whenever packages or source files change.
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}-${{ env.DEPLOY_PATH }}
+          # If source files changed but packages didn't, rebuild from a prior cache.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ env.DEPLOY_PATH }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Update the next.config.js to use the correct basePath based on the branch
+      - name: Update Next.js config
+        run: |
+          # Create a temporary file with the updated config
+          cat > next.config.js.tmp << EOL
+          /** @type {import('next').NextConfig} */
+          const nextConfig = {
+            output: "export",
+            basePath: "/${{ env.DEPLOY_PATH }}",
+            images: {
+              unoptimized: true,
+            },
+          };
+
+          module.exports = nextConfig;
+          EOL
+
+          # Replace the original file with the temporary one
+          mv next.config.js.tmp next.config.js
+
+      - name: Build with Next.js
+        run: npx next build
+
+      - name: Create .nojekyll file
+        run: touch ./out/.nojekyll
+
+      # Store the output in a subdirectory based on the branch name
+      - name: Prepare artifact for deployment
+        run: |
+          # Create directory for this branch's output
+          mkdir -p ./deployment/${{ env.DEPLOY_PATH }}
+
+          # Copy the build output to the branch-specific directory
+          cp -r ./out/* ./deployment/${{ env.DEPLOY_PATH }}/
+
+          # Create .nojekyll at the root level too
+          touch ./deployment/.nojekyll
+
+          # Create a root index.html if this is the primary branch (2025)
+          if [ "${{ env.IS_PRIMARY }}" = "true" ]; then
+            cat > ./deployment/index.html << EOL
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta http-equiv="refresh" content="0;url=/${{ env.DEPLOY_PATH }}" />
+            </head>
+            <body>
+              Redirecting to <a href="/${{ env.DEPLOY_PATH }}">/${{ env.DEPLOY_PATH }}</a>
+            </body>
+          </html>
+          EOL
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./deployment
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
