@@ -44,7 +44,7 @@ Emory Hacks Tech team can refer to [this document](https://github.com/project-em
 ### 2026
 
 ### 2025
-<div style="display: flex; justify-content: center; gap: 20px;">
+<picture style="display: flex; justify-content: center; gap: 20px;">
   <a href="https://www.hyundaiusa.com/us/en" target="_blank" rel="noopener noreferrer">
     <img src="/assets/images/sponsors/hyundai.webp" alt="Hyundai" width="120" style="margin: 20px;" />
   </a>
@@ -60,4 +60,4 @@ Emory Hacks Tech team can refer to [this document](https://github.com/project-em
   <a href="https://www.emorynlp.org/" target="_blank" rel="noopener noreferrer">
     <img src="/assets/images/sponsors/emorynlp.webp" alt="EmoryNLP" width="120" style="margin: 20px;" />
   </a>
-</div>
+</picture>
