@@ -26,8 +26,24 @@ coder or a seasoned developer, join us to push your creative and
 technical boundaries in this dynamic weekend of building and
 collaboration.
 
-## Sponsored by
+## Codebase
 
+### Branches
+
+  - `main`: The main branch contains the GitHub workflows that ensures smooth CI/CD.
+  - `gh-pages`: The branch to deploy static outputs of all websites.
+  - `2026`: The branch for the 2026 hackathon.
+  - `2025`: The branch for the 2025 hackathon.
+
+### Development
+
+Emory Hacks Tech team can refer to [this document](https://github.com/project-emory/emory-hacks/blob/main/docs/deployment.md) for guidance on how to deploy new year's website.
+
+## Sponsors
+
+### 2026
+
+### 2025
 <div style="display: flex; justify-content: center; gap: 20px;">
   <a href="https://www.hyundaiusa.com/us/en" target="_blank" rel="noopener noreferrer">
     <img src="/assets/images/sponsors/hyundai.webp" alt="Hyundai" width="120" style="margin: 20px;" />
@@ -44,18 +60,4 @@ collaboration.
   <a href="https://www.emorynlp.org/" target="_blank" rel="noopener noreferrer">
     <img src="/assets/images/sponsors/emorynlp.webp" alt="EmoryNLP" width="120" style="margin: 20px;" />
   </a>
-</p>
-Each year's website lives in its own branch. For example, the website for the 2025 hackathon is located in the `2025` branch.
-
-## Codebase
-
-### Branches
-
-  - `main`: The main branch contains the GitHub workflows that ensures smooth CI/CD.
-  - `gh-pages`: The branch to deploy static outputs of all websites.
-  - `2026`: The branch for the 2026 hackathon.
-  - `2025`: The branch for the 2025 hackathon.
-
-### Development
-
-Emory Hacks Tech team can refer to [this document](https://github.com/project-emory/emory-hacks/blob/main/docs/deployment.md) for guidance on how to deploy new year's website.
+</div>
