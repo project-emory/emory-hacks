@@ -4,10 +4,6 @@
   "jsxSingleQuote": false,
   "singleQuote": false,
   "tabWidth": 2,
-  "plugins": [
-    "@ianvs/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
-  ],
   "importOrder": [
     "^react$",
     "",

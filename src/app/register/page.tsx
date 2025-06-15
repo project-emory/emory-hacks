@@ -43,15 +43,15 @@ const countriesCsvPath = "/2026/countries.csv";
 const schoolsCsvPath = "/2026/schools.csv";
 
 const formSchema = z.object({
-	fname: z.string().min(1, "First name is required"),
-	lname: z.string().min(1, "Last name is required"),
-	age: z.string().min(1, "Age is required"),
-	phone: z.string().min(1, "Phone number is required"),
-	email: z.email().min(1, "Email is required"),
-	school: z.string().min(1, "School is required"),
-	studyLevel: z.string().min(1, "Level of study is required"),
-	country: z.string().min(1, "Country of residence is required"),
-	linkedIn: z.url().optional(),
+  fname: z.string().min(1, "First name is required"),
+  lname: z.string().min(1, "Last name is required"),
+  age: z.string().min(1, "Age is required"),
+  phone: z.string().min(1, "Phone number is required"),
+  email: z.email().min(1, "Email is required"),
+  school: z.string().min(1, "School is required"),
+  studyLevel: z.string().min(1, "Level of study is required"),
+  country: z.string().min(1, "Country of residence is required"),
+  linkedIn: z.url().optional(),
 });
 
 const studyLevels = [
