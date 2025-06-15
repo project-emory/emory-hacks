@@ -1,0 +1,24 @@
+services:
+# Emory Hacks 2025
+- type: web
+  name: emory-hacks-2025
+  runtime: static
+  repo: https://github.com/project-emory/emory-hacks
+  branch: "2025"
+  buildCommand: npm ci; npm run build
+  staticPublishPath: out
+  autoDeployTrigger: commit
+
+# Emory Hacks 2026
+- type: web
+  name: emory-hacks-2026
+  runtime: node
+  repo: https://github.com/project-emory/emory-hacks
+  branch: "2026"
+  plan: free
+  envVars:
+  - fromGroup: prod
+  region: oregon
+  buildCommand: npm ci; npm run build
+  startCommand: npm start
+  autoDeployTrigger: commit
