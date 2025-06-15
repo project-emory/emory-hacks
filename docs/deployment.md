@@ -1,8 +1,18 @@
-# CI/CD
+# Development
+
+## Web Framework
+
+Future websites are highly encouraged to be built using Next.js, for the best compatibility with the deployment process.
+If you absolutely want to build in a different framework, it is best to create a new repository other than this one. It's because the current deployment automation is only tailored to Next.js applications, and creating a new deployment process will most likely undeploy all the previous websites. GitHub Pages only support one branch to be deployed, which is the `gh-pages` branch for our project.
 
 ## GitHub Actions
 
 Each year's website is deployed using GitHub Actions. The workflow is defined in the `.github/workflows/deploy.yml` file.
+This is how the workflow works:
+
+1. The workflow exports the Next.js project as a static site by running `npm run build` on the specified branch.
+2. The build output is then copied to the `gh-pages` branch.
+3. The `gh-pages` branch is where all the build outputs from previous years are stored and deployed.
 
 ## Deploying Future Websites
 
