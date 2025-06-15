@@ -6,9 +6,7 @@ name: Deploy Next.js site to Pages
 on:
   # Runs on pushes targeting any branch matching the pattern
   push:
-    branches:
-      - "2026"
-      - "2025"
+    branches: ["2025", "2026"]
 
   # Allows you to run this workflow manually from the Actions tab
   # workflow_dispatch:
