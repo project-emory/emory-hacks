@@ -7,9 +7,8 @@ on:
   # Runs on pushes targeting any branch matching the pattern
   push:
     branches:
-      - "**" # Include all branches
-      - "!gh-pages" # Exclude gh-pages
-      - "!main" # Exclude main
+      - "2026"
+      - "2025"
 
   # Allows you to run this workflow manually from the Actions tab
   # workflow_dispatch:
@@ -38,11 +37,12 @@ jobs:
     steps:
       - name: Set branch name
         run: |
-          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "BRANCH_NAME=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
-          else
-            echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
-          fi
+          # if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+          #   echo "BRANCH_NAME=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
+          # else
+          #   echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+          # fi
+          echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
 
       - name: Checkout current branch
         uses: actions/checkout@v4
