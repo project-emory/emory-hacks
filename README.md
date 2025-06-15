@@ -55,3 +55,6 @@ Each year's website lives in its own branch. For example, the website for the 20
   - `gh-pages`: The branch to deploy static outputs of all websites.
   - `2026`: The branch for the 2026 hackathon.
   - `2025`: The branch for the 2025 hackathon.
+
+### CI/CD
+
