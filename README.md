@@ -58,4 +58,4 @@ Each year's website lives in its own branch. For example, the website for the 20
 
 ### Development
 
-Emory Hacks Tech team can refer to [this document](https://github.com/project-emory/emory-hacks/blob/main/README.md) for guidance on how to deploy new year's website.
+Emory Hacks Tech team can refer to [this document](https://github.com/project-emory/emory-hacks/blob/main/docs/deployment.md) for guidance on how to deploy new year's website.
