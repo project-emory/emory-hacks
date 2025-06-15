@@ -19,8 +19,6 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod/v4";
-import { useEffect, useState } from "react";
-import { usePapaParse } from "react-papaparse";
 import {
   Popover,
   PopoverContent,
@@ -37,38 +35,11 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-
-// Import the CSV files as URLs rather than trying to import the data directly
-const countriesCsvPath = "/2026/countries.csv";
-const schoolsCsvPath = "/2026/schools.csv";
-
-const formSchema = z.object({
-  fname: z.string().min(1, "First name is required"),
-  lname: z.string().min(1, "Last name is required"),
-  age: z.string().min(1, "Age is required"),
-  phone: z.string().min(1, "Phone number is required"),
-  email: z.email().min(1, "Email is required"),
-  school: z.string().min(1, "School is required"),
-  studyLevel: z.string().min(1, "Level of study is required"),
-  country: z.string().min(1, "Country of residence is required"),
-  linkedIn: z.url().optional(),
-});
-
-const studyLevels = [
-  "Less than Secondary / High School",
-  "Secondary / High School",
-  "Undergraduate University (2 year - community college or similar)",
-  "Undergraduate University (3+ year)",
-  "Graduate University (Masters, Professional, Doctoral, etc.)",
-  "Code School / Bootcamp",
-  "Other Vocational / Trade Program or Apprenticeship",
-  "Post Doctorate",
-  "Other",
-  "I'm not currently a student",
-  "Prefer not to answer",
-];
+import { formSchema, studyLevels, useData } from "@/lib/register";
 
 const Register = () => {
+  const { countriesData, schoolsData, isLoading } = useData();
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -83,51 +54,6 @@ const Register = () => {
       linkedIn: "",
     },
   });
-
-  // Define types for CSV data
-  interface CountryData {
-    name: string;
-    alpha2: string;
-  }
-
-  interface SchoolData {
-    name: string;
-  }
-
-  // State to store parsed CSV data
-  const [countriesData, setCountriesData] = useState<CountryData[]>([]);
-  const [schoolsData, setSchoolsData] = useState<SchoolData[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const { readRemoteFile } = usePapaParse();
-
-  useEffect(() => {
-    // Load countries data
-    readRemoteFile(countriesCsvPath, {
-      download: true,
-      header: true,
-      complete: (results) => {
-        setCountriesData(results.data as CountryData[]);
-      },
-      error: (error) => {
-        console.error("Error loading countries:", error);
-      },
-    });
-
-    // Load schools data
-    readRemoteFile(schoolsCsvPath, {
-      download: true,
-      header: true,
-      complete: (results) => {
-        setSchoolsData(results.data as SchoolData[]);
-        setIsLoading(false);
-      },
-      error: (error) => {
-        console.error("Error loading schools:", error);
-        setIsLoading(false);
-      },
-    });
-  }, [readRemoteFile]);
 
   function onSubmit(data: z.infer<typeof formSchema>) {
     console.log("Form submitted with data:", data);
