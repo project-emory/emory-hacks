@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { usePapaParse } from "react-papaparse";
 
-const schoolsCsvPath = "/2026/schools.csv";
+const schoolsCsvPath = "/schools.csv";
 
 type SchoolData = {
   name: string;
