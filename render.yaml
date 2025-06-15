@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: emory-hacks-2025
-    runtime: static
-    buildCommand: npm ci; npm run build
-    autoDeploy: true
-    envVars:
-      - key: PORT
-        value: 2025
