@@ -13,7 +13,6 @@ export default function Home() {
     const add = async () => {
       await addRow(["hello", new Date().toISOString()]);
     };
-
     add();
   }, []);
 
