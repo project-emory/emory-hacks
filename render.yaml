@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: next-js
+    runtime: node
+    plan: free
+    buildCommand: npm install; npm build
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8080
