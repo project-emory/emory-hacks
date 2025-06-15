@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: next-js
+    name: emory-hacks
     runtime: node
     plan: free
     buildCommand: npm ci; npm run build
