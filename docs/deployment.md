@@ -33,6 +33,17 @@ To deploy a new website for a new year, follow these steps:
           - "2026"
           - "2027" # new branch added here
   ```
+3. Modify the `PRIMARY_BRANCH` variable in the `deploy.yml` file to match the most recent branch name.
+
+  ```yaml
+  jobs:
+    # Build job
+    build:
+      runs-on: ubuntu-latest
+      env:
+        PRIMARY_BRANCH: "2026" # Branch that root path will redirect to
+  ```
+  Here, instead of `2026`, assign the variable `PRIMARY_BRANCH` to the new branch name (e.g. `2027`).
 
 3. Commit and push the changes to the `deploy.yml` file.
 4. Continue building the new website on the new branch.

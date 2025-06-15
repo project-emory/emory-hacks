@@ -56,5 +56,6 @@ Each year's website lives in its own branch. For example, the website for the 20
   - `2026`: The branch for the 2026 hackathon.
   - `2025`: The branch for the 2025 hackathon.
 
-### CI/CD
+### Development
 
+Emory Hacks Tech team can refer to [this document](https://github.com/emory-hacks/docs/deployment.md) for guidance on how to deploy new year's website.
