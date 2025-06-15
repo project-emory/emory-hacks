@@ -1,8 +1,3 @@
-export {
-  formSchema,
-  countriesCsvPath,
-  schoolsCsvPath,
-  studyLevels,
-} from "./form";
+export { formSchema, studyLevels } from "./form";
 
-export { useData } from "./use-data";
+export { useCountriesData } from "./use-countries-data";

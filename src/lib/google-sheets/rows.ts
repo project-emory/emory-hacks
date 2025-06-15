@@ -2,9 +2,18 @@
 
 import { getSheet } from "./sheet";
 
-export const addRow = async (row: (number | string | boolean | Date)[]) => {
+export const addRow = async (
+  row: Record<string, string | boolean | number | Date>,
+) => {
   const sheet = await getSheet();
-  await sheet.addRow(row).then(() => {
-    console.log("added", row);
-  });
+
+  try {
+    await sheet.addRow(row, {
+      
+    }).then(() => {
+      console.log("added", row);
+    });
+  } catch (error) {
+    console.error("Error adding row:", error);
+  }
 };

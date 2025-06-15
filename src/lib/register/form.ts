@@ -26,7 +26,4 @@ const studyLevels = [
   "Prefer not to answer",
 ];
 
-type FormData = z.infer<typeof formSchema>;
-
 export { formSchema, studyLevels };
-export type { FormData };
