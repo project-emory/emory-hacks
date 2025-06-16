@@ -24,4 +24,3 @@ services:
     autoDeployTrigger: commit
     domains:
       - emoryhacks.com
-version: "1"

@@ -26,24 +26,19 @@ coder or a seasoned developer, join us to push your creative and
 technical boundaries in this dynamic weekend of building and
 collaboration.
 
-## Websites
-
-| Year | Website |
-|------|---------|
-| 2025 Fall   | <https://emoryhacks.com> |
-| 2025 Spring | <https://emory-hacks-2025-spring.onrender.com> |
-
 ## Codebase
 
-### Branches
+### Websites
 
-- `main`: The main branch contains the GitHub workflows that ensures smooth CI/CD.
-- `2025/fall`: The branch for the 2025 Fall hackathon.
-- `2025/spring`: The branch for the 2025 Spring hackathon.
+| Branch                                                                         | Description                                                                                                             |
+| ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| [`main`](https://github.com/project-emory/emory-hacks)                         | Main branch containing docs and `render.yaml` file, a blueprint for website deployment on [Render](https://render.com/) |
+| [`2025/fall`](https://github.com/project-emory/emory-hacks/tree/2025/fall)     | 2025 Fall hackathon [website](https://emoryhacks.com)                                                                   |
+| [`2025/spring`](https://github.com/project-emory/emory-hacks/tree/2025/spring) | 2025 Spring hackathon [website](https://emory-hacks-2025-spring.onrender.com)                                           |
 
 ### Development
 
-Emory Hacks Tech team can refer to [this document](https://github.com/project-emory/emory-hacks/blob/main/docs/deployment.md) for guidance on how to deploy new year's website.
+Emory Hacks Tech team can refer to [docs](https://github.com/project-emory/emory-hacks/blob/main/docs/README.md) for guidance on how to deploy new year's website.
 
 ## Sponsors
 
