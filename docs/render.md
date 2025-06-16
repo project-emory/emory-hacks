@@ -80,3 +80,10 @@ Now, Render will automatically detect the changes and deploy the new website. Yo
 
 From now on, any new commits to a website branch will trigger a new deployment of the website. You can check the deployment status on the Render Dashboard.
 
+### 4. Assign Emory Hacks Domain
+
+Refer to our [DNS settings documentation](/docs/dns-settings.md) for instructions on how to assign the Emory Hacks domain to the new website.
+
+## 3. Monitor Deployment
+
+You can monitor the deployment status on the Render Dashboard. If there are any errors during the deployment, you can check the logs to see what went wrong. You can also manually trigger a deployment by clicking the "Manual Deploy" button on the Render Dashboard.
