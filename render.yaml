@@ -8,6 +8,8 @@ services:
     buildCommand: npm ci; npm run build
     staticPublishPath: out
     autoDeployTrigger: commit
+    domains:
+      - emoryhacks.com
 
   # Emory Hacks 2025 Fall (dynamic)
   - type: web
@@ -22,6 +24,3 @@ services:
     buildCommand: npm ci; npm run build
     startCommand: npm start
     autoDeployTrigger: commit
-    domains:
-      - emoryhacks.com
-

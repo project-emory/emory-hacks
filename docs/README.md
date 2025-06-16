@@ -47,4 +47,3 @@ Our 2025 Spring website relied on a third-party service [Luma](https://lu.ma/) f
 ### The Blueprint
 
 [`render.yaml`](/render.yaml) is the blueprint file for our Render deployment. It is a way of telling Render how to build and deploy our website. It contains the configuration for each website, including the build command, start command, and environment variables. Refer to the [Render documentation](./render.md) for a detailed guideline on how to use the blueprint file.
-
