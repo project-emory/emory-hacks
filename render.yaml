@@ -24,3 +24,15 @@ services:
     autoDeployTrigger: commit
     domains:
       - emoryhacks.com
+
+  # Emory Hacks 2026 Spring (dynamic)
+  - type: web
+    name: emory-hacks-2026-spring
+    runtime: node
+    repo: https://github.com/project-emory/emory-hacks
+    branch: "2026/spring"
+    plan: free
+    region: oregon
+    buildCommand: npm ci; npm run build
+    startCommand: npm start
+    autoDeployTrigger: commit
