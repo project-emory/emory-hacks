@@ -1,5 +1,5 @@
 services:
-  # Emory Hacks 2025 Spring
+  # Emory Hacks 2025 Spring (static)
   - type: web
     name: emory-hacks-2025-spring
     runtime: static
@@ -9,7 +9,7 @@ services:
     staticPublishPath: out
     autoDeployTrigger: commit
 
-  # Emory Hacks 2025 Fall
+  # Emory Hacks 2025 Fall (dynamic)
   - type: web
     name: emory-hacks-2025-fall
     runtime: node
