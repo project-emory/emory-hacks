@@ -1,20 +1,20 @@
 services:
-# Emory Hacks 2025
+# Emory Hacks 2025 Spring
 - type: web
-  name: emory-hacks-2025
+  name: emory-hacks-2025-spring
   runtime: static
   repo: https://github.com/project-emory/emory-hacks
-  branch: "2025"
+  branch: "2025/spring"
   buildCommand: npm ci; npm run build
   staticPublishPath: out
   autoDeployTrigger: commit
 
-# Emory Hacks 2026
+# Emory Hacks 2025 Fall
 - type: web
-  name: emory-hacks-2026
+  name: emory-hacks-2025-fall
   runtime: node
   repo: https://github.com/project-emory/emory-hacks
-  branch: "2026"
+  branch: "2025/fall"
   plan: free
   envVars:
   - fromGroup: prod
