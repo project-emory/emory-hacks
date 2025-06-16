@@ -23,6 +23,5 @@ services:
     startCommand: npm start
     autoDeployTrigger: commit
     domains:
-      - www.emoryhacks.com
       - emoryhacks.com
 version: "1"
