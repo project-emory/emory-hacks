@@ -17,7 +17,7 @@ services:
   branch: "2025/fall"
   plan: free
   envVars:
-  - fromGroup: prod
+  - fromGroup: google-api
   region: oregon
   buildCommand: npm ci; npm run build
   startCommand: npm start
