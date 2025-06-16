@@ -26,14 +26,20 @@ coder or a seasoned developer, join us to push your creative and
 technical boundaries in this dynamic weekend of building and
 collaboration.
 
+## Websites
+
+| Year | Website |
+|------|---------|
+| 2025 Fall   | <https://emoryhacks.com> |
+| 2025 Spring | <https://emory-hacks-2025-spring.onrender.com> |
+
 ## Codebase
 
 ### Branches
 
-  - `main`: The main branch contains the GitHub workflows that ensures smooth CI/CD.
-  - `gh-pages`: The branch to deploy static outputs of all websites.
-  - `2026`: The branch for the 2026 hackathon.
-  - `2025`: The branch for the 2025 hackathon.
+- `main`: The main branch contains the GitHub workflows that ensures smooth CI/CD.
+- `2025/fall`: The branch for the 2025 Fall hackathon.
+- `2025/spring`: The branch for the 2025 Spring hackathon.
 
 ### Development
 
@@ -60,4 +66,3 @@ Emory Hacks Tech team can refer to [this document](https://github.com/project-em
 <a href="https://www.emorynlp.org/" target="_blank" rel="noopener noreferrer">
 <img src="/assets/images/sponsors/emorynlp.webp" alt="EmoryNLP" width="15%" style="margin: 20px;" />
 </a>
-
