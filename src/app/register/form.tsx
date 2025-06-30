@@ -6,6 +6,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
 import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
 import {
@@ -56,6 +57,11 @@ const RegisterForm = () => {
       studyLevel: "",
       country: "",
       linkedIn: "",
+      mlh: {
+        codeOfConduct: false,
+        eventInfo: false,
+        communication: false,
+      },
     },
   });
 
@@ -354,6 +360,101 @@ const RegisterForm = () => {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="mlh.codeOfConduct"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex items-start gap-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                    className="mt-1"
+                  />
+                </FormControl>
+                <FormLabel className="text-sm font-normal">
+                  I have read and agree to the{""}
+                  <a
+                    href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+                    className="underline"
+                  >
+                    {""}
+                    MLH Code of Conduct
+                  </a>
+                  .
+                </FormLabel>
+              </div>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="mlh.eventInfo"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex items-start gap-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                    className="mt-1"
+                  />
+                </FormControl>
+                <FormLabel className="inline text-sm font-normal select-none ...">
+                  I authorize you to share my application/registration
+                  information with Major League Hacking for event
+                  administration, ranking, and MLH administration in-line with
+                  the MLH Privacy Policy. I further agree to the terms of both
+                  the{" "}
+                  <a
+                    href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
+                    className="underline"
+                  >
+                    {" "}
+                    MLH Contest Terms and Conditions
+                  </a>{" "}
+                  and the{" "}
+                  <a
+                    href="https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md"
+                    className="underline"
+                  >
+                    {" "}
+                    MLH Privacy Policy
+                  </a>
+                  .
+                </FormLabel>
+              </div>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="mlh.communication"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex items-start gap-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                    className="mt-1"
+                  />
+                </FormControl>
+                <FormLabel className="text-sm font-normal">
+                  I authorize MLH to send me occasional emails about relevant
+                  events, career opportunities, and community announcements.
+                </FormLabel>
+              </div>
               <FormMessage />
             </FormItem>
           )}
