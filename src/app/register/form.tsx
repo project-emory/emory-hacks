@@ -6,8 +6,10 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
 import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
+import Link from "next/link";
 import {
   Command,
   CommandEmpty,
@@ -56,6 +58,11 @@ const RegisterForm = () => {
       studyLevel: "",
       country: "",
       linkedIn: "",
+      mlh: {
+        codeOfConduct: false,
+        eventInfo: false,
+        communication: false,
+      },
     },
   });
 
@@ -74,6 +81,7 @@ const RegisterForm = () => {
       "Level of Study": data.studyLevel,
       Country: data.country,
       LinkedIn: data.linkedIn || "",
+      "Receive Communication": data.mlh.communication ?? false,
       "Register Date": formattedNow,
     };
 
@@ -354,6 +362,104 @@ const RegisterForm = () => {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="mlh.codeOfConduct"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex items-start gap-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                    className="mt-1"
+                  />
+                </FormControl>
+                <FormLabel className="text-sm font-normal">
+                  I have read and agree to the{""}
+                  <Link
+                    href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+                    className="underline"
+                    target="_blank"
+                  >
+                    {""}
+                    MLH Code of Conduct
+                  </Link>
+                  .
+                </FormLabel>
+              </div>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="mlh.eventInfo"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex items-start gap-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                    className="mt-1"
+                  />
+                </FormControl>
+                <FormLabel className="inline text-sm font-normal select-none ...">
+                  I authorize you to share my application/registration
+                  information with Major League Hacking for event
+                  administration, ranking, and MLH administration in-line with
+                  the MLH Privacy Policy. I further agree to the terms of both
+                  the{" "}
+                  <Link
+                    href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
+                    className="underline"
+                    target="_blank"
+                  >
+                    {" "}
+                    MLH Contest Terms and Conditions
+                  </Link>{" "}
+                  and the{" "}
+                  <Link
+                    href="https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md"
+                    className="underline"
+                    target="_blank"
+                  >
+                    {" "}
+                    MLH Privacy Policy
+                  </Link>
+                  .
+                </FormLabel>
+              </div>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="mlh.communication"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex items-start gap-2">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                    className="mt-1"
+                  />
+                </FormControl>
+                <FormLabel className="text-sm font-normal">
+                  I authorize MLH to send me occasional emails about relevant
+                  events, career opportunities, and community announcements.
+                </FormLabel>
+              </div>
               <FormMessage />
             </FormItem>
           )}
