@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
 import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
+import Link from "next/link";
 import {
   Command,
   CommandEmpty,
@@ -80,6 +81,7 @@ const RegisterForm = () => {
       "Level of Study": data.studyLevel,
       Country: data.country,
       LinkedIn: data.linkedIn || "",
+      "Receive Communication": data.mlh.communication ?? false,
       "Register Date": formattedNow,
     };
 
@@ -380,13 +382,14 @@ const RegisterForm = () => {
                 </FormControl>
                 <FormLabel className="text-sm font-normal">
                   I have read and agree to the{""}
-                  <a
+                  <Link
                     href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
                     className="underline"
+                    target="_blank"
                   >
                     {""}
                     MLH Code of Conduct
-                  </a>
+                  </Link>
                   .
                 </FormLabel>
               </div>
@@ -414,21 +417,23 @@ const RegisterForm = () => {
                   administration, ranking, and MLH administration in-line with
                   the MLH Privacy Policy. I further agree to the terms of both
                   the{" "}
-                  <a
+                  <Link
                     href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
                     className="underline"
+                    target="_blank"
                   >
                     {" "}
                     MLH Contest Terms and Conditions
-                  </a>{" "}
+                  </Link>{" "}
                   and the{" "}
-                  <a
+                  <Link
                     href="https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md"
                     className="underline"
+                    target="_blank"
                   >
                     {" "}
                     MLH Privacy Policy
-                  </a>
+                  </Link>
                   .
                 </FormLabel>
               </div>
