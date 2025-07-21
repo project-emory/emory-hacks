@@ -1,8 +1,8 @@
+import { fonts } from "@/components/fonts";
+import Nav from "@/components/nav";
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import "./globals.css";
-import Nav from "@/components/nav";
-import { fonts } from "@/components/fonts";
-import { Toaster } from "@/components/ui/sonner";
 
 const fontVariables = Object.entries(fonts)
   .map(([, v]) => v.variable)
