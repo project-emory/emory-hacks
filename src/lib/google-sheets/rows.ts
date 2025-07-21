@@ -8,9 +8,7 @@ export const addRow = async (
   const sheet = await getSheet();
 
   try {
-    await sheet.addRow(row, {
-      
-    }).then(() => {
+    await sheet.addRow(row, {}).then(() => {
       console.log("added", row);
     });
   } catch (error) {

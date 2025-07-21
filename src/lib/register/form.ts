@@ -10,6 +10,7 @@ const formSchema = z.object({
   studyLevel: z.string().min(1, "Level of study is required"),
   country: z.string().min(1, "Country of residence is required"),
   linkedIn: z.url().optional(),
+  resume: z.instanceof(File).nullable(),
   mlh: z.object({
     codeOfConduct: z.boolean().refine((val) => val, {
       message: "You must agree to the MLH Code of Conduct.",

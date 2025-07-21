@@ -1,15 +1,7 @@
 "use client";
 
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { cn } from "@/lib/utils";
-import { CheckIcon, ChevronsUpDownIcon } from "lucide-react";
-import Link from "next/link";
 import {
   Command,
   CommandEmpty,
@@ -27,6 +19,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import {
   Select,
   SelectContent,
@@ -34,17 +32,23 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { formSchema, studyLevels, useCountriesData } from "@/lib/register";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod/v4";
+import { upload } from "@/lib/aws/upload";
 import { addRow } from "@/lib/google-sheets";
+import { formSchema, studyLevels, useCountriesData } from "@/lib/register";
 import { useSchoolsData } from "@/lib/register/use-schools-data";
+import { cn } from "@/lib/utils";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { CheckIcon, ChevronsUpDownIcon, Loader2Icon } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { z } from "zod/v4";
 
 const RegisterForm = () => {
   const { countriesData, isLoading: isCountriesLoading } = useCountriesData();
   const { schoolsData, isLoading: isSchoolsLoading } = useSchoolsData();
+  const router = useRouter();
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -58,6 +62,7 @@ const RegisterForm = () => {
       studyLevel: "",
       country: "",
       linkedIn: "",
+      resume: null,
       mlh: {
         codeOfConduct: false,
         eventInfo: false,
@@ -66,39 +71,54 @@ const RegisterForm = () => {
     },
   });
 
-  async function onSubmit(data: z.infer<typeof formSchema>) {
+  async function handleSubmit(data: z.infer<typeof formSchema>) {
     const now = new Date();
     const formattedNow = `${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
 
-    const formattedData = {
-      "Checked In": "FALSE",
-      "First Name": data.fname,
-      "Last Name": data.lname,
-      Age: data.age,
-      "Phone Number": data.phone,
-      Email: data.email,
-      School: data.school,
-      "Level of Study": data.studyLevel,
-      Country: data.country,
-      LinkedIn: data.linkedIn || "",
-      "Receive Communication": data.mlh.communication ?? false,
-      "Register Date": formattedNow,
-    };
-
     try {
+      let resumeUrl = "";
+      if (data.resume) {
+        const uploadRes = await upload(data.resume);
+        if (uploadRes.success) {
+          resumeUrl = uploadRes.url;
+        } else {
+          throw new Error("Failed to upload resume.");
+        }
+      }
+
+      const formattedData = {
+        "Checked In": "FALSE",
+        "First Name": data.fname,
+        "Last Name": data.lname,
+        Age: data.age,
+        "Phone Number": data.phone,
+        Email: data.email,
+        School: data.school,
+        "Level of Study": data.studyLevel,
+        Country: data.country,
+        LinkedIn: data.linkedIn || "",
+        Resume: resumeUrl,
+        "Receive Communication": data.mlh.communication ?? false,
+        "Register Date": formattedNow,
+      };
+
       await addRow(formattedData);
+      toast.success("Registration successful!", {
+        description: formattedNow,
+      });
+      form.reset();
+      router.push("/");
     } catch {
       toast.error("Failed to register. Please try again.");
     }
-
-    toast.success("Registration successful!", {
-      description: formattedNow,
-    });
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form
+        onSubmit={form.handleSubmit(handleSubmit)}
+        className="space-y-8 mb-10 *:w-full"
+      >
         <div className="flex gap-2">
           <FormField
             control={form.control}
@@ -350,18 +370,50 @@ const RegisterForm = () => {
           )}
         />
 
+        <div className="flex gap-2">
+          <FormField
+            control={form.control}
+            name="linkedIn"
+            render={({ field }) => (
+              <FormItem className="flex-1">
+                <FormLabel>LinkedIn Profile</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="https://www.linkedin.com/in/johndoe/"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+
         <FormField
           control={form.control}
-          name="linkedIn"
+          name="resume"
           render={({ field }) => (
-            <FormItem className="flex-1">
-              <FormLabel>LinkedIn Profile</FormLabel>
+            <FormItem>
+              <FormLabel>Resume</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="https://www.linkedin.com/in/johndoe/"
-                  {...field}
+                  type="file"
+                  id="resume"
+                  accept="application/pdf"
+                  className="cursor-pointer hidden"
+                  onChange={(e) => field.onChange(e.target.files?.[0])}
                 />
               </FormControl>
+              <Button
+                variant="secondary"
+                size="sm"
+                asChild
+                className="w-full cursor-pointer"
+              >
+                <Label htmlFor="resume">
+                  {form.watch("resume")?.name.toString() ?? "Browse files"}
+                </Label>
+              </Button>
               <FormMessage />
             </FormItem>
           )}
@@ -380,14 +432,13 @@ const RegisterForm = () => {
                     className="mt-1"
                   />
                 </FormControl>
-                <FormLabel className="text-sm font-normal">
-                  I have read and agree to the{""}
+                <FormLabel className="text-sm font-normal inline">
+                  (Required) I have read and agree to the{" "}
                   <Link
                     href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
                     className="underline"
                     target="_blank"
                   >
-                    {""}
                     MLH Code of Conduct
                   </Link>
                   .
@@ -412,11 +463,11 @@ const RegisterForm = () => {
                   />
                 </FormControl>
                 <FormLabel className="inline text-sm font-normal select-none ...">
-                  I authorize you to share my application/registration
-                  information with Major League Hacking for event
-                  administration, ranking, and MLH administration in-line with
-                  the MLH Privacy Policy. I further agree to the terms of both
-                  the{" "}
+                  (Required) I authorize you to share my
+                  application/registration information with Major League Hacking
+                  for event administration, ranking, and MLH administration
+                  in-line with the MLH Privacy Policy. I further agree to the
+                  terms of both the{" "}
                   <Link
                     href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
                     className="underline"
@@ -456,8 +507,9 @@ const RegisterForm = () => {
                   />
                 </FormControl>
                 <FormLabel className="text-sm font-normal">
-                  I authorize MLH to send me occasional emails about relevant
-                  events, career opportunities, and community announcements.
+                  (Optional) I authorize MLH to send me occasional emails about
+                  relevant events, career opportunities, and community
+                  announcements.
                 </FormLabel>
               </div>
               <FormMessage />
@@ -466,7 +518,16 @@ const RegisterForm = () => {
         />
 
         {/* Continue with other form fields */}
-        <Button className="w-full">Submit</Button>
+        <Button
+          className="w-full"
+          disabled={form.formState.isSubmitting || !form.formState.isValid}
+        >
+          {form.formState.isSubmitting ? (
+            <Loader2Icon className="animate-spin" />
+          ) : (
+            "Submit"
+          )}
+        </Button>
       </form>
     </Form>
   );
