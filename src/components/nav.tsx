@@ -52,11 +52,11 @@ const Nav = () => {
             <Link href="/">Home</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+{/*         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/register">Register</Link>
           </NavigationMenuLink>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );
