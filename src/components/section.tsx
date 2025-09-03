@@ -45,8 +45,6 @@ const Graphic = memo(
       offset: ["start end", "end start"],
     });
 
-    console.log(scrollYProgress);
-
     const y = useTransform(
       scrollYProgress,
       [0, 1],
@@ -59,6 +57,7 @@ const Graphic = memo(
           src={src}
           alt={src.split("/").slice(-1)[0]}
           fill
+          sizes="(min-width: 768px) 800px, (min-width: 1200px) 1200px, 100vw"
           className="pointer-events-none -z-10"
         />
       </motion.div>
