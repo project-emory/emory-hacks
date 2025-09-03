@@ -12,9 +12,7 @@ import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 
 const links = [
@@ -27,10 +25,10 @@ const links = [
 const Nav = () => {
   return (
     <NavigationMenu viewport={false}>
-      <NavigationMenuList className="fixed flex items-center top-0 w-screen z-50 border-b m-0 p-2 *:m-0">
-        <NavigationMenuItem className="absolute left-4">
+      <NavigationMenuList className="fixed flex h-14 items-center justify-between top-0 w-screen z-50 bg-gradient-to-r from-[#7BD5F299] to-[#84FAFE99] backdrop-blur-xl m-0 *:m-0 px-5">
+        <NavigationMenuItem>
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-sm font-mono bg-muted px-2 py-1 rounded focus:outline-0 w-24">
+            <DropdownMenuTrigger className="text-sm font-mono px-2 py-1 rounded focus:outline-0 w-24 bg-background/20">
               2025 Fall
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -47,16 +45,14 @@ const Nav = () => {
             </DropdownMenuContent>
           </DropdownMenu>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/">Home</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-{/*         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/register">Register</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem> */}
+        <div className="flex gap-4">
+          <NavigationMenuItem>
+            <Link href="/">HOME</Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/register">REGISTER</Link>
+          </NavigationMenuItem>
+        </div>
       </NavigationMenuList>
     </NavigationMenu>
   );
