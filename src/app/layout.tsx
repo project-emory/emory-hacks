@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontVariables} bg-[#8BEAFC] font-sans antialiased`}>
+      <body className={`${fontVariables} font-sans antialiased`}>
         <Nav />
         {children}
         <Toaster />

@@ -61,7 +61,7 @@ const Graphic = memo(
           alt={src.split("/").slice(-1)[0]}
           fill
           quality={50}
-          sizes="(min-width: 768px) 800px, (min-width: 1200px) 1200px, 100vw"
+          sizes="(max-width: 768px) 800px, (max-width: 1200px) 1200px, 1920px"
           className="pointer-events-none -z-10"
         />
       </motion.div>

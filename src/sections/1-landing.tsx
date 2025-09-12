@@ -10,11 +10,11 @@ import Section from "@/components/section";
 // and the last graphic will be the closest to the viewer.
 // So naturally, the background should be the first graphic.
 const graphics = [
-  { src: "/graphics/1-landing/bg.png", parallaxLevel: 0 },
-  { src: "/graphics/1-landing/coral-l.png", parallaxLevel: 0 },
-  { src: "/graphics/1-landing/coral-r.png", parallaxLevel: 0 },
-  { src: "/graphics/1-landing/fish-l.png", parallaxLevel: 10 },
-  { src: "/graphics/1-landing/turtle.png", parallaxLevel: 15 },
+  { src: "/graphics/1-landing/bg.webp", parallaxLevel: 0 },
+  { src: "/graphics/1-landing/coral-l.webp", parallaxLevel: 0 },
+  { src: "/graphics/1-landing/coral-r.webp", parallaxLevel: 0 },
+  { src: "/graphics/1-landing/fish-l.webp", parallaxLevel: 10 },
+  { src: "/graphics/1-landing/turtle.webp", parallaxLevel: 15 },
 ];
 
 const LandingSection = () => {

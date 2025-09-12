@@ -1,10 +1,10 @@
 import Section from "@/components/section";
 
 const graphics = [
-  { src: "/graphics/2-about/bg.png", parallaxLevel: 0 },
-  { src: "/graphics/2-about/rock-l.png", parallaxLevel: 0 },
-  { src: "/graphics/2-about/rock-r.png", parallaxLevel: 0 },
-  { src: "/graphics/2-about/fish-tl.png", parallaxLevel: 5 },
+  { src: "/graphics/2-about/bg.webp", parallaxLevel: 0 },
+  { src: "/graphics/2-about/rock-l.webp", parallaxLevel: 0 },
+  { src: "/graphics/2-about/rock-r.webp", parallaxLevel: 0 },
+  { src: "/graphics/2-about/fish-tl.webp", parallaxLevel: 5 },
 ];
 
 const AboutSection = () => {
