@@ -32,10 +32,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { upload } from "@/lib/aws/upload";
-import { addRow } from "@/lib/google-sheets";
-import { formSchema, studyLevels, useCountriesData } from "@/lib/register";
-import { useSchoolsData } from "@/lib/register/use-schools-data";
+import { upload } from "@/lib/(deprecated)/aws/upload";
+import { addRow } from "@/lib/(deprecated)/google-sheets";
+import { formSchema, studyLevels, useCountriesData } from "@/lib/(deprecated)/register";
+import { useSchoolsData } from "@/lib/(deprecated)/register/use-schools-data";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckIcon, ChevronsUpDownIcon, Loader2Icon } from "lucide-react";

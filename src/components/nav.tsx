@@ -50,7 +50,9 @@ const Nav = () => {
             <Link href="/">HOME</Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/register">REGISTER</Link>
+            <Link href="https://forms.gle/zcG97BnzQRy6yLqW6" target="_blank">
+              REGISTER
+            </Link>
           </NavigationMenuItem>
         </div>
       </NavigationMenuList>
