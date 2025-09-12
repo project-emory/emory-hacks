@@ -12,13 +12,14 @@ services:
   # Emory Hacks 2025 Fall (dynamic)
   - type: web
     name: emory-hacks-2025-fall
-    runtime: node
+    runtime: static
     repo: https://github.com/project-emory/emory-hacks
     branch: "2025/fall"
-    plan: free
+    # plan: free
     envVars:
       - fromGroup: google-api
-    region: oregon
+    # region: oregon
     buildCommand: npm ci; npm run build
-    startCommand: npm start
+    # startCommand: npm start
+    staticPublishPath: out
     autoDeployTrigger: commit
