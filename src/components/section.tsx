@@ -13,12 +13,12 @@ const Section = memo(({ children, graphics }: SectionProps) => {
   const container = useRef<HTMLDivElement>(null);
 
   return (
-    <div ref={container} className="relative w-svw h-[80svw]">
+    <section ref={container} className="relative w-svw h-[80svw]">
       {graphics?.map((graphic, i) => (
         <Graphic key={i} container={container} {...graphic} />
       ))}
       {children}
-    </div>
+    </section>
   );
 });
 Section.displayName = "Section";
