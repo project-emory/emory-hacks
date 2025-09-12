@@ -25,7 +25,7 @@ const links = [
 const Nav = () => {
   return (
     <NavigationMenu viewport={false}>
-      <NavigationMenuList className="fixed flex h-14 items-center justify-between top-0 w-screen z-50 bg-gradient-to-r from-[#7BD5F299] to-[#84FAFE99] backdrop-blur-xl m-0 *:m-0 px-5">
+      <NavigationMenuList className="fixed flex h-14 items-center justify-between top-0 w-screen z-50 backdrop-blur-xl m-0 *:m-0 px-5">
         <NavigationMenuItem>
           <DropdownMenu>
             <DropdownMenuTrigger className="text-sm font-mono px-2 py-1 rounded focus:outline-0 w-24 bg-background/20">

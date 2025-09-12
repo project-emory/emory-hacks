@@ -10,18 +10,18 @@ import Section from "@/components/section";
 // and the last graphic will be the closest to the viewer.
 // So naturally, the background should be the first graphic.
 const graphics = [
-  { src: "/graphics/1-landing/bg.png" },
-  { src: "/graphics/1-landing/turtle.png" },
-  { src: "/graphics/1-landing/coral-l.png" },
-  { src: "/graphics/1-landing/coral-r.png" },
-  { src: "/graphics/1-landing/fish-l.png" },
+  { src: "/graphics/1-landing/bg.png", parallaxLevel: 0 },
+  { src: "/graphics/1-landing/coral-l.png", parallaxLevel: 0 },
+  { src: "/graphics/1-landing/coral-r.png", parallaxLevel: 0 },
+  { src: "/graphics/1-landing/fish-l.png", parallaxLevel: 10 },
+  { src: "/graphics/1-landing/turtle.png", parallaxLevel: 15 },
 ];
 
 const LandingSection = () => {
   return (
     <Section graphics={graphics}>
       <div className="absolute top-20 left-10 text-white font-display text-shadow-2xs">
-        <h1 className="text-8xl mb-3">Emory Hacks</h1>
+        <h1 className="text-8xl mb-5">Emory Hacks</h1>
         <p className="text-5xl">11/14 - 11/16</p>
       </div>
     </Section>

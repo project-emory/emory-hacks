@@ -15,7 +15,7 @@ const Section = memo(({ children, graphics }: SectionProps) => {
   return (
     <div ref={container} className="relative w-svw h-[80svw]">
       {graphics?.map((graphic, i) => (
-        <Graphic key={i} container={container} order={i} {...graphic} />
+        <Graphic key={i} container={container} {...graphic} />
       ))}
       {children}
     </div>
@@ -27,18 +27,18 @@ export default Section;
 
 type GraphicProps = {
   src: string;
+  parallaxLevel: number;
 };
 
-const PARRALAX_INTENSITY = 50;
+const PARRALAX_INTENSITY = 10;
 
 const Graphic = memo(
   ({
     src,
     container,
-    order,
+    parallaxLevel,
   }: GraphicProps & {
     container: RefObject<HTMLDivElement | null>;
-    order: number;
   }) => {
     const { scrollYProgress } = useScroll({
       target: container,
@@ -48,11 +48,14 @@ const Graphic = memo(
     const y = useTransform(
       scrollYProgress,
       [0, 1],
-      [PARRALAX_INTENSITY * order, -PARRALAX_INTENSITY * order],
+      [PARRALAX_INTENSITY * parallaxLevel, -PARRALAX_INTENSITY * parallaxLevel],
     );
 
     return (
-      <motion.div style={{ y }} className="absolute top-[] left-0 size-full">
+      <motion.div
+        style={{ y, z: parallaxLevel }}
+        className="absolute top-0 left-0 size-full"
+      >
         <Image
           src={src}
           alt={src.split("/").slice(-1)[0]}
