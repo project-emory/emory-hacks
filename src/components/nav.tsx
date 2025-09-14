@@ -47,7 +47,7 @@ const Nav = () => {
             </DropdownMenuContent>
           </DropdownMenu>
         </NavigationMenuItem>
-        <div className="flex gap-5 *:font-semibold">
+        <div className="flex gap-5">
           <NavigationMenuItem>
             <Link href="/">HOME</Link>
           </NavigationMenuItem>
