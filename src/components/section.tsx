@@ -54,7 +54,7 @@ const Graphic = memo(
     return (
       <motion.div
         style={{ y, z: parallaxLevel }}
-        className="absolute top-0 left-0 size-full"
+        className="absolute top-0 left-0 size-full pointer-events-none"
       >
         <Image
           src={src}

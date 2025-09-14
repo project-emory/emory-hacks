@@ -15,12 +15,14 @@ import {
   NavigationMenuList,
 } from "./ui/navigation-menu";
 
-const links = [
+const pastSites = [
   {
-    year: "2025-spring",
-    link: "https://emory-hacks-2025-spring.onrender.com",
+    year: "2025 Spring",
+    link: "https://emory-hacks-2025-spring-4xd4.onrender.com",
   },
 ];
+
+const registrationForm = "https://forms.gle/zcG97BnzQRy6yLqW6"
 
 const Nav = () => {
   return (
@@ -32,7 +34,7 @@ const Nav = () => {
               2025 Fall
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              {links.map(({ year, link }, i) => (
+              {pastSites.map(({ year, link }, i) => (
                 <Link key={i} href={link} target="_blank">
                   <DropdownMenuItem className="cursor-pointer">
                     {year}
@@ -45,12 +47,12 @@ const Nav = () => {
             </DropdownMenuContent>
           </DropdownMenu>
         </NavigationMenuItem>
-        <div className="flex gap-4">
+        <div className="flex gap-5 *:font-semibold">
           <NavigationMenuItem>
             <Link href="/">HOME</Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="https://forms.gle/zcG97BnzQRy6yLqW6" target="_blank">
+            <Link href={registrationForm} target="_blank">
               REGISTER
             </Link>
           </NavigationMenuItem>
