@@ -69,7 +69,8 @@ const Graphic = memo(
           src={src}
           alt={src.split("/").slice(-1)[0]}
           fill
-          priority={true}
+          priority
+          loading="eager"
           className="pointer-events-none -z-10"
         />
       </motion.div>
