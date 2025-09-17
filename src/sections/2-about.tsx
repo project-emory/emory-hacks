@@ -10,9 +10,9 @@ const graphics = [
 const AboutSection = () => {
   return (
     <Section graphics={graphics}>
-      <div className="absolute top-25 left-16 text-white font-display text-shadow-2xs">
-        <h1 className="text-8xl mb-3">About</h1>
-      </div>
+      <h1 className="absolute top-25 left-16 text-white font-display text-shadow-2xs text-8xl mb-3">
+        ABOUT
+      </h1>
     </Section>
   );
 };

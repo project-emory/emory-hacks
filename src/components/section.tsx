@@ -13,12 +13,18 @@ const Section = memo(({ children, graphics }: SectionProps) => {
   const container = useRef<HTMLDivElement>(null);
 
   return (
-    <section ref={container} className="relative w-svw h-[80svw]">
+    <motion.section
+      ref={container}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, duration: 0.5 }}
+      className="relative w-svw h-[80svw]"
+    >
       {graphics?.map((graphic, i) => (
         <Graphic key={i} container={container} {...graphic} />
       ))}
       {children}
-    </section>
+    </motion.section>
   );
 });
 Section.displayName = "Section";
@@ -54,12 +60,16 @@ const Graphic = memo(
     return (
       <motion.div
         style={{ y, z: parallaxLevel }}
+        initial={{ y: parallaxLevel }}
+        animate={{ y: 0 }}
+        transition={{ duration: 1 }}
         className="absolute top-0 left-0 size-full pointer-events-none"
       >
         <Image
           src={src}
           alt={src.split("/").slice(-1)[0]}
           fill
+          priority={true}
           className="pointer-events-none -z-10"
         />
       </motion.div>
