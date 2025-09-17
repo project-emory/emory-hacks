@@ -10,7 +10,7 @@ const graphics = [
 const AboutSection = () => {
   return (
     <Section graphics={graphics}>
-      <h1 className="absolute top-25 left-16 text-white font-display text-shadow-2xs text-8xl mb-3">
+      <h1 className="absolute top-25 left-16 text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-3">
         ABOUT
       </h1>
     </Section>

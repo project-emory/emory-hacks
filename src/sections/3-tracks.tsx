@@ -25,12 +25,12 @@ const TracksSection = () => {
   const isInView = useInView(ref);
   return (
     <Section graphics={graphics}>
-      <h1 className="absolute top-25 left-16 text-white font-display text-shadow-2xs text-2xl md:text-8xl mb-3">
+      <h1 className="absolute top-25 left-16 text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-3">
         TRACKS
       </h1>
       <div
         ref={ref}
-        className="flex gap-5 flex-wrap absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%]"
+        className="grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%]"
       >
         {Object.entries(tracks).map(([track, description]) => (
           <motion.div
