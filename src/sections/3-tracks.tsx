@@ -30,7 +30,7 @@ const TracksSection = () => {
       </h1>
       <div
         ref={ref}
-        className="grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%]"
+        className="grid gap-5 grid-cols-2 xl:grid-cols-3 absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%]"
       >
         {Object.entries(tracks).map(([track, description]) => (
           <motion.div
