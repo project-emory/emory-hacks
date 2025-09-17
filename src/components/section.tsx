@@ -68,7 +68,6 @@ const Graphic = memo(
         <Image
           src={src}
           alt={src.split("/").slice(-1)[0]}
-          placeholder="blur"
           quality={70}
           fill
           priority

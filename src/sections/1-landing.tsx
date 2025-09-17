@@ -1,4 +1,5 @@
 import Section from "@/components/section";
+import Link from "next/link";
 
 // Graphics to be used in the section.
 // Add the path to the image in the src field
@@ -20,9 +21,15 @@ const graphics = [
 const LandingSection = () => {
   return (
     <Section graphics={graphics}>
-      <div className="absolute top-25 left-16 text-white font-display text-shadow-2xs">
-        <h1 className="text-9xl mb-5 text-shadow-2xl">EMORY HACKS</h1>
-        <p className="text-5xl">11/14 - 11/16</p>
+      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 text-primary flex flex-col items-center gap-4 font-display">
+        <h1 className="text-9xl mb-5 text-shine">EMORY HACKS</h1>
+        <p className="text-5xl text-shine">11/14 - 11/16</p>
+        <Link
+          href="https://forms.gle/zcG97BnzQRy6yLqW6"
+          className="text-xl bg-white px-4 mt-4 py-3 block w-fit rounded-lg hover:opacity-80 transition-all font-semibold text-shine"
+        >
+          REGISTER
+        </Link>
       </div>
     </Section>
   );
