@@ -32,7 +32,7 @@ const KEYWORDS = [
   "atlanta",
 ];
 
-export const metadata = {
+export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords: KEYWORDS,
