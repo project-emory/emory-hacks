@@ -8,11 +8,56 @@ const fontVariables = Object.entries(fonts)
   .map(([, v]) => v.variable)
   .join(" ");
 
-export const metadata: Metadata = {
-  title: "Emory Hacks 2026",
-  description: "Get ready for Emory Hacks 2026!",
-};
+const TITLE = "Emory Hacks" as const;
+const DESCRIPTION =
+  "Join us for Emory Hacks, a 36-hour hackathon at Emory University where innovation comes to life.";
+const KEYWORDS = [
+  "emory hacks",
+  "hackathon",
+  "emory university",
+  "coding",
+  "programming",
+  "innovation",
+  "emory hackathon",
+  "atlanta",
+  "emory university",
+  "emory",
+  "software",
+  "contest",
+  "competition",
+  "atlanta hackathon",
+  "atl hackathon",
+  "atlanta coding",
+  "computer science",
+  "atlanta",
+];
 
+export const metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords: KEYWORDS,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "https://www.emoryhacks.com",
+    siteName: TITLE,
+    images: [
+      {
+        url: "https://www.emoryhacks.com/logo.png",
+        width: 800,
+        height: 800,
+        alt: "Emory Hacks",
+      },
+    ],
+    locale: "en_us",
+    type: "website",
+  },
+};
 export default function RootLayout({
   children,
 }: Readonly<{
