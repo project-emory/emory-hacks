@@ -65,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontVariables} font-sans antialiased bg-bg`}>
+      <body className={`${fontVariables} font-sans antialiased bg-bg overflow-x-hidden`}>
         <Nav />
         {children}
         <Toaster />

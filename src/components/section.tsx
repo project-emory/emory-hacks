@@ -18,7 +18,7 @@ const Section = memo(({ children, graphics }: SectionProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3, duration: 0.5 }}
-      className="relative w-svw h-[80svw]"
+      className="relative w-svw h-[80svw] overflow-y-visible overflow-x-hidden"
     >
       {graphics?.map((graphic, i) => (
         <Graphic key={i} container={container} {...graphic} />

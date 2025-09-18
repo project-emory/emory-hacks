@@ -23,11 +23,16 @@ const LandingSection = () => {
     <Section graphics={graphics}>
       <div className="absolute top-[20%] left-1/2 text-nowrap w-fit -translate-x-1/2 text-center text-primary flex flex-col items-center">
         <span className="text-3xl font-semibold font-display">2025 FALL</span>
-        <h1 className="text-9xl mb-5 border-shine font-display">EMORY HACKS</h1>
-        <p className="text-5xl border-shine my-5">11/14 - 11/16</p>
+        <h1 className="text-6xl md:text-9xl xl:text-[160px] mb-5 bg-clip-text bg-[url(/graphics/1-landing/bg.webp)] bg-blend-difference border-shine text-transparent font-display leading-none">
+          EMORY HACKS
+          <span className="absolute text-primary/50 top-0 left-0 font-display pointer-events-none">EMORY HACKS</span>
+        </h1>
+        <p className="text-5xl border-shine my-5 font-display font-medium">
+          11/14 - 11/16
+        </p>
         <Link
           href="https://forms.gle/zcG97BnzQRy6yLqW6"
-          className="text-xl bg-white px-4 mt-4 py-3 block w-fit rounded-lg transition-all font-semibold hover:border-shine"
+          className="text-3xl bg-white px-4 mt-4 py-3 block w-fit rounded-lg transition-all font-semibold hover:border-shine"
         >
           REGISTER
         </Link>

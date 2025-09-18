@@ -117,11 +117,11 @@
   --font-mono: var(--font-mono);
   --font-display: var(--font-display);
   --color-bg: #83dcf4;
-  --color-primary: #758ef4;
+  --color-primary: #4564a2;
 }
 
 @utility border-shine {
-  @apply drop-shadow-[0px_0px_10px_rgba(255,255,255,0.6)];
+  @apply drop-shadow-[0px_0px_10px_rgba(255,255,255,1)];
 }
 
 @layer base {
