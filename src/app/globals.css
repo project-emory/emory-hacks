@@ -120,8 +120,8 @@
   --color-primary: #758ef4;
 }
 
-@utility text-shine {
-  @apply drop-shadow-[0_2px_8px_rgba(255,255,255,0.8)];
+@utility border-shine {
+  @apply drop-shadow-[0px_0px_10px_rgba(255,255,255,0.6)];
 }
 
 @layer base {

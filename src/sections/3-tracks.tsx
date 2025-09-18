@@ -25,7 +25,7 @@ const TracksSection = () => {
   const isInView = useInView(ref);
   return (
     <Section graphics={graphics}>
-      <h1 className="absolute top-25 left-16 text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-3">
+      <h1 className="absolute top-25 left-16 text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-3 border-shine">
         TRACKS
       </h1>
       <div
@@ -37,7 +37,7 @@ const TracksSection = () => {
             key={track}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
             transition={{ delay: 0.3 }}
-            className="text-white bg-bg/30 backdrop-brightness-80 shadow-xl backdrop-blur-2xl p-5 rounded-xl max-w-120"
+            className="text-white bg-bg/30 hover:border-shine transition-all cursor-pointer backdrop-brightness-80 shadow-xl backdrop-blur-2xl p-5 rounded-xl max-w-120"
           >
             <span className="text-xl md:text-3xl font-bold block mb-4">
               {track.toUpperCase()}

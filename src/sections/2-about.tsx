@@ -11,7 +11,7 @@ const AboutSection = () => {
   return (
     <Section graphics={graphics}>
       <div className="absolute top-25 left-16">
-        <h1 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-10">
+        <h1 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-10 border-shine">
           ABOUT
         </h1>
         <p className="text-white text-xl leading-loose w-1/3">

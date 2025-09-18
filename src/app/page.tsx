@@ -1,4 +1,4 @@
-import MLHBadge from "@/components/mlh-badge";
+import SmoothScroll from "@/components/smooth-scroll";
 import LandingSection from "@/sections/1-landing";
 import AboutSection from "@/sections/2-about";
 import TracksSection from "@/sections/3-tracks";
@@ -8,7 +8,7 @@ import { memo } from "react";
 const Page = memo(() => {
   return (
     <main>
-      <MLHBadge />
+      <SmoothScroll />
       <LandingSection />
       <AboutSection />
       <TracksSection />

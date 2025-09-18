@@ -23,11 +23,11 @@ const LandingSection = () => {
     <Section graphics={graphics}>
       <div className="absolute top-[20%] left-1/2 text-nowrap w-fit -translate-x-1/2 text-center text-primary flex flex-col items-center">
         <span className="text-3xl font-semibold font-display">2025 FALL</span>
-        <h1 className="text-9xl mb-5 text-shine font-display">EMORY HACKS</h1>
-        <p className="text-5xl text-shine my-5">11/14 - 11/16</p>
+        <h1 className="text-9xl mb-5 border-shine font-display">EMORY HACKS</h1>
+        <p className="text-5xl border-shine my-5">11/14 - 11/16</p>
         <Link
           href="https://forms.gle/zcG97BnzQRy6yLqW6"
-          className="text-xl bg-white px-4 mt-4 py-3 block w-fit rounded-lg hover:opacity-80 transition-all font-semibold text-shine"
+          className="text-xl bg-white px-4 mt-4 py-3 block w-fit rounded-lg transition-all font-semibold hover:border-shine"
         >
           REGISTER
         </Link>
