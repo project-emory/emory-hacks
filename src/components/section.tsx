@@ -23,7 +23,7 @@ const Section = memo(({ children, graphics }: SectionProps) => {
       {graphics?.map((graphic, i) => (
         <Graphic key={i} container={container} {...graphic} />
       ))}
-      <div className="relative z-40 size-full md:pt-10 xl:pt-25 mx-auto w-9/10 md:w-4/5">
+      <div className="relative z-40 size-full md:pt-10 xl:pt-25 mx-auto w-9/10 md:w-4/5 pt-4">
         {children}
       </div>
     </motion.div>
