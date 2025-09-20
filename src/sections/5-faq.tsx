@@ -14,7 +14,10 @@ const FaqSection = () => {
         FAQ
       </h2>
 
-      <div className="p-5 md:p-10 bg-background/20 backdrop-blur-2xl drop-shadow-lg rounded-xl flex flex-col gap-2 md:gap-6">
+      <div
+        className="text-white bg-bg/30 border-white/20 cursor-pointer backdrop-brightness-80 shadow-xl backdrop-blur-2xl p-4 md:p-6 rounded-xl space-y-2"
+        // className="p-5 md:p-10 bg-background/20 backdrop-blur-2xl drop-shadow-lg rounded-xl flex flex-col gap-2 md:gap-6"
+      >
         {data.map((q, i) => (
           <Question
             key={i}

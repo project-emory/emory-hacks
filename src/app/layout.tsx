@@ -1,8 +1,8 @@
 import { fonts } from "@/components/fonts";
 import Nav from "@/components/nav";
-import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 const fontVariables = Object.entries(fonts)
   .map(([, v]) => v.variable)
@@ -65,10 +65,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontVariables} font-sans antialiased bg-bg overflow-x-hidden`}>
+      <body
+        className={`${fontVariables} font-sans antialiased bg-bg overflow-x-hidden`}
+      >
         <Nav />
         {children}
-        <Toaster />
+        <Footer />
       </body>
     </html>
   );
