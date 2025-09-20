@@ -14,7 +14,7 @@ const AboutSection = () => {
         ABOUT
       </h2>
       <p className="text-white text-sm md:text-xl leading-tight md:leading-loose xl:w-1/3 border-shine">
-        Emory Hacks, presented by PROJECT Emory, is a hackathon hosted atEmory
+        Emory Hacks, presented by PROJECT Emory, is a hackathon hosted at Emory
         University. We are committed to bringing hundreds of students together
         for an intensive 36-hour hackathon where innovation comes to life.
         Whether you&apos;re a first-time coder or a seasoned developer come bond
