@@ -15,7 +15,7 @@ const FaqSection = () => {
 
   return (
     <Section graphics={graphics}>
-      <div className="mt-8 relative h-fit w-lg mx-auto px-6 z-10">
+      <div className="mt-8 relative h-fit w-3xl mx-auto px-6 z-10">
         <h2 className="mb-2 text-title font-bold bg-gradient-to-r from-white to-brand-tertiary text-transparent bg-clip-text drop-shadow-title">
           FAQ
         </h2>
