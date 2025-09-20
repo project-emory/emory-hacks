@@ -7,7 +7,7 @@ import { memo } from "react";
 
 const Page = memo(() => {
   return (
-    <main>
+    <main className="pb-40">
       <SmoothScroll />
       <LandingSection />
       <AboutSection />

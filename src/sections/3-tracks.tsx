@@ -1,8 +1,8 @@
 "use client";
 
 import Section from "@/components/section";
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { useState } from "react";
+import { motion } from "motion/react";
 
 const graphics = [
   { src: "/graphics/3-tracks/bg.webp", parallaxLevel: 0 },
@@ -21,29 +21,37 @@ const tracks = {
 };
 
 const TracksSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+  const [expanded, setExpanded] = useState("");
+
   return (
     <Section graphics={graphics}>
-      <h1 className="absolute top-25 left-16 text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-3 border-shine">
+      <h2 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl md:mb-4 xl:mb-10 border-shine">
         TRACKS
-      </h1>
-      <div
-        ref={ref}
-        className="grid gap-5 md:grid-cols-2 xl:grid-cols-3 absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%]"
-      >
+      </h2>
+      <div className="relative z-40 grid gap-3 md:gap-5 md:grid-cols-2 xl:grid-cols-3 py-4">
         {Object.entries(tracks).map(([track, description]) => (
-          <motion.div
+          <div
             key={track}
-            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-            transition={{ delay: 0.3 }}
-            className="text-white bg-bg/30 border border-white/20 hover:border-shine transition-all cursor-pointer backdrop-brightness-80 shadow-xl backdrop-blur-2xl p-6 rounded-xl max-w-120"
+            onClick={() => setExpanded((prev) => (prev === track ? "" : track))}
+            className="text-white bg-bg/30 border-white/20 hover:border-shine transition-all cursor-pointer backdrop-brightness-80 shadow-xl backdrop-blur-2xl p-4 md:p-6 rounded-xl"
           >
-            <span className="text-xl md:text-3xl font-bold block mb-4">
+            <span className="text-base md:text-2xl xl:text-3xl font-bold block">
               {track.toUpperCase()}
             </span>
-            <p className="text-base md:text-lg block">{description}</p>
-          </motion.div>
+            <motion.p
+              animate={
+                expanded === track
+                  ? {
+                      height: "auto",
+                      paddingTop: "16px",
+                    }
+                  : { height: 0, paddingTop: 0 }
+              }
+              className="text-sm md:h-auto! md:p-4! xl:text-base md:text-lg block overflow-hidden"
+            >
+              {description}
+            </motion.p>
+          </div>
         ))}
       </div>
     </Section>
