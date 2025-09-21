@@ -1,4 +1,5 @@
 import { IconCaretDownFilled } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 interface QuestionProps {
   question: string;
@@ -36,22 +37,32 @@ function Question({
           <p className="text-white font-semibold">{question}</p>
 
           {/* ANSWER */}
-          <div
+          <motion.div
             id={`faq-answer-${index}`}
-            className={`mt-1 ${isActive ? "block" : "hidden"} text-white`}
+            className={`mt-1 text-body-small`} //${isActive ? "block" : "hidden"}
+            animate={{
+              height: isActive ? "auto" : 0,
+              opacity: isActive ? 1 : 0,
+            }}
+            style={{ overflow: "hidden" }}
           >
             {answer}
-          </div>
+          </motion.div>
         </div>
 
         <div
           data-active={isActive}
           className="transition-all size-fit duration-200 data-[active=true]:rotate-180 "
           aria-hidden
+        ></div>
+
+        {/* ICON */}
+        <motion.div
+          className="w-fit h-fit hidden sm:block"
+          animate={{ rotate: isActive ? 180 : 0 }}
         >
-          {/* ICON */}
-          <IconCaretDownFilled size={24} className="text-white" />
-        </div>
+          <IconCaretDownFilled size={24} color="#505050" />
+        </motion.div>
       </div>
 
       {/* DIVIDER */}

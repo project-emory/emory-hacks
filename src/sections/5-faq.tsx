@@ -5,11 +5,17 @@ import { Question } from "@/components/ui/question";
 import { useState } from "react";
 import data from "../lib/faqData.json";
 
+const graphics = [
+  { src: "/graphics/5-faq/bg.webp", parallaxLevel: 0 },
+  { src: "/graphics/5-faq/rock.webp", parallaxLevel: 0 },
+];
+
 const FaqSection = () => {
   const [activeQuestion, setActiveQuestion] = useState(-1);
 
   return (
-    <Section>
+    <Section graphics={graphics}>
+      <div className="mt-8 relative h-fit w-3xl mx-auto px-6 z-10">
       <h2 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl md:mb-4 xl:mb-10 border-shine">
         FAQ
       </h2>
