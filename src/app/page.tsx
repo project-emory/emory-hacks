@@ -16,7 +16,7 @@ const Page = memo(() => {
   }, []);
 
   return (
-    <main className="pb-40">
+    <main>
       <LandingSection />
       <AboutSection />
       <TracksSection />

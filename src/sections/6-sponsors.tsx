@@ -1,19 +1,28 @@
 import Section from "@/components/section";
+import Link from "next/link";
 
 const graphics = [
   { src: "/graphics/6-sponsors/bg.webp", parallaxLevel: 0 },
-  { src: "/graphics/6-sponsors/fg.webp", parallaxLevel: 5 },
-  { src: "/graphics/6-sponsors/starfish-bl.webp", parallaxLevel: 5 },
-  { src: "/graphics/6-sponsors/starfish-coral.webp", parallaxLevel: 5 },
+  { src: "/graphics/6-sponsors/fg.webp", parallaxLevel: 0 },
+  // { src: "/graphics/6-sponsors/starfish-bl.webp", parallaxLevel: 15 },
+  // { src: "/graphics/6-sponsors/starfish-coral.webp", parallaxLevel: 20 },
 ];
 
 const SponsorSection = () => {
   return (
     <Section graphics={graphics}>
-      <div className="absolute md:top-10 xl:top-25 left-1/2 -translate-x-1/2 w-4/5">
-        <h1 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-4 xl:mb-10 border-shine">
-          Sponsors
-        </h1>
+      <h2 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-0 md:mb-4 xl:mb-10 border-shine">
+        SPONSORS
+      </h2>
+
+      <div className="absolute bottom-0 left-0 w-full hidden md:flex h-40 items-center justify-center">
+        <Link
+          href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+          target="_blank"
+          className="text-white underline"
+        >
+          MLH Code of Conduct
+        </Link>
       </div>
     </Section>
   );

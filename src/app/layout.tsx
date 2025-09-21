@@ -2,7 +2,6 @@ import { fonts } from "@/components/fonts";
 import Nav from "@/components/nav";
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "@/components/footer";
 
 const fontVariables = Object.entries(fonts)
   .map(([, v]) => v.variable)
@@ -70,7 +69,6 @@ export default function RootLayout({
       >
         <Nav />
         {children}
-        <Footer />
       </body>
     </html>
   );
