@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
-import { memo, ReactNode, RefObject, useRef } from "react";
+import { memo, ReactNode, RefObject, useEffect, useRef, useState } from "react";
 
 type SectionProps = {
   children: ReactNode;
@@ -48,6 +48,17 @@ const Graphic = memo(
   }: GraphicProps & {
     container: RefObject<HTMLDivElement | null>;
   }) => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const checkIsMobile = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+      checkIsMobile();
+      window.addEventListener("resize", checkIsMobile);
+      return () => window.removeEventListener("resize", checkIsMobile);
+    }, []);
+
     const { scrollYProgress } = useScroll({
       target: container,
       offset: ["start end", "end start"],
@@ -61,9 +72,7 @@ const Graphic = memo(
 
     return (
       <motion.div
-        style={{ y, zIndex: parallaxLevel }}
-        initial={{ y: parallaxLevel }}
-        animate={{ y: 0 }}
+        style={{ y: isMobile ? 0 : y, zIndex: parallaxLevel }}
         transition={{ duration: 1 }}
         className="absolute top-0 left-0 size-full pointer-events-none"
       >
