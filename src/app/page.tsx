@@ -9,13 +9,6 @@ import SponsorSection from "@/sections/6-sponsors";
 import { memo } from "react";
 
 const Page = memo(() => {
-  // useEffect(() => {
-  //   (async () => {
-  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
-  //     new LocomotiveScroll({});
-  //   })();
-  // }, []);
-
   return (
     <main>
       <LandingSection />
