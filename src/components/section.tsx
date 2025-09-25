@@ -61,7 +61,7 @@ const Graphic = memo(
 
     return (
       <motion.div
-        style={{ y, z: parallaxLevel }}
+        style={{ y, zIndex: parallaxLevel }}
         initial={{ y: parallaxLevel }}
         animate={{ y: 0 }}
         transition={{ duration: 1 }}
