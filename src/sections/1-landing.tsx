@@ -35,7 +35,7 @@ const LandingSection = () => {
           11/14 - 11/16
         </p>
         <Link
-          href="https://forms.gle/Qcu6xNSoUcg1pJir5"
+          href="https://forms.gle/TV76qB2en6bNJTiM9"
           className="text-lg md:text-3xl bg-white px-2 md:px-4 mt-4 md:mt-10 py-1 md:py-3 block w-fit rounded-lg transition-all font-semibold hover:border-shine"
         >
           REGISTER

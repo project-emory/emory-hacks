@@ -1,5 +1,5 @@
 import { IconCaretDownFilled } from "@tabler/icons-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface QuestionProps {
   question: string;

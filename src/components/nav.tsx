@@ -21,7 +21,7 @@ const pastSites = [
 
 const Nav = () => {
   return (
-    <nav className="fixed flex h-14 items-center justify-end top-0 w-screen z-100 backdrop-blur-xl m-0 *:m-0 px-5">
+    <nav className="absolute flex h-14 items-center justify-end top-0 w-screen z-100 m-0 *:m-0 px-5">
       <MLHBadge />
       <DropdownMenu>
         <DropdownMenuTrigger className="text-sm flex items-center gap-2 font-mono px-2 py-1 rounded focus:outline-0 bg-primary/20">

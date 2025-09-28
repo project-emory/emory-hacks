@@ -18,6 +18,8 @@ const tracks = {
     "Build tools and platforms that transform learning experiences and educational access. Create solutions for online learning, student engagement, educational games, tutoring systems, or tools that help educators and students succeed.",
   "smart city":
     "Design technology solutions for urban challenges and community improvement. Develop apps or systems for transportation, sustainability, public safety, civic engagement, or making city services more efficient and accessible to residents.",
+  rogue:
+    "Open-ended track for beginners to work on any project they find interesting. No specific theme or requirements, just build something you want to make. Could be a web app, mobile app, game, or any other software project. Focus is on learning and experimenting rather than competing for major prizes. Smaller prize pool compared to main tracks.",
 };
 
 const TracksSection = () => {
