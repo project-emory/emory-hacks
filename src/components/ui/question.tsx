@@ -34,7 +34,7 @@ function Question({
       >
         <div className="flex-1 overflow-hidden flex flex-col">
           {/* QUESTION */}
-          <p className="text-body font-semibold">{question}</p>
+          <p className="text-white font-semibold">{question}</p>
 
           {/* ANSWER */}
           <motion.div
@@ -51,9 +51,8 @@ function Question({
         </div>
 
         <div
-          className={`transition-transform duration-200 ${
-            isActive ? "rotate-180" : ""
-          }`}
+          data-active={isActive}
+          className="transition-all size-fit duration-200 data-[active=true]:rotate-180 "
           aria-hidden
         ></div>
 

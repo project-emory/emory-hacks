@@ -21,18 +21,22 @@ const graphics = [
 const LandingSection = () => {
   return (
     <Section graphics={graphics}>
-      <div className="absolute top-[20%] left-1/2 text-nowrap w-fit -translate-x-1/2 text-center text-primary flex flex-col items-center">
-        <span className="text-3xl font-semibold font-display">2025 FALL</span>
-        <h1 className="text-6xl md:text-9xl xl:text-[160px] mb-5 bg-clip-text bg-[url(/graphics/1-landing/bg.webp)] bg-blend-difference border-shine text-transparent font-display leading-none">
+      <div className="size-full text-primary text-center flex flex-col items-center">
+        <span className="mt-20 md:mt-40 text-3xl font-semibold font-display">
+          2025 FALL
+        </span>
+        <h1 className="text-4xl md:text-9xl xl:text-[160px] mb-5 bg-clip-text bg-[url(/graphics/1-landing/bg.webp)] bg-blend-difference border-shine text-transparent font-display leading-none">
           EMORY HACKS
-          <span className="absolute text-primary/50 top-0 left-0 font-display pointer-events-none">EMORY HACKS</span>
+          <span className="absolute text-primary/50 top-0 left-0 font-display pointer-events-none">
+            EMORY HACKS
+          </span>
         </h1>
-        <p className="text-5xl border-shine my-5 font-display font-medium">
+        <p className="text-xl md:text-3xl xl:text-5xl border-shine font-display font-medium">
           11/14 - 11/16
         </p>
         <Link
-          href="https://forms.gle/zcG97BnzQRy6yLqW6"
-          className="text-3xl bg-white px-4 mt-4 py-3 block w-fit rounded-lg transition-all font-semibold hover:border-shine"
+          href="https://forms.gle/Qcu6xNSoUcg1pJir5"
+          className="text-lg md:text-3xl bg-white px-2 md:px-4 mt-4 md:mt-10 py-1 md:py-3 block w-fit rounded-lg transition-all font-semibold hover:border-shine"
         >
           REGISTER
         </Link>

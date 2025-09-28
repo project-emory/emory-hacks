@@ -13,18 +13,20 @@ const Section = memo(({ children, graphics }: SectionProps) => {
   const container = useRef<HTMLDivElement>(null);
 
   return (
-    <motion.section
+    <motion.div
       ref={container}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3, duration: 0.5 }}
-      className="relative w-svw h-[80svw] overflow-y-visible overflow-x-hidden"
+      className="relative w-svw min-h-[80svw] xl:h-[80svw] overflow-hidden"
     >
       {graphics?.map((graphic, i) => (
         <Graphic key={i} container={container} {...graphic} />
       ))}
-      {children}
-    </motion.section>
+      <div className="relative z-40 size-full md:pt-10 xl:pt-25 mx-auto w-9/10 md:w-4/5 pt-4">
+        {children}
+      </div>
+    </motion.div>
   );
 });
 Section.displayName = "Section";
