@@ -27,7 +27,7 @@ const LandingSection = () => {
         </span>
         <h1 className="text-4xl md:text-9xl xl:text-[160px] mb-5 bg-clip-text bg-[url(/graphics/1-landing/bg.webp)] bg-blend-difference border-shine text-transparent font-display leading-none">
           EMORY HACKS
-          <span className="absolute text-primary/50 top-0 left-0 font-display pointer-events-none">
+          <span className="absolute text-primary md:text-primary/50 top-0 left-0 font-display pointer-events-none">
             EMORY HACKS
           </span>
         </h1>
