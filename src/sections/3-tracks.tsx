@@ -25,7 +25,7 @@ const TracksSection = () => {
       <h2 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl md:mb-4 xl:mb-10 border-shine">
         TRACKS
       </h2>
-      <div className="relative z-40 flex overflow-x-scroll md:grid gap-3 md:gap-5 md:grid-cols-2 xl:grid-cols-3 py-4">
+      <div className="relative z-40 no-scrollbar flex overflow-x-scroll md:grid gap-3 md:gap-5 md:grid-cols-2 xl:grid-cols-3 py-4">
         {Object.entries(tracks).map(([track, description]) => (
           <div
             key={track}

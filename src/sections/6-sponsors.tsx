@@ -15,11 +15,15 @@ const sponsors = [
     name: "Siro",
     link: "https://www.siro.ai/",
   },
-
   {
     src: "/images/sponsors/foxtrot.webp",
     name: "Foxtrot",
     link: "https://foxtrotco.com/",
+  },
+  {
+    src: "/images/sponsors/sgklogo.webp",
+    name: "SGK International",
+    link: "",
   },
   {
     src: "/images/sponsors/songys.webp",

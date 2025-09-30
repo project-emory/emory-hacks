@@ -21,6 +21,8 @@ const KEYWORDS = [
   "atlanta",
   "emory university",
   "emory",
+  "mlh",
+  "major league hacking",
   "software",
   "contest",
   "competition",
