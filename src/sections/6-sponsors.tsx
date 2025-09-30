@@ -18,12 +18,7 @@ const sponsors = [
   {
     src: "/images/sponsors/foxtrot.webp",
     name: "Foxtrot",
-    link: "https://foxtrotco.com/",
-  },
-  {
-    src: "/images/sponsors/sgklogo.webp",
-    name: "SGK International",
-    link: "",
+    link: "https://www.foxtrot-services.com/",
   },
   {
     src: "/images/sponsors/songys.webp",
@@ -33,7 +28,17 @@ const sponsors = [
   {
     src: "/images/sponsors/oreilly.webp",
     name: "O'Reilly",
+    link: "https://www.oreilly.com/",
+  },
+  {
+    src: "/images/sponsors/bawlsguarana.webp",
+    name: "Bawls",
     link: "https://www.oreillyauto.com/",
+  },
+  {
+    src: "/images/sponsors/luckyenergy.webp",
+    name: "Lucky Energy",
+    link: "https://luckybevco.com/",
   },
 ];
 
