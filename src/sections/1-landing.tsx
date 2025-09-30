@@ -22,7 +22,7 @@ const LandingSection = () => {
   return (
     <Section graphics={graphics}>
       <div className="size-full text-primary text-center flex flex-col items-center">
-        <span className="mt-20 md:mt-40 text-3xl font-semibold font-display">
+        <span className="mt-20 md:mt-40 text-xl md:text-3xl xl:text-4xl font-semibold font-display">
           2025 FALL
         </span>
         <h1 className="text-4xl md:text-9xl xl:text-[160px] mb-5 bg-clip-text bg-[url(/graphics/1-landing/bg.webp)] bg-blend-difference border-shine text-transparent font-display leading-none">
