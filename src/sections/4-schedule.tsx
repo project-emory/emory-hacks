@@ -2,6 +2,7 @@ import Section from "@/components/section";
 
 const graphics = [
   { src: "/graphics/4-schedule/bg.webp", parallaxLevel: 0 },
+  { src: "/graphics/4-schedule/rock.webp", parallaxLevel: 0 },
   { src: "/graphics/4-schedule/fish.webp", parallaxLevel: 10 },
 ];
 

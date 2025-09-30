@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 
 const graphics = [
   { src: "/graphics/3-tracks/bg.webp", parallaxLevel: 0 },
+  { src: "/graphics/3-tracks/rock.webp", parallaxLevel: 0 },
   { src: "/graphics/3-tracks/jellyfish-tr.webp", parallaxLevel: 0 },
   { src: "/graphics/3-tracks/jellyfish-tl.webp", parallaxLevel: 15 },
   { src: "/graphics/3-tracks/jellyfish-bl.webp", parallaxLevel: 25 },

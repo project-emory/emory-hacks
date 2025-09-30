@@ -1,16 +1,12 @@
 "use client";
 
 import Section from "@/components/section";
-import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
 import Link from "next/link";
 
 const graphics = [
   { src: "/graphics/6-sponsors/bg.webp", parallaxLevel: 0 },
   { src: "/graphics/6-sponsors/fg.webp", parallaxLevel: 0 },
-  // { src: "/graphics/6-sponsors/starfish-bl.webp", parallaxLevel: 15 },
-  // { src: "/graphics/6-sponsors/starfish-coral.webp", parallaxLevel: 20 },
 ];
 
 const sponsors = [
@@ -50,12 +46,12 @@ const SponsorCard = ({ src, name, link }: Sponsor) => {
       target="_blank"
       className="relative block overflow-hidden bg-white/50 rounded-xl p-4 size-20 md:size-50 backdrop-blur-2xl"
     >
-        <Image
-          src={src}
-          alt={name}
-          fill
-          className="object-contain p-4 overflow-hidden"
-        />
+      <Image
+        src={src}
+        alt={name}
+        fill
+        className="object-contain p-4 overflow-hidden"
+      />
     </Link>
   );
 };

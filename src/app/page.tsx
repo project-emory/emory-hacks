@@ -18,11 +18,11 @@ const Page = memo(() => {
       <ScheduleSection />
       <FaqSection />
       <SponsorsSection />
-      <div className="absolute bottom-0 left-0 w-full hidden md:flex h-40 items-center justify-center">
+      <div className="absolute bottom-0 left-0 z-50 w-full hidden md:flex h-40 items-center justify-center">
         <Link
           href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
           target="_blank"
-          className="text-white underline"
+          className="cursor-pointer text-white underline"
         >
           MLH Code of Conduct
         </Link>
