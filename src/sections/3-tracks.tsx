@@ -1,8 +1,6 @@
 "use client";
 
 import Section from "@/components/section";
-import { useState } from "react";
-import { motion } from "motion/react";
 
 const graphics = [
   { src: "/graphics/3-tracks/bg.webp", parallaxLevel: 0 },
@@ -24,8 +22,6 @@ const tracks = {
 };
 
 const TracksSection = () => {
-  const [expanded, setExpanded] = useState("");
-
   return (
     <Section graphics={graphics}>
       <h2 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl md:mb-4 xl:mb-10 border-shine">
@@ -35,7 +31,6 @@ const TracksSection = () => {
         {Object.entries(tracks).map(([track, description]) => (
           <div
             key={track}
-            onClick={() => setExpanded((prev) => (prev === track ? "" : track))}
             className="min-w-80 text-white bg-bg/30 border-white/20 hover:border-shine transition-all cursor-pointer backdrop-brightness-80 shadow-xl backdrop-blur-2xl p-4 md:p-6 rounded-xl"
           >
             <span className="text-base md:text-2xl xl:text-3xl font-bold block">
