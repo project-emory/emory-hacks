@@ -13,6 +13,10 @@
   @apply drop-shadow-[0px_0px_10px_rgba(255,255,255,1)];
 }
 
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
 @layer base {
   * {
     @apply font-sans;
