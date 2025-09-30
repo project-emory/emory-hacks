@@ -1,9 +1,7 @@
 "use client";
 
 import Section from "@/components/section";
-import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
 import Link from "next/link";
 
 const graphics = [
@@ -23,7 +21,7 @@ const sponsors = [
   {
     src: "/images/sponsors/foxtrot.webp",
     name: "Foxtrot",
-    link: "https://foxtrotco.com/",
+    link: "https://www.foxtrot-services.com/",
   },
   {
     src: "/images/sponsors/songys.webp",
@@ -33,7 +31,17 @@ const sponsors = [
   {
     src: "/images/sponsors/oreilly.webp",
     name: "O'Reilly",
-    link: "https://www.oreillyauto.com/",
+    link: "https://www.oreilly.com/",
+  },
+  {
+    src: "/images/sponsors/bawlsguarana.webp",
+    name: "Bawls Guarana",
+    link: "https://www.bawls.com/",
+  },
+  {
+    src: "/images/sponsors/luckyenergy.webp",
+    name: "Lucky Energy",
+    link: "https://luckybevco.com/",
   },
 ];
 
@@ -50,12 +58,12 @@ const SponsorCard = ({ src, name, link }: Sponsor) => {
       target="_blank"
       className="relative block overflow-hidden bg-white/50 rounded-xl p-4 size-20 md:size-50 backdrop-blur-2xl"
     >
-        <Image
-          src={src}
-          alt={name}
-          fill
-          className="object-contain p-4 overflow-hidden"
-        />
+      <Image
+        src={src}
+        alt={name}
+        fill
+        className="object-contain p-4 overflow-hidden"
+      />
     </Link>
   );
 };
