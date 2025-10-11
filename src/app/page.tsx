@@ -18,7 +18,7 @@ const Page = memo(() => {
       <ScheduleSection />
       <FaqSection />
       <SponsorsSection />
-      <div className="absolute bottom-0 left-0 z-50 w-full hidden md:flex h-40 items-center justify-center">
+      <div className="absolute bottom-0 left-0 z-50 w-full hidden sm:flex sm:h-20 lg:h-40 items-center justify-center">
         <Link
           href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
           target="_blank"
