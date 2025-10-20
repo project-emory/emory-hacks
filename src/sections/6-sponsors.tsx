@@ -53,9 +53,9 @@ const sponsors = [
     tier: 3,
   },
   {
-    src: "/images/sponsors/luckyenergy.webp",
-    name: "Lucky Energy",
-    link: "https://luckybevco.com/",
+    src: "/images/sponsors/vectus.webp",
+    name: "Vectus AI",
+    link: "https://tryvectus.ai/",
     tier: 3,
   },
 ];
