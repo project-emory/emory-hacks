@@ -23,6 +23,12 @@ const sponsors = [
     tier: 1,
   },
   {
+    src: "/images/sponsors/msba.webp",
+    name: "MSBA",
+    link: "https://goizueta.emory.edu/msba/",
+    tier: 2,
+  },
+  {
     src: "/images/sponsors/siro.webp",
     name: "Siro",
     link: "https://www.siro.ai/",
@@ -47,6 +53,12 @@ const sponsors = [
     tier: 3,
   },
   {
+    src: "/images/sponsors/lablup.webp",
+    name: "Lablup",
+    link: "https://www.lablup.com/",
+    tier: 3,
+  },
+  {
     src: "/images/sponsors/bawlsguarana.webp",
     name: "Bawls",
     link: "https://www.oreillyauto.com/",
@@ -62,6 +74,12 @@ const sponsors = [
     src: "/images/sponsors/vectus.webp",
     name: "Vectus AI",
     link: "https://tryvectus.ai/",
+    tier: 3,
+  },
+  {
+    src: "/images/sponsors/tfa.webp",
+    name: "TFA",
+    link: "https://www.teachforamerica.org/",
     tier: 3,
   },
 ];
