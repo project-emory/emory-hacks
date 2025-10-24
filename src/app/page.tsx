@@ -4,8 +4,9 @@ import LandingSection from "@/sections/1-landing";
 import AboutSection from "@/sections/2-about";
 import TracksSection from "@/sections/3-tracks";
 import ScheduleSection from "@/sections/4-schedule";
-import FaqSection from "@/sections/5-faq";
-import SponsorsSection from "@/sections/6-sponsors";
+import SpeakersSection from "@/sections/5-speakers";
+import FaqSection from "@/sections/6-faq";
+import SponsorsSection from "@/sections/7-sponsors";
 import Link from "next/link";
 import { memo } from "react";
 
@@ -16,6 +17,7 @@ const Page = memo(() => {
       <AboutSection />
       <TracksSection />
       <ScheduleSection />
+      <SpeakersSection />
       <FaqSection />
       <SponsorsSection />
       <div className="absolute bottom-0 left-0 z-50 w-full hidden sm:flex sm:h-20 lg:h-40 items-center justify-center">

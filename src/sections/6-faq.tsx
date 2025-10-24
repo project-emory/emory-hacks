@@ -6,8 +6,8 @@ import { useState } from "react";
 import data from "../lib/faqData.json";
 
 const graphics = [
-  { src: "/graphics/5-faq/bg.webp", parallaxLevel: 0 },
-  { src: "/graphics/5-faq/rock.webp", parallaxLevel: 0 },
+  { src: "/graphics/6-faq/bg.webp", parallaxLevel: 0 },
+  { src: "/graphics/6-faq/rock.webp", parallaxLevel: 0 },
 ];
 
 const FaqSection = () => {
