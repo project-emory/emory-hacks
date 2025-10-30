@@ -47,6 +47,18 @@ const sponsors = [
     tier: 2,
   },
   {
+    src: "/images/sponsors/cnr.webp",
+    name: "Computer Networking Resources",
+    link: "https://cnrit.com/",
+    tier: 2,
+  },
+  {
+    src: "/images/sponsors/tractian.webp",
+    name: "Tractian",
+    link: "https://www.tractian.com/",
+    tier: 2,
+  },
+  {
     src: "/images/sponsors/oreilly.webp",
     name: "O'Reilly",
     link: "https://www.oreilly.com/",
