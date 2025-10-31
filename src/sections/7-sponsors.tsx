@@ -47,6 +47,18 @@ const sponsors = [
     tier: 2,
   },
   {
+    src: "/images/sponsors/cnr.webp",
+    name: "Computer Networking Resources",
+    link: "https://cnrit.com/",
+    tier: 2,
+  },
+  {
+    src: "/images/sponsors/tractian.svg",
+    name: "Tractian",
+    link: "https://www.tractian.com/",
+    tier: 2,
+  },
+  {
     src: "/images/sponsors/oreilly.webp",
     name: "O'Reilly",
     link: "https://www.oreilly.com/",
@@ -92,9 +104,9 @@ type Sponsor = {
 };
 
 const sizeClasses = {
-  1: "size-24 sm:size-32 md:size-40 xl:size-58",
-  2: "size-20 sm:size-28 md:size-36 xl:size-52",
-  3: "size-16 sm:size-24 md:size-32 xl:size-46",
+  1: "size-22 sm:size-30 md:size-46 xl:size-54",
+  2: "size-18 sm:size-26 md:size-40 xl:size-46",
+  3: "size-14 sm:size-22 md:size-34 xl:size-36",
 };
 
 const SponsorCard = ({ src, name, link, tier }: Sponsor) => {
@@ -110,7 +122,7 @@ const SponsorCard = ({ src, name, link, tier }: Sponsor) => {
         src={src}
         alt={name}
         fill
-        className="object-contain p-4 overflow-hidden"
+        className="object-contain p-1 overflow-hidden"
       />
     </Link>
   );
@@ -129,7 +141,7 @@ const SponsorSection = () => {
         SPONSORS
       </h1>
 
-      <div className="flex flex-col mt-15 mb-10 md:mt-20 xl:mt-30 gap-6 md:gap-8 w-full">
+      <div className="flex flex-col mt-15 mb-15 md:mt-20 xl:mt-30 gap-6 md:gap-8 w-full">
         {Object.entries(sponsorsByTier).map(([tier, tierSponsors]) => {
           return tierSponsors.length > 0 ? (
             <div key={tier} className="flex flex-col gap-3">
