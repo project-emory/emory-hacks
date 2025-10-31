@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Raphael Palacio",
+    "description": "Raphael Palacio is a recent Computer Science graduate from Emory University with a robust background in software engineering, machine learning, and AI-driven solutions. Raphael has made significant contributions during internships at JP Morgan & Chase and Emory University, developing scalable cloud data pipelines, advanced NLP chatbots, and leading innovative projects in mobile app development and computer vision. Currently, Raphael is part of the LexisNexis Risk Solutions tech new grad program, currently in his first six-month rotation as part of the Emailage DevOps team.",
+    "img": "/images/speakers/palacio.jpg"
+  },
+  {
+    "name": "Sarah O'Brien",
+    "description": "Sarah Margaret O’Brien (She/Her) is a Data Scientist at Southern Company and a graduate student at Georgia Tech, pursuing her Master of Science in Analytics. She holds a B.S. in Computer Science from Georgia State University, where she led the university’s first all-female hackathon and served as Vice President of Girls Who Code. At Southern Company, Sarah works on AI and machine learning initiatives that improve enterprise platforms and customer experience. She’s a proud advocate for women in STEM, serving as Co-Chair of Technical Women in Georgia (TWIG), a Graduate Student Senator at Georgia Tech, and a finalist for the 2025 Women in Technology Awards. Originally from Chicago and now based in Atlanta, Sarah is passionate about mentorship, innovation, and building inclusive tech communities.",
+    "img": "/images/speakers/obrien.jpg"
+  },
+  {
+    "name": "Sridhar Halyalla",
+    "description": "Sridhar Hallyala is a data and analytics professional passionate about helping companies transform marketing campaigns into measurable growth. Currently a Data Solutions Analyst at Deluxe, he works closely with financial institutions to deliver impactful, data-driven strategies. Over the past seven years, Sridhar has built his career at Wells Fargo, Accenture, and Deluxe, honing expertise at the intersection of analytics, marketing, AI, and product development. When he’s not working with data, you’ll likely find him on a pickleball court, riding his motorcycle, or volunteering both with his alma mater to mentor students and with nonprofits to support community initiatives.",
+    "img": "/images/speakers/halyalla.jpg"
+  },
+  {
+    "name": "Zachary Farley",
+    "description": "Zach is a seasoned software engineer with 10+ years of experience building scalable web solutions across startups and enterprise environments—now focused on roles that blend technical expertise with client-facing impact. By day, he is designing and delivering full-stack applications, enterprise integrations, and cloud infrastructure (AWS & Google Cloud). By night, he runs a nonprofit called KITT LABS that's focused on STEM education and community innovation.",
+    "img": "/images/speakers/farley.jpg"
+  }
+]
