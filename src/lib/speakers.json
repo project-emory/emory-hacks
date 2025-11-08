@@ -18,5 +18,10 @@
     "name": "Zachary Farley",
     "description": "Zach is a seasoned software engineer with 10+ years of experience building scalable web solutions across startups and enterprise environments—now focused on roles that blend technical expertise with client-facing impact. By day, he is designing and delivering full-stack applications, enterprise integrations, and cloud infrastructure (AWS & Google Cloud). By night, he runs a nonprofit called KITT LABS that's focused on STEM education and community innovation.",
     "img": "/images/speakers/farley.jpg"
+  },
+  {
+    "name": "Rosalind",
+    "description": "Rosalind McCullough is a lecturer in the School of Information at the University of California Berkeley and the CEO of SilverThred, a cybersecurity consulting and education firm. Some of Rosalind’s previously experience includes working as a part of the Emerging Technologies Engineering group for IBM Research, as well as a contractor for the Department of Defense. While her more technical work allows her to design and build data security solutions, her governance work is focused on ensuring adherence to international, national, and organizational information security and privacy standards. Rosalind is passionate about creating opportunities in technical spaces. She enjoys teaching people how to transition from being tech users into being tech designers and builders.",
+    "img": "/images/speakers/mccullough.jpg"
   }
 ]
