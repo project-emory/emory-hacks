@@ -1,0 +1,58 @@
+[
+  {
+    "day": "Friday",
+    "events": [
+      {
+        "time": "02:00 PM",
+        "description": "Participant Check-in"
+      },
+      { "time": "03:30 PM", "description": "Opening Ceremony" },
+      { "time": "05:00 PM", "description": "Hackathon Begins" },
+      { "time": "06:00 PM", "description": "Dinner" },
+      { "time": "06:00 PM", "description": "Vectus Mentors" },
+      {
+        "time": "06:30 PM",
+        "description": "MLH Google AI Studio"
+      },
+      { "time": "07:30 PM", "description": "Workshop 1" },
+      { "time": "10:00 PM", "description": "Late-night Snack" }
+    ]
+  },
+
+  {
+    "day": "Saturday",
+    "events": [
+      { "time": "12:00 AM", "description": "Quiet Hours" },
+      { "time": "07:00 AM", "description": "Breakfast" },
+      { "time": "09:15 AM", "description": "Workshop 2" },
+      { "time": "10:15 AM", "description": "Workshop 3" },
+      {
+        "time": "11:00 AM",
+        "description": "Vectus and Akash Mentors"
+      },
+      { "time": "11:15 AM", "description": "Workshop 4" },
+      { "time": "12:00 PM", "description": "Lunch" },
+      { "time": "01:15 PM", "description": "Workshop 5" },
+      { "time": "06:00 PM", "description": "Dinner" },
+      {
+        "time": "06:30 PM",
+        "description": "MLH Github Copilot Workshop"
+      },
+      { "time": "11:00 PM", "description": "Late-night Snack" }
+    ]
+  },
+
+  {
+    "day": "Sunday",
+    "events": [
+      { "time": "08:00 AM", "description": "Breakfast" },
+      { "time": "09:00 AM", "description": "Submission Deadline" },
+      { "time": "09:00 AM", "description": "Round 1 Judging" },
+      { "time": "11:15 AM", "description": "Finalists Announced" },
+      { "time": "11:30 AM", "description": "Lunch" },
+      { "time": "12:30 AM", "description": "Finalists Demo" },
+      { "time": "01:30 PM", "description": "Judge Deliberation" },
+      { "time": "02:30 PM", "description": "Closing Ceremony" }
+    ]
+  }
+]
