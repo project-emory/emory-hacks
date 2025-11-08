@@ -3,7 +3,7 @@
 import Section from "@/components/section";
 import data from "@/lib/schedule.json";
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 
 const graphics = [
   { src: "/graphics/4-schedule/bg.webp", parallaxLevel: 0 },
