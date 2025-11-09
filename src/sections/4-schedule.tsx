@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 const graphics = [
   { src: "/graphics/4-schedule/bg.webp", parallaxLevel: 0 },
   { src: "/graphics/4-schedule/rock.webp", parallaxLevel: 0 },
-  { src: "/graphics/4-schedule/fish.webp", parallaxLevel: 10 },
+  { src: "/graphics/4-schedule/fish.webp", parallaxLevel: 10, top: "-20%" },
 ];
 
 const ScheduleSection = () => {
@@ -17,11 +17,11 @@ const ScheduleSection = () => {
 
   return (
     <Section graphics={graphics}>
-      <h2 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-4 xl:mb-16 border-shine">
+      <h2 className="text-white font-display text-shadow-2xs text-2xl md:text-6xl xl:text-8xl mb-4 xl:mb-16 border-shine sm:mt-12 md:mt-24 lg:mt-32">
         SCHEDULE
       </h2>
 
-      <div className="w-full">
+      <div className="sm:w-2/5">
         <div className="text-white text-lg xl:text-2xl font-semibold mb-4 flex gap-4 xl:gap-6">
           {data.map((d, i) => (
             <button
