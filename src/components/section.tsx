@@ -36,6 +36,7 @@ export default Section;
 type GraphicProps = {
   src: string;
   parallaxLevel: number;
+  top?: string;
 };
 
 const PARRALAX_INTENSITY = 10;
@@ -45,6 +46,7 @@ const Graphic = memo(
     src,
     container,
     parallaxLevel,
+    top,
   }: GraphicProps & {
     container: RefObject<HTMLDivElement | null>;
   }) => {
@@ -67,14 +69,14 @@ const Graphic = memo(
     const y = useTransform(
       scrollYProgress,
       [0, 1],
-      [PARRALAX_INTENSITY * parallaxLevel, -PARRALAX_INTENSITY * parallaxLevel],
+      [PARRALAX_INTENSITY * parallaxLevel, -PARRALAX_INTENSITY * parallaxLevel]
     );
 
     return (
       <motion.div
-        style={{ y: isMobile ? 0 : y, zIndex: parallaxLevel }}
+        style={{ y: isMobile ? 0 : y, zIndex: parallaxLevel, top: top || "0" }}
         transition={{ duration: 1 }}
-        className="absolute top-0 left-0 size-full pointer-events-none"
+        className="absolute left-0 size-full pointer-events-none"
       >
         <Image
           src={src}
@@ -87,6 +89,6 @@ const Graphic = memo(
         />
       </motion.div>
     );
-  },
+  }
 );
 Graphic.displayName = "Graphic";

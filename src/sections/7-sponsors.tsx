@@ -4,10 +4,7 @@ import Section from "@/components/section";
 import Image from "next/image";
 import Link from "next/link";
 
-const graphics = [
-  { src: "/graphics/7-sponsors/bg.webp", parallaxLevel: 0 },
-  { src: "/graphics/7-sponsors/fg.webp", parallaxLevel: 0 },
-];
+const graphics = [{ src: "/graphics/7-sponsors/bg.webp", parallaxLevel: 0 }];
 
 const sponsors = [
   {

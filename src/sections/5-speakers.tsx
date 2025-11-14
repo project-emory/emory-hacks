@@ -13,7 +13,7 @@ import data from "@/lib/speakers.json";
 import Image from "next/image";
 import { useState } from "react";
 
-const graphics = [{ src: "/graphics/5-speakers/bg.webp", parallaxLevel: 0 }];
+const graphics = [{ src: "/graphics/5-speakers/bg2.webp", parallaxLevel: 0 }];
 
 const SpeakersSection = () => {
   return (
